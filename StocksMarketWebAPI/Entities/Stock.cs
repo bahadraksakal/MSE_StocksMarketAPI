@@ -10,6 +10,7 @@
 
         public bool Status { get; set; }
 
+        public virtual ICollection<StockBuyAndSale> StockBuyAndSales { get; set; }
         public virtual ICollection<StockPrice> StockPrices { get; set; }
         public virtual ICollection<PortfolioStock> PortfolioStocks { get; set; }
     }

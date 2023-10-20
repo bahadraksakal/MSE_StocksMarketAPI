@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StocksMarketWebAPI.Context;
 
@@ -11,9 +12,11 @@ using StocksMarketWebAPI.Context;
 namespace StocksMarketWebAPI.Migrations
 {
     [DbContext(typeof(StockMarketDbContext))]
-    partial class StockMarketDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231020131803_mig_7_User_AddRelation_UserMoneyCard")]
+    partial class mig_7_User_AddRelation_UserMoneyCard
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,8 +124,7 @@ namespace StocksMarketWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PortfolioId")
-                        .IsUnique();
+                    b.HasIndex("PortfolioId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
@@ -265,8 +267,7 @@ namespace StocksMarketWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MoneyCardId")
-                        .IsUnique();
+                    b.HasIndex("MoneyCardId");
 
                     b.HasIndex("UserId");
 
@@ -295,8 +296,8 @@ namespace StocksMarketWebAPI.Migrations
             modelBuilder.Entity("StocksMarketWebAPI.Entities.PortfolioUser", b =>
                 {
                     b.HasOne("StocksMarketWebAPI.Entities.Portfolio", "Portfolio")
-                        .WithOne("PortfolioUsers")
-                        .HasForeignKey("StocksMarketWebAPI.Entities.PortfolioUser", "PortfolioId")
+                        .WithMany("PortfoliosUsers")
+                        .HasForeignKey("PortfolioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -320,7 +321,7 @@ namespace StocksMarketWebAPI.Migrations
                         .IsRequired();
 
                     b.HasOne("StocksMarketWebAPI.Entities.Stock", "Stock")
-                        .WithMany("StockBuyAndSales")
+                        .WithMany()
                         .HasForeignKey("StockId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -344,8 +345,8 @@ namespace StocksMarketWebAPI.Migrations
             modelBuilder.Entity("StocksMarketWebAPI.Entities.UserMoneyCard", b =>
                 {
                     b.HasOne("StocksMarketWebAPI.Entities.MoneyCard", "MoneyCard")
-                        .WithOne("UserMoneyCard")
-                        .HasForeignKey("StocksMarketWebAPI.Entities.UserMoneyCard", "MoneyCardId")
+                        .WithMany("UserMoneyCard")
+                        .HasForeignKey("MoneyCardId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -362,16 +363,14 @@ namespace StocksMarketWebAPI.Migrations
 
             modelBuilder.Entity("StocksMarketWebAPI.Entities.MoneyCard", b =>
                 {
-                    b.Navigation("UserMoneyCard")
-                        .IsRequired();
+                    b.Navigation("UserMoneyCard");
                 });
 
             modelBuilder.Entity("StocksMarketWebAPI.Entities.Portfolio", b =>
                 {
-                    b.Navigation("PortfolioUsers")
-                        .IsRequired();
-
                     b.Navigation("PortfoliosStocks");
+
+                    b.Navigation("PortfoliosUsers");
 
                     b.Navigation("StockBuyAndSales");
                 });
@@ -379,8 +378,6 @@ namespace StocksMarketWebAPI.Migrations
             modelBuilder.Entity("StocksMarketWebAPI.Entities.Stock", b =>
                 {
                     b.Navigation("PortfolioStocks");
-
-                    b.Navigation("StockBuyAndSales");
 
                     b.Navigation("StockPrices");
                 });

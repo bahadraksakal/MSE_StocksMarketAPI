@@ -10,6 +10,6 @@
 
         public DateTime UsedDate { get; set; }
 
-        public virtual ICollection<UserMoneyCard> UserMoneyCard { get; set; }
+        public virtual UserMoneyCard UserMoneyCard { get; set; }
     }
 }

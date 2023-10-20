@@ -15,5 +15,6 @@
         public string Role { get; set; }
 
         public virtual PortfolioUser PortfolioUser { get; set; }
+        public virtual ICollection<UserMoneyCard> UserMoneyCards { get; set; }
     }
 }
