@@ -1,0 +1,4 @@
+2023-10-20 16:04:50.814 +03:00 [WRN] warn: GetWeatherForecast çalıştı
+2023-10-20 16:04:50.817 +03:00 [ERR] err: GetWeatherForecast çalıştı
+2023-10-20 16:04:51.907 +03:00 [WRN] warn: GetWeatherForecast çalıştı
+2023-10-20 16:04:51.908 +03:00 [ERR] err: GetWeatherForecast çalıştı
