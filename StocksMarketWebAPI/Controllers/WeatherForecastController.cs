@@ -4,7 +4,7 @@ using Serilog;
 namespace StocksMarketWebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private readonly ILogger<WeatherForecastController> logger;
@@ -20,7 +20,7 @@ namespace StocksMarketWebAPI.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             Log.Information("inf: GetWeatherForecast çalýþtý");
