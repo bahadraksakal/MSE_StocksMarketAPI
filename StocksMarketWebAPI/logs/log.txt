@@ -68,3 +68,8 @@ System.NullReferenceException: Object reference not set to an instance of an obj
    at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-10-23 17:14:38.833 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcının bakiyesini -3500- olarak değiştirdi.
+2023-10-23 17:14:59.438 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcının bakiyesini -3500- olarak değiştirdi.
+2023-10-23 17:15:30.973 +03:00 [WRN] 6 Id'li kullanıcı olan deneme3 giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTMiLCJ1c2VySWQiOiI2IiwibmJmIjoxNjk4MDcwNTMwLCJleHAiOjE2OTgwNzQxMzAsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.k8GYKm16dXvtEpF8jDr11Bmzy8EicY7fi2FjKGaFoeM
+2023-10-23 17:18:10.061 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODA3MDY4OSwiZXhwIjoxNjk4MDc0Mjg5LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.YABP9kP6c5GsPrb1LK16I2xqocOiluJh70nFNamTaE4
+2023-10-23 17:18:29.002 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcının bakiyesini -4000- olarak değiştirdi.

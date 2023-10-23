@@ -41,7 +41,10 @@ namespace StocksMarketWebAPI.Services
         }
         public async Task<PortfolioUser> UpdateUserPortfolioBalanceById(int id,int newBalance)
         {
-            PortfolioUser portfolioChanged = await _stockMarketDbContext.PortfolioUser.SingleOrDefaultAsync(portfolioUser => portfolioUser.UserId == id);
+            PortfolioUser portfolioChanged = await _stockMarketDbContext.PortfolioUser
+                .Include(portfolioUser=>portfolioUser.Portfolio)
+                .Include(portfolioUser => portfolioUser.User)
+                .SingleOrDefaultAsync(portfolioUser => portfolioUser.UserId == id);
             if (portfolioChanged != null)
             {
                 portfolioChanged.Portfolio.Balance = newBalance;
