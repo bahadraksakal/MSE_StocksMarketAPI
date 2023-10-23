@@ -1,5 +1,9 @@
-﻿namespace StocksMarketWebAPI.Entities
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace StocksMarketWebAPI.Entities
 {
+    [Index(nameof(User.Name), IsUnique = true)]
     public class User
     {
         public int Id { get; set; }

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "axxnJXLJInxFKuArKlgBEVNkGUoB17PYbbjX5AUlObDuztzv+Jk/pPBHc92KYOn/h/ZvaNAwOTy+gJdweXqSYQ==",
+  "dgSpecHash": "o9Y7CchNqQdImxz6pse16ANMqoOw/JKriED02+xJJn1ESb5V7N61DghQndPjkdsQpOYA5o1PAwSjJcHrDRda8g==",
   "success": true,
   "projectFilePath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketWebAPI\\StocksMarketWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bahadr\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.12\\microsoft.aspnetcore.authentication.jwtbearer.7.0.12.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
