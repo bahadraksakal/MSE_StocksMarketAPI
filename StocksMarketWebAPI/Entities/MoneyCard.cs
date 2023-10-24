@@ -8,7 +8,7 @@
 
         public DateTime CreationDate { get; set; }
 
-        public DateTime UsedDate { get; set; }
+        public DateTime? UsedDate { get; set; }
 
         public virtual UserMoneyCard UserMoneyCard { get; set; }
     }

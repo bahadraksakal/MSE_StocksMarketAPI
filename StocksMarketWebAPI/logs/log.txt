@@ -73,3 +73,16 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-10-23 17:15:30.973 +03:00 [WRN] 6 Id'li kullanıcı olan deneme3 giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTMiLCJ1c2VySWQiOiI2IiwibmJmIjoxNjk4MDcwNTMwLCJleHAiOjE2OTgwNzQxMzAsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.k8GYKm16dXvtEpF8jDr11Bmzy8EicY7fi2FjKGaFoeM
 2023-10-23 17:18:10.061 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODA3MDY4OSwiZXhwIjoxNjk4MDc0Mjg5LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.YABP9kP6c5GsPrb1LK16I2xqocOiluJh70nFNamTaE4
 2023-10-23 17:18:29.002 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcının bakiyesini -4000- olarak değiştirdi.
+2023-10-24 10:06:07.649 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODEzMTE2NywiZXhwIjoxNjk4MTM0NzY3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.Z34BOxF-1K6RMnJ4UFvibcCsp_sSkH27ey0J2XVjAWs
+2023-10-24 10:06:31.914 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:07:23.016 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:08:38.520 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:08:44.814 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:10:34.928 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:12:48.578 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcıya -1200- değerinde para kartı tanımladı.
+2023-10-24 10:20:23.684 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcıya -4000- değerinde para kartı tanımladı.
+2023-10-24 10:20:47.563 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 4 id'li deneme2 adındaki kullanıcıya -5000- değerinde para kartı tanımladı.
+2023-10-24 10:21:14.062 +03:00 [WRN] 4 Id'li kullanıcı olan deneme2 giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTIiLCJ1c2VySWQiOiI0IiwibmJmIjoxNjk4MTMyMDc0LCJleHAiOjE2OTgxMzU2NzQsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.l_tAKcS4koz2wcDA37ErH-1JRX_tdP89yx1F3VLqrNg
+2023-10-24 10:21:36.044 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODEzMjA5NiwiZXhwIjoxNjk4MTM1Njk2LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.QhGrIqSV_yFwVCsfgX0FVTPknXPB6NCHyK3tlgJPoSU
+2023-10-24 10:21:56.443 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
+2023-10-24 10:22:01.428 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 6 id'li deneme3 adındaki kullanıcıya -6000- değerinde para kartı tanımladı.

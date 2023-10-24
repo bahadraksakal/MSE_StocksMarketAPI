@@ -16,6 +16,7 @@ namespace StocksMarketWebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
@@ -53,8 +54,7 @@ namespace StocksMarketWebAPI.Controllers
                 return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
             }
         }
-
-        [Authorize]
+        
         [HttpGet("{id}/{role}")]
         public async Task<IActionResult> ChangeStatusUser(int id,string role)
         {
@@ -86,7 +86,6 @@ namespace StocksMarketWebAPI.Controllers
             }            
         }
 
-        [Authorize]
         [HttpGet("{id}/{balance}")]
         public async Task<IActionResult> ChangePortfolioBalanceUser(int id,int balance)
         {
