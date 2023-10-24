@@ -57,5 +57,32 @@ namespace StocksMarketWebAPI.Controllers
                 return BadRequest("MoneyCardController:AddMoneyCard hata:" + ex.Message);
             }
         }
+
+        [HttpGet("{moneyCardId}")]
+        public async Task<IActionResult> UseMoneyCard(int moneyCardId)
+        {
+            try
+            {
+                int userId = int.Parse(User.FindFirstValue("userId"));
+                UserMoneyCard newUserMoneyCard = await _moneyCardService.UseMoneyCard(userId, moneyCardId);
+                Log.Warning($" {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcı" +
+                    $"{newUserMoneyCard.MoneyCard.Id} id'li {newUserMoneyCard.MoneyCard.Balance} değerindeki para kartını kullandı.");
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve
+                };
+                return new ContentResult
+                {
+                    Content = JsonSerializer.Serialize(newUserMoneyCard, options),
+                    ContentType = "application/json",
+                    StatusCode = 200 // Başarı durumu
+                };                
+            }
+            catch (Exception ex)
+            {
+                Log.Warning("MoneyCardController:UseMoneyCard hata:" + ex.Message);
+                return BadRequest("MoneyCardController:UseMoneyCard hata:" + ex.Message);
+            }
+        }
     }
 }

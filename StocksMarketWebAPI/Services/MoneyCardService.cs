@@ -25,7 +25,30 @@ namespace StocksMarketWebAPI.Services
                 await _stockMarketDbContext.SaveChangesAsync();
                 return newUserMoneyCard;            
             }
-            throw new Exception("Bu id'ye sahip kullanıcı bulunamadı");
+            throw new Exception($"{userId} id'sine sahip bir kullanıcı bulunamadı");
+        }
+        public async Task<UserMoneyCard> UseMoneyCard(int userId, int moneyCardId)
+        {
+            UserMoneyCard userMoneyCard=await _stockMarketDbContext.UsersMoneyCard
+                .Include(userMoneyCards=>userMoneyCards.MoneyCard)
+                .Include(userMoneyCards => userMoneyCards.User)
+                .ThenInclude(users=>users.PortfolioUser)
+                .ThenInclude(portfolioUsers=>portfolioUsers.Portfolio)
+                .SingleOrDefaultAsync(userMoneyCard=>
+                    userMoneyCard.UserId == userId
+                    && userMoneyCard.MoneyCardId==moneyCardId);
+            if (userMoneyCard != null)
+            {
+                if (userMoneyCard.Status == false)
+                {
+                    userMoneyCard.Status = true;
+                    userMoneyCard.User.PortfolioUser.Portfolio.Balance += userMoneyCard.MoneyCard.Balance;
+                    await _stockMarketDbContext.SaveChangesAsync();
+                    return userMoneyCard;
+                }
+                throw new Exception($"moneyCardId:{userMoneyCard.MoneyCardId} - UserId:{userMoneyCard.UserId} değerlerine sahip bir UserMoneyCard zaten kullanılmış.");
+            }
+            throw new Exception($"moneyCardId:{moneyCardId} - UserId:{userId} değerlerine sahip bir UserMoneyCard bulunamadı.");
         }
     }
 }

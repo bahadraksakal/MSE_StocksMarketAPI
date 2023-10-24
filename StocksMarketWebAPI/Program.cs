@@ -27,6 +27,7 @@ builder.Services.AddDbContext<StockMarketDbContext>(options => {
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<MoneyCardService>();
+builder.Services.AddScoped<MainBoardService>();
 
 //seri log
 builder.Services.AddSerilog();

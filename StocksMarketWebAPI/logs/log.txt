@@ -86,3 +86,17 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-10-24 10:21:36.044 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODEzMjA5NiwiZXhwIjoxNjk4MTM1Njk2LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.QhGrIqSV_yFwVCsfgX0FVTPknXPB6NCHyK3tlgJPoSU
 2023-10-24 10:21:56.443 +03:00 [WRN] MoneyCardController:AddMoneyCard hata:Bu id'ye sahip kullanıcı bulunamadı
 2023-10-24 10:22:01.428 +03:00 [WRN] 1 - admin  bilgilerine sahip admin, 6 id'li deneme3 adındaki kullanıcıya -6000- değerinde para kartı tanımladı.
+2023-10-24 10:59:46.317 +03:00 [WRN] MoneyCardController:UseMoneyCard hata:moneyCardId:4 - UserId:1 değerlerine sahip bir UserMoneyCard bulunamadı.
+2023-10-24 11:00:04.206 +03:00 [WRN] MoneyCardController:UseMoneyCard hata:moneyCardId:4 - UserId:1 değerlerine sahip bir UserMoneyCard bulunamadı.
+2023-10-24 11:01:08.663 +03:00 [WRN] 4 Id'li kullanıcı olan deneme2 giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTIiLCJ1c2VySWQiOiI0IiwibmJmIjoxNjk4MTM0NDY4LCJleHAiOjE2OTgxMzgwNjgsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.0j6M4jSj3LKZMS78fgSIqGKXQc9YiJQosZdKJurmbc4
+2023-10-24 11:01:27.228 +03:00 [WRN] MoneyCardController:UseMoneyCard hata:moneyCardId:4 - UserId:4 değerlerine sahip bir UserMoneyCard bulunamadı.
+2023-10-24 11:01:37.050 +03:00 [WRN]  4 id'li deneme2 adındaki kullanıcı2 id'li 4000 değerindeki para kartını kullandı.
+2023-10-24 11:02:26.885 +03:00 [WRN]  4 id'li deneme2 adındaki kullanıcı1 id'li 1200 değerindeki para kartını kullandı.
+2023-10-24 11:02:51.882 +03:00 [WRN] MoneyCardController:UseMoneyCard hata:moneyCardId:1 - UserId:4 değerlerine sahip bir UserMoneyCard zaten kullanılmış.
+2023-10-24 12:16:14.660 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODEzODk3NCwiZXhwIjoxNjk4MTQyNTc0LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.iLGcqP9gwIdytCrF9d2-Y4i-W4Q5N2ibz6A7dbhc0k8
+2023-10-24 12:17:15.670 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 12:17:15.842 +03:00 [WRN] MainBoardController:ChangeCommissionRate hata:Veri tabanında bir MainBoard bulunamadı.
+2023-10-24 12:18:01.977 +03:00 [WRN] 4 Id'li kullanıcı olan deneme2 giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTIiLCJ1c2VySWQiOiI0IiwibmJmIjoxNjk4MTM5MDgxLCJleHAiOjE2OTgxNDI2ODEsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.bE9_dt8d7JnCaTyl6_N5Dd13sJ9k43iCikxoPBaQykA
+2023-10-24 12:18:19.693 +03:00 [WRN] MainBoardController:ChangeCommissionRate hata:Veri tabanında bir MainBoard bulunamadı.
+2023-10-24 12:19:25.191 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 12:19:25.252 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 7 olarak ayarladı.
