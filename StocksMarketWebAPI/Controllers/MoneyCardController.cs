@@ -17,12 +17,10 @@ namespace StocksMarketWebAPI.Controllers
     [Authorize]
     public class MoneyCardController : ControllerBase
     {
-        private readonly StockMarketDbContext _stockMarketDbContext;
         private readonly UserService _userService;
         private readonly MoneyCardService _moneyCardService;
-        public MoneyCardController(StockMarketDbContext stockMarketDbContext, UserService userService, MoneyCardService moneyCardService)
+        public MoneyCardController(UserService userService, MoneyCardService moneyCardService)
         {
-            _stockMarketDbContext = stockMarketDbContext;
             _userService = userService;
             _moneyCardService = moneyCardService;
         }

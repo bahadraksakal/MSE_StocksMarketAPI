@@ -19,14 +19,10 @@ namespace StocksMarketWebAPI.Controllers
     [Authorize]
     public class UserController : ControllerBase
     {
-        private readonly ILogger<UserController> _logger;
-        private readonly StockMarketDbContext _stockMarketDbContext;
         private readonly UserService _userService;
 
-        public UserController(ILogger<UserController> logger, StockMarketDbContext stockMarketDbContext, UserService userService)
+        public UserController(UserService userService)
         {
-            this._logger = logger;
-            _stockMarketDbContext = stockMarketDbContext;
             _userService = userService;
         }
 
