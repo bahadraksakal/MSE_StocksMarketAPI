@@ -100,3 +100,23 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-10-24 12:18:19.693 +03:00 [WRN] MainBoardController:ChangeCommissionRate hata:Veri tabanında bir MainBoard bulunamadı.
 2023-10-24 12:19:25.191 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
 2023-10-24 12:19:25.252 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 7 olarak ayarladı.
+2023-10-24 13:15:12.919 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 13:15:13.405 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 7 olarak ayarladı.
+2023-10-24 13:15:41.884 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 9 olarak ayarladı.
+2023-10-24 13:16:40.262 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 9 olarak ayarladı.
+2023-10-24 13:16:54.680 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:20:37.677 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 13:20:38.055 +03:00 [WRN] MainBoardService: setDefaultMainBoard işlemi başarıyla çalıştı. 2 id'li MainBoard zaten var. MainBoard static olarak set edildi.
+2023-10-24 13:20:38.162 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:22:11.158 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODE0MjkzMSwiZXhwIjoxNjk4MTQ2NTMxLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.Ks9kS9OVytsogwd9Rq08LrKsbhH87_7TdWDKwvxERuY
+2023-10-24 13:22:22.762 +03:00 [WRN] MainBoardService: setDefaultMainBoard işlemi başarıyla çalıştı. 2 id'li MainBoard zaten var. MainBoard static olarak set edildi.
+2023-10-24 13:22:22.770 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:22:32.969 +03:00 [WRN] MainBoardService: setDefaultMainBoard işlemi başarıyla çalıştı. 2 id'li MainBoard zaten var. MainBoard static olarak set edildi.
+2023-10-24 13:22:32.974 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:23:15.689 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 13:23:16.077 +03:00 [WRN] MainBoardService: setDefaultMainBoard işlemi başarıyla çalıştı. 2 id'li MainBoard zaten var. MainBoard static olarak set edildi.
+2023-10-24 13:23:16.184 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:23:27.728 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:23:32.756 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:40:58.789 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 13:41:02.645 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 5 olarak ayarladı.

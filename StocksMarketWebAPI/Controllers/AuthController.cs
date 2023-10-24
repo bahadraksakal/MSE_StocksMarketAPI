@@ -19,16 +19,11 @@ namespace StocksMarketWebAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly ILogger<AuthController> _logger;
-        private readonly IConfiguration _configuration;
-        private readonly StockMarketDbContext _stockMarketDbContext;
         private readonly UserService _userService;
         private readonly AuthService _authService;
 
-        public AuthController(ILogger<AuthController> logger, IConfiguration configuration, UserService userService, AuthService authService)
-        {
-            this._logger = logger;
-            _configuration = configuration;
+        public AuthController(UserService userService, AuthService authService)
+        {            
             _userService = userService;
             _authService = authService;
         }
