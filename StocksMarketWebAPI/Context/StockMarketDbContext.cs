@@ -24,6 +24,44 @@ namespace StocksMarketWebAPI.Context
         {
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StockMarketDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MainBoard>().HasData(
+                new MainBoard
+                {
+                    Id=5,
+                    Balance = 0,
+                    CommissionRate=5
+                }
+            );
+
+
+            User userAdmin = new User
+            {
+                Id = 1,
+                Name = "admin",
+                Password = "admin",
+                Email = "admin@gmail.com",
+                Tel = "05350449876",
+                Role = "Admin"
+            };
+            modelBuilder.Entity<User>().HasData(userAdmin);
+
+            Portfolio portfolioAdmin = new Portfolio
+            {
+                Id = 1,
+                Balance = 0
+            };
+            modelBuilder.Entity<Portfolio>().HasData(portfolioAdmin);
+
+            PortfolioUser userPortfolioAdmin = new PortfolioUser
+            {
+                Id = 1,
+                UserId = 1,
+                PortfolioId = 1
+            };
+            modelBuilder.Entity<PortfolioUser>().HasData(userPortfolioAdmin);
+        }
 
     }
 }
