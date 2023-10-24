@@ -30,10 +30,10 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 string adminId = User.FindFirstValue("userId");
-                bool isAdmin = await _userService.isAdmin(adminId);
+                bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    MainBoard mainBoard = await _mainBoardService.ChangeCommissionRate(commissionRate);
+                    MainBoard mainBoard = await _mainBoardService.ChangeCommissionRateAsync(commissionRate);
                     Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin," +
                         $"Main Board Komisyon oranını {mainBoard.CommissionRate} olarak ayarladı.");
                     var options = new JsonSerializerOptions

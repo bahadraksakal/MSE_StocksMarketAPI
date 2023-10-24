@@ -33,10 +33,10 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 string adminId = User.FindFirstValue("userId");
-                bool isAdmin = await _userService.isAdmin(adminId);
+                bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    UserMoneyCard newUserMoneyCard = await _moneyCardService.AddMoneyCard(userId,balance);
+                    UserMoneyCard newUserMoneyCard = await _moneyCardService.AddMoneyCardAsync(userId,balance);
                     Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcıya -{newUserMoneyCard.MoneyCard.Balance}- değerinde para kartı tanımladı.");
                     var options = new JsonSerializerOptions
                     {
@@ -64,7 +64,7 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 int userId = int.Parse(User.FindFirstValue("userId"));
-                UserMoneyCard newUserMoneyCard = await _moneyCardService.UseMoneyCard(userId, moneyCardId);
+                UserMoneyCard newUserMoneyCard = await _moneyCardService.UseMoneyCardAsync(userId, moneyCardId);
                 Log.Warning($" {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcı" +
                     $"{newUserMoneyCard.MoneyCard.Id} id'li {newUserMoneyCard.MoneyCard.Balance} değerindeki para kartını kullandı.");
                 var options = new JsonSerializerOptions

@@ -14,13 +14,13 @@ namespace StocksMarketWebAPI.Services
             _stockMarketDbContext = stockMarketDbContext;
             
         }
-        public async Task<MainBoard> GetMainBoard()
+        public async Task<MainBoard> GetMainBoardAsync()
         {
             MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
             return mainBoard;
         }
 
-        public async Task<MainBoard> ChangeCommissionRate(int newCommissionRate)
+        public async Task<MainBoard> ChangeCommissionRateAsync(int newCommissionRate)
         {
             MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
             mainBoard.CommissionRate = newCommissionRate;

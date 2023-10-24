@@ -20,11 +20,11 @@ namespace StocksMarketWebAPI.Services
             _configuration = configuration;
         }
 
-        public async Task<User> CheckCredentials(string userName, string userPassword)
+        public async Task<User> CheckCredentialsAsync(string userName, string userPassword)
         {
             // Kullanıcı adı ve şifreye sahip bir kullanıcıyı veritabanından sorgulayın
             //Log.Warning($"{userName} isimli kullanıcı için AuthService:CheckCredentials çalıştı.");
-            var user = await _stockMarketDbContext.Users.SingleOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
+            var user = await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
             return user;           
         }
 

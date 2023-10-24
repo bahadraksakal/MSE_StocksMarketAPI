@@ -15,7 +15,7 @@ namespace StocksMarketWebAPI.Services
         public UserService(StockMarketDbContext stockMarketDbContext){
             _stockMarketDbContext = stockMarketDbContext;        
         }
-        public async Task<User> AddUser(string userName, string userPassword, string userEmail, string userTel, string userRole)
+        public async Task<User> AddUserAsync(string userName, string userPassword, string userEmail, string userTel, string userRole)
         {
             User newUser = new User() { Name = userName, Password = userPassword, Email = userEmail, Tel = userTel, Role = userRole };
             PortfolioUser userPortfolio = new PortfolioUser
@@ -23,14 +23,14 @@ namespace StocksMarketWebAPI.Services
                 User = newUser,
                 Portfolio = new Portfolio() { Balance = 0 }
             };
-            _stockMarketDbContext.PortfolioUser.Add(userPortfolio);
+            await _stockMarketDbContext.PortfolioUser.AddAsync(userPortfolio);
             await _stockMarketDbContext.SaveChangesAsync();
             return newUser;
 
         }
-        public async Task<User> UpdateUserRoleById(int id,string role)
+        public async Task<User> UpdateUserRoleByIdAsync(int id,string role)
         {
-            User userChanged=_stockMarketDbContext.Users.SingleOrDefault(user => user.Id == id);
+            User userChanged= await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Id == id);
             if(userChanged != null)
             {
                userChanged.Role = role;
@@ -39,12 +39,12 @@ namespace StocksMarketWebAPI.Services
             }
             throw new Exception("Bu id'ye sahip kullanıcı bulunamadı");
         }
-        public async Task<PortfolioUser> UpdateUserPortfolioBalanceById(int id,int newBalance)
+        public async Task<PortfolioUser> UpdateUserPortfolioBalanceByIdAsync(int id,int newBalance)
         {
             PortfolioUser portfolioChanged = await _stockMarketDbContext.PortfolioUser
                 .Include(portfolioUser=>portfolioUser.Portfolio)
                 .Include(portfolioUser => portfolioUser.User)
-                .SingleOrDefaultAsync(portfolioUser => portfolioUser.UserId == id);
+                .FirstOrDefaultAsync(portfolioUser => portfolioUser.UserId == id);
             if (portfolioChanged != null)
             {
                 portfolioChanged.Portfolio.Balance = newBalance;
@@ -53,15 +53,15 @@ namespace StocksMarketWebAPI.Services
             }
             throw new Exception("Bu id'ye sahip kullanıcı bulunamadı");
         }
-        public async Task<bool> isAdmin(string idStr)
+        public async Task<bool> isAdminAsync(string idStr)
         {
             int id = int.Parse(idStr);
-            User admin= await _stockMarketDbContext.Users.AsNoTracking().SingleOrDefaultAsync(user => user.Id == id);
+            User admin= await _stockMarketDbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Id == id);
             return (admin.Role == "Admin") ? true : false;
         }
-        public async Task<bool> isAdmin(int id)
+        public async Task<bool> isAdminAsync(int id)
         {
-            User admin = await _stockMarketDbContext.Users.AsNoTracking().SingleOrDefaultAsync(user => user.Id == id);
+            User admin = await _stockMarketDbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Id == id);
             return (admin.Role == "Admin") ? true : false;
         }
     }

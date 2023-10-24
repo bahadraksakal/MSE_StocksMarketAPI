@@ -12,29 +12,29 @@ namespace StocksMarketWebAPI.Services
         { 
             _stockMarketDbContext = stockMarketDbContext;
         }
-        public async Task<UserMoneyCard> AddMoneyCard(int userId,int balance)
+        public async Task<UserMoneyCard> AddMoneyCardAsync(int userId,int balance)
         {
-            User userTemp=await _stockMarketDbContext.Users.SingleOrDefaultAsync(user=>user.Id == userId);
+            User userTemp=await _stockMarketDbContext.Users.FirstOrDefaultAsync(user=>user.Id == userId);
             if(userTemp!=null){
                 UserMoneyCard newUserMoneyCard = new UserMoneyCard() { 
                     User=userTemp,
                     MoneyCard= new MoneyCard() { Balance=balance ,CreationDate=DateTime.Now},  
                     Status=false
                 };
-                _stockMarketDbContext.UsersMoneyCard.Add(newUserMoneyCard);
+                await _stockMarketDbContext.UsersMoneyCard.AddAsync(newUserMoneyCard);
                 await _stockMarketDbContext.SaveChangesAsync();
                 return newUserMoneyCard;            
             }
             throw new Exception($"{userId} id'sine sahip bir kullanıcı bulunamadı");
         }
-        public async Task<UserMoneyCard> UseMoneyCard(int userId, int moneyCardId)
+        public async Task<UserMoneyCard> UseMoneyCardAsync(int userId, int moneyCardId)
         {
             UserMoneyCard userMoneyCard=await _stockMarketDbContext.UsersMoneyCard
                 .Include(userMoneyCards=>userMoneyCards.MoneyCard)
                 .Include(userMoneyCards => userMoneyCards.User)
                 .ThenInclude(users=>users.PortfolioUser)
                 .ThenInclude(portfolioUsers=>portfolioUsers.Portfolio)
-                .SingleOrDefaultAsync(userMoneyCard=>
+                .FirstOrDefaultAsync(userMoneyCard=>
                     userMoneyCard.UserId == userId
                     && userMoneyCard.MoneyCardId==moneyCardId);
             if (userMoneyCard != null)

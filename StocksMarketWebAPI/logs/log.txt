@@ -193,3 +193,8 @@ INSERT INTO [Portfolios] ([Id], [Balance])
 VALUES (1, CAST(0 AS real));
 IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Balance') AND [object_id] = OBJECT_ID(N'[Portfolios]'))
     SET IDENTITY_INSERT [Portfolios] OFF;
+2023-10-24 15:51:34.283 +03:00 [WRN] 1 Id'li kullanıcı olan admin giriş yaptı. Tokeni: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsIm5iZiI6MTY5ODE1MTg5NCwiZXhwIjoxNjk4MTU1NDk0LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.LuVelQuz3XlJNOsUUTyeoxO-xJoa514WBVqOdbGnYqM
+2023-10-24 15:51:58.369 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-24 15:51:58.400 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 5 olarak ayarladı.
+2023-10-24 15:52:02.851 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 10 olarak ayarladı.
+2023-10-24 15:52:06.117 +03:00 [WRN] 1 - admin  bilgilerine sahip admin,Main Board Komisyon oranını 5 olarak ayarladı.

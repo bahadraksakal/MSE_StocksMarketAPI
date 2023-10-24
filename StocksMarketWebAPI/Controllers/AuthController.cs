@@ -33,7 +33,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                User newUser = await _userService.AddUser(userName, userPassword, userEmail, userTel, "User");
+                User newUser = await _userService.AddUserAsync(userName, userPassword, userEmail, userTel, "User");
                 var options = new JsonSerializerOptions
                 {
                     ReferenceHandler = ReferenceHandler.Preserve
@@ -57,7 +57,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                User userTemp = await _authService.CheckCredentials(userName, userPassword);
+                User userTemp = await _authService.CheckCredentialsAsync(userName, userPassword);
                 if (userTemp != null)
                 {
                     string token = _authService.CreateToken(userTemp);

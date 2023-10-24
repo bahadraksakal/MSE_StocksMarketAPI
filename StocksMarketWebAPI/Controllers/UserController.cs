@@ -35,7 +35,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                User newUser = await _userService.AddUser(userName, userPassword, userEmail, userTel, userRole);
+                User newUser = await _userService.AddUserAsync(userName, userPassword, userEmail, userTel, userRole);
                 var options = new JsonSerializerOptions
                 {
                     ReferenceHandler = ReferenceHandler.Preserve
@@ -61,10 +61,10 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 string adminId = User.FindFirstValue("userId");
-                bool isAdmin = await _userService.isAdmin(adminId);
+                bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    User changedUser = await _userService.UpdateUserRoleById(id, role);
+                    User changedUser = await _userService.UpdateUserRoleByIdAsync(id, role);
                     Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {changedUser.Id} id'li {changedUser.Name} adındaki kullanıcının rolünü -{changedUser.Role}- olarak değiştirdi.");
                     var options = new JsonSerializerOptions
                     {
@@ -92,10 +92,10 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 string adminId = User.FindFirstValue("userId");
-                bool isAdmin = await _userService.isAdmin(adminId);
+                bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    PortfolioUser changedPortfolio = await _userService.UpdateUserPortfolioBalanceById(id, balance);
+                    PortfolioUser changedPortfolio = await _userService.UpdateUserPortfolioBalanceByIdAsync(id, balance);
                     Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {changedPortfolio.UserId} id'li {changedPortfolio.User.Name} adındaki kullanıcının bakiyesini -{changedPortfolio.Portfolio.Balance}- olarak değiştirdi.");
                     var options = new JsonSerializerOptions
                     {
