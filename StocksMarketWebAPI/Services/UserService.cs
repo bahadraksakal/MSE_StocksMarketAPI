@@ -25,6 +25,8 @@ namespace StocksMarketWebAPI.Services
             };
             await _stockMarketDbContext.PortfolioUser.AddAsync(userPortfolio);
             await _stockMarketDbContext.SaveChangesAsync();
+            Log.Warning($"Kullanıcı başarıyla eklendi: " +
+                $"Name:{userPortfolio.User.Name} - Role:{userPortfolio.User.Role} - Bakiye: {userPortfolio.Portfolio.Balance}");
             return newUser;
 
         }
@@ -35,9 +37,12 @@ namespace StocksMarketWebAPI.Services
             {
                userChanged.Role = role;
                await _stockMarketDbContext.SaveChangesAsync();
-               return userChanged;
+
+                Log.Warning($"{userChanged.Id} id'li {userChanged.Name} adındaki kullanıcının rolünü -{userChanged.Role}- olarak değiştirdi.");
+                return userChanged;
             }
-            throw new Exception("Bu id'ye sahip kullanıcı bulunamadı");
+            Log.Warning($"{id} id'li kullanıcı bulunamadı");
+            throw new Exception($"{id} id'li kullanıcı bulunamadı");
         }
         public async Task<PortfolioUser> UpdateUserPortfolioBalanceByIdAsync(int id,int newBalance)
         {
@@ -49,9 +54,12 @@ namespace StocksMarketWebAPI.Services
             {
                 portfolioChanged.Portfolio.Balance = newBalance;
                 await _stockMarketDbContext.SaveChangesAsync();
+
+                Log.Warning($"{portfolioChanged.UserId} id'li {portfolioChanged.User.Name} adındaki kullanıcının bakiyesini -{portfolioChanged.Portfolio.Balance}- olarak değiştirdi.");
                 return portfolioChanged;
             }
-            throw new Exception("Bu id'ye sahip kullanıcı bulunamadı");
+            Log.Warning($"{id} id'li kullanıcı bulunamadı");
+            throw new Exception($"{id} id'li kullanıcı bulunamadı");
         }
         public async Task<bool> isAdminAsync(string idStr)
         {

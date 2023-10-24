@@ -46,7 +46,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("Veri tabanı hatası:" + ex.InnerException.Message);
                 return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
             }
         }
@@ -61,7 +60,6 @@ namespace StocksMarketWebAPI.Controllers
                 if (isAdmin)
                 {
                     User changedUser = await _userService.UpdateUserRoleByIdAsync(id, role);
-                    Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {changedUser.Id} id'li {changedUser.Name} adındaki kullanıcının rolünü -{changedUser.Role}- olarak değiştirdi.");
                     var options = new JsonSerializerOptions
                     {
                         ReferenceHandler = ReferenceHandler.Preserve
@@ -77,7 +75,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("UserController:ChangeStatusUser hata:" + ex.Message);
                 return BadRequest("UserController:ChangeStatusUser hata:" + ex.Message);
             }            
         }
@@ -92,7 +89,6 @@ namespace StocksMarketWebAPI.Controllers
                 if (isAdmin)
                 {
                     PortfolioUser changedPortfolio = await _userService.UpdateUserPortfolioBalanceByIdAsync(id, balance);
-                    Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {changedPortfolio.UserId} id'li {changedPortfolio.User.Name} adındaki kullanıcının bakiyesini -{changedPortfolio.Portfolio.Balance}- olarak değiştirdi.");
                     var options = new JsonSerializerOptions
                     {
                         ReferenceHandler = ReferenceHandler.Preserve
@@ -108,7 +104,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("Veri tabanı hatası:" + ex.InnerException.Message);
                 return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
             }
         }

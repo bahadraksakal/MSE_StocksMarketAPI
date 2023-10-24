@@ -21,11 +21,15 @@ namespace StocksMarketWebAPI.Services
         }
 
         public async Task<User> CheckCredentialsAsync(string userName, string userPassword)
-        {
-            // Kullanıcı adı ve şifreye sahip bir kullanıcıyı veritabanından sorgulayın
-            //Log.Warning($"{userName} isimli kullanıcı için AuthService:CheckCredentials çalıştı.");
+        {            
             var user = await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
-            return user;           
+            if (user != null)
+            {
+                Log.Warning($"AuthService-CheckCredentialsAsync: {userName} giriş yapmayı deniyor.");
+                return user;
+            }
+            Log.Warning($"AuthService-CheckCredentialsAsync: {userName} hatalı giriş denemesi yaptı.");
+            return null;
         }
 
         public string CreateToken(User user)
@@ -47,6 +51,7 @@ namespace StocksMarketWebAPI.Services
                     signingCredentials: credentials
                 );
             var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+            Log.Warning($"AuthService-CreateToken: Token oluşturuldu: {token}");
             return token;
         }
     }

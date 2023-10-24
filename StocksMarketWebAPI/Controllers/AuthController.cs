@@ -47,7 +47,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("Veri tabanı hatası:" + ex.InnerException.Message);
                 return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
             }
         }
@@ -67,7 +66,6 @@ namespace StocksMarketWebAPI.Controllers
                         User = userTemp,
                         Token = token
                     };
-                    Log.Warning($"{userTemp.Id} Id'li kullanıcı olan {userTemp.Name} giriş yaptı. Tokeni: {token}");
                     return new ContentResult
                     {
                         Content = JsonSerializer.Serialize(response),
@@ -75,13 +73,11 @@ namespace StocksMarketWebAPI.Controllers
                         StatusCode = 200 // Başarı durumu
                     };
                 }
-                Log.Warning($"{userName} hatalı giriş denemesi.");
                 return BadRequest("Kullanıcı Adı Veya Şifre Hatalı");
             }
             catch(Exception ex)
             {
-                Log.Error("AuthController : Login metodunda hata:" + ex.InnerException.Message);
-                return StatusCode(500, "AuthController : Login metodunda hata!");
+                return StatusCode(500, "AuthController : Login metodunda hata!" + ex.Message);
             }
             
         }

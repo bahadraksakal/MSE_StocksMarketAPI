@@ -34,8 +34,7 @@ namespace StocksMarketWebAPI.Controllers
                 bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    UserMoneyCard newUserMoneyCard = await _moneyCardService.AddMoneyCardAsync(userId,balance);
-                    Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin, {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcıya -{newUserMoneyCard.MoneyCard.Balance}- değerinde para kartı tanımladı.");
+                    UserMoneyCard newUserMoneyCard = await _moneyCardService.AddMoneyCardAsync(userId,balance);                    
                     var options = new JsonSerializerOptions
                     {
                         ReferenceHandler = ReferenceHandler.Preserve
@@ -51,7 +50,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("MoneyCardController:AddMoneyCard hata:" + ex.Message);
                 return BadRequest("MoneyCardController:AddMoneyCard hata:" + ex.Message);
             }
         }
@@ -63,8 +61,6 @@ namespace StocksMarketWebAPI.Controllers
             {
                 int userId = int.Parse(User.FindFirstValue("userId"));
                 UserMoneyCard newUserMoneyCard = await _moneyCardService.UseMoneyCardAsync(userId, moneyCardId);
-                Log.Warning($" {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcı" +
-                    $"{newUserMoneyCard.MoneyCard.Id} id'li {newUserMoneyCard.MoneyCard.Balance} değerindeki para kartını kullandı.");
                 var options = new JsonSerializerOptions
                 {
                     ReferenceHandler = ReferenceHandler.Preserve
@@ -78,7 +74,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("MoneyCardController:UseMoneyCard hata:" + ex.Message);
                 return BadRequest("MoneyCardController:UseMoneyCard hata:" + ex.Message);
             }
         }

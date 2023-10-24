@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Serilog;
 using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.Entities;
 
@@ -23,8 +24,11 @@ namespace StocksMarketWebAPI.Services
                 };
                 await _stockMarketDbContext.UsersMoneyCard.AddAsync(newUserMoneyCard);
                 await _stockMarketDbContext.SaveChangesAsync();
+                Log.Warning($"MoneyCardService:AddMoneyCardAsync: admin, {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcıya" +
+                    $" -{newUserMoneyCard.MoneyCard.Balance}- değerinde para kartı tanımladı.");
                 return newUserMoneyCard;            
             }
+            Log.Warning($"MoneyCardService:AddMoneyCardAsync: {userId} id'sine sahip bir kullanıcı bulunamadı");
             throw new Exception($"{userId} id'sine sahip bir kullanıcı bulunamadı");
         }
         public async Task<UserMoneyCard> UseMoneyCardAsync(int userId, int moneyCardId)
@@ -44,10 +48,14 @@ namespace StocksMarketWebAPI.Services
                     userMoneyCard.Status = true;
                     userMoneyCard.User.PortfolioUser.Portfolio.Balance += userMoneyCard.MoneyCard.Balance;
                     await _stockMarketDbContext.SaveChangesAsync();
+                    Log.Warning($"MoneyCardService:UseMoneyCardAsync: {userMoneyCard.User.Id} id'li {userMoneyCard.User.Name} adındaki kullanıcı" +
+                        $"{userMoneyCard.MoneyCard.Id} id'li {userMoneyCard.MoneyCard.Balance} değerindeki para kartını kullandı.");
                     return userMoneyCard;
                 }
+                Log.Warning($"MoneyCardService:UseMoneyCardAsync: moneyCardId:{userMoneyCard.MoneyCardId} - UserId:{userMoneyCard.UserId} değerlerine sahip bir UserMoneyCard zaten kullanılmış.");
                 throw new Exception($"moneyCardId:{userMoneyCard.MoneyCardId} - UserId:{userMoneyCard.UserId} değerlerine sahip bir UserMoneyCard zaten kullanılmış.");
             }
+            Log.Warning($"MoneyCardService:UseMoneyCardAsync: moneyCardId:{moneyCardId} - UserId:{userId} değerlerine sahip bir UserMoneyCard bulunamadı.");
             throw new Exception($"moneyCardId:{moneyCardId} - UserId:{userId} değerlerine sahip bir UserMoneyCard bulunamadı.");
         }
     }

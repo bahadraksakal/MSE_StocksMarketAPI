@@ -17,15 +17,26 @@ namespace StocksMarketWebAPI.Services
         public async Task<MainBoard> GetMainBoardAsync()
         {
             MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
-            return mainBoard;
+            if(mainBoard != null) {
+                Log.Warning($"MainBoardService-GetMainBoardAsync: çalıştı. MainBoard Id:{mainBoard.Id}");
+                return mainBoard;
+            }
+            Log.Warning($"MainBoardService-GetMainBoardAsync: MainBoard bulunamadı");
+            throw new Exception("MainBoard bulunamadı");
         }
 
         public async Task<MainBoard> ChangeCommissionRateAsync(int newCommissionRate)
         {
             MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
-            mainBoard.CommissionRate = newCommissionRate;
-            await _stockMarketDbContext.SaveChangesAsync();
-            return mainBoard;
+            if( mainBoard != null )
+            {
+                mainBoard.CommissionRate = newCommissionRate;
+                await _stockMarketDbContext.SaveChangesAsync();
+                Log.Warning($"MainBoardService-ChangeCommissionRateAsync: Main Board Komisyon oranını {mainBoard.CommissionRate} olarak ayarladı.");
+                return mainBoard;
+            }
+            Log.Warning($"MainBoardService-ChangeCommissionRateAsync: MainBoard bulunamadı");
+            throw new Exception("MainBoard bulunamadı");
         }
 
 

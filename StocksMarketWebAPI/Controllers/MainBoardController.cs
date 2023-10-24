@@ -34,8 +34,6 @@ namespace StocksMarketWebAPI.Controllers
                 if (isAdmin)
                 {
                     MainBoard mainBoard = await _mainBoardService.ChangeCommissionRateAsync(commissionRate);
-                    Log.Warning($"{User.FindFirstValue("userId")} - {User.FindFirstValue("userName")}  bilgilerine sahip admin," +
-                        $"Main Board Komisyon oranını {mainBoard.CommissionRate} olarak ayarladı.");
                     var options = new JsonSerializerOptions
                     {
                         ReferenceHandler = ReferenceHandler.Preserve
@@ -51,7 +49,6 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                Log.Warning("MainBoardController:ChangeCommissionRate hata:" + ex.Message);
                 return BadRequest("MainBoardController:ChangeCommissionRate hata:" + ex.Message);
             }
         }
