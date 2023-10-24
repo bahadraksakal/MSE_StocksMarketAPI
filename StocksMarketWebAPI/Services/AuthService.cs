@@ -25,7 +25,7 @@ namespace StocksMarketWebAPI.Services
             var user = await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
             if (user != null)
             {
-                Log.Warning($"AuthService-CheckCredentialsAsync: {userName} giriş yapmayı deniyor.");
+                Log.Warning($"AuthService-CheckCredentialsAsync: {userName} giriş yaptı.");
                 return user;
             }
             Log.Warning($"AuthService-CheckCredentialsAsync: {userName} hatalı giriş denemesi yaptı.");
