@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
+using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
 
 namespace StocksMarketWebAPI.Controllers
 {
@@ -34,17 +35,8 @@ namespace StocksMarketWebAPI.Controllers
                 bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    UserMoneyCard newUserMoneyCard = await _moneyCardService.AddMoneyCardAsync(userId,balance);                    
-                    var options = new JsonSerializerOptions
-                    {
-                        ReferenceHandler = ReferenceHandler.Preserve
-                    };
-                    return new ContentResult
-                    {
-                        Content = JsonSerializer.Serialize(newUserMoneyCard, options),
-                        ContentType = "application/json",
-                        StatusCode = 201 // Başarı durumu
-                    };
+                    UserMoneyCardDTO newUserMoneyCard = await _moneyCardService.AddMoneyCardAsync(userId,balance);
+                    return StatusCode(StatusCodes.Status201Created, newUserMoneyCard);
                 }
                 return BadRequest("MoneyCardController:AddMoneyCard hata: Admin değilsiniz.");
             }
@@ -60,17 +52,8 @@ namespace StocksMarketWebAPI.Controllers
             try
             {
                 int userId = int.Parse(User.FindFirstValue("userId"));
-                UserMoneyCard newUserMoneyCard = await _moneyCardService.UseMoneyCardAsync(userId, moneyCardId);
-                var options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve
-                };
-                return new ContentResult
-                {
-                    Content = JsonSerializer.Serialize(newUserMoneyCard, options),
-                    ContentType = "application/json",
-                    StatusCode = 200 // Başarı durumu
-                };                
+                UserMoneyCardDTO usedUserMoneyCard = await _moneyCardService.UseMoneyCardAsync(userId, moneyCardId);
+                return Ok(usedUserMoneyCard);           
             }
             catch (Exception ex)
             {

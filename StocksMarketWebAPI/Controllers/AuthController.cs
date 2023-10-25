@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.UserDTOs;
 using StocksMarketWebAPI.Entities;
 using StocksMarketWebAPI.Services;
 using System.IdentityModel.Tokens.Jwt;
@@ -29,25 +30,16 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(string userName, string userPassword, string userEmail, string userTel)
+        public async Task<IActionResult> Register([FromBody]UserDTO user)
         {
             try
             {
-                User newUser = await _userService.AddUserAsync(userName, userPassword, userEmail, userTel, "User");
-                var options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve
-                };
-                return new ContentResult
-                {
-                    Content = JsonSerializer.Serialize(newUser,options),
-                    ContentType = "application/json",
-                    StatusCode = 201 // Başarı durumu
-                };
+                UserDTO newUser = await _userService.AddUserAsync(user.Name, user.Password, user.Email, user.Tel, "User");
+                return StatusCode(StatusCodes.Status201Created, newUser);
             }
             catch (Exception ex)
             {
-                return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
+                return BadRequest("AuthController-Register Hata:" + ex.InnerException?.Message);
             }
         }
 
@@ -56,7 +48,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                User userTemp = await _authService.CheckCredentialsAsync(userName, userPassword);
+                UserDTO userTemp = await _authService.CheckCredentialsAsync(userName, userPassword);
                 if (userTemp != null)
                 {
                     string token = _authService.CreateToken(userTemp);
@@ -66,12 +58,7 @@ namespace StocksMarketWebAPI.Controllers
                         User = userTemp,
                         Token = token
                     };
-                    return new ContentResult
-                    {
-                        Content = JsonSerializer.Serialize(response),
-                        ContentType = "application/json",
-                        StatusCode = 200 // Başarı durumu
-                    };
+                    return Ok(response);
                 }
                 return BadRequest("Kullanıcı Adı Veya Şifre Hatalı");
             }

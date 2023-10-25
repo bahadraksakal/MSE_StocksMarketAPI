@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using StocksMarketWebAPI.DTOs.MainBoardDTOs;
 using StocksMarketWebAPI.Entities;
 using System;
 

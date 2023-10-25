@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.MainBoardDTOs;
 using StocksMarketWebAPI.Entities;
 
 namespace StocksMarketWebAPI.Services
@@ -8,10 +10,12 @@ namespace StocksMarketWebAPI.Services
     public class MainBoardService
     {
         private readonly StockMarketDbContext _stockMarketDbContext;
+        private readonly IMapper _mapper;
 
-        public MainBoardService(StockMarketDbContext stockMarketDbContext)
+        public MainBoardService(StockMarketDbContext stockMarketDbContext, IMapper mapper)
         {
             _stockMarketDbContext = stockMarketDbContext;
+            _mapper = mapper;
             
         }
         public async Task<MainBoard> GetMainBoardAsync()
@@ -25,7 +29,7 @@ namespace StocksMarketWebAPI.Services
             throw new Exception("MainBoard bulunamadı");
         }
 
-        public async Task<MainBoard> ChangeCommissionRateAsync(int newCommissionRate)
+        public async Task<MainBoardDTO> ChangeCommissionRateAsync(int newCommissionRate)
         {
             MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
             if( mainBoard != null )
@@ -33,7 +37,7 @@ namespace StocksMarketWebAPI.Services
                 mainBoard.CommissionRate = newCommissionRate;
                 await _stockMarketDbContext.SaveChangesAsync();
                 Log.Warning($"MainBoardService-ChangeCommissionRateAsync: Main Board Komisyon oranını {mainBoard.CommissionRate} olarak ayarladı.");
-                return mainBoard;
+                return _mapper.Map<MainBoardDTO>(mainBoard);
             }
             Log.Warning($"MainBoardService-ChangeCommissionRateAsync: MainBoard bulunamadı");
             throw new Exception("MainBoard bulunamadı");

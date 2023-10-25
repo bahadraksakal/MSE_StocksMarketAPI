@@ -5,17 +5,22 @@ using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.Entities;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using AutoMapper;
+using StocksMarketWebAPI.DTOs.UserDTOs;
+using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
 
 namespace StocksMarketWebAPI.Services
 {
     public class UserService
     {
         private readonly StockMarketDbContext _stockMarketDbContext;
+        private readonly IMapper _mapper;
 
-        public UserService(StockMarketDbContext stockMarketDbContext){
+        public UserService(StockMarketDbContext stockMarketDbContext,IMapper mapper){
             _stockMarketDbContext = stockMarketDbContext;        
+            _mapper = mapper;
         }
-        public async Task<User> AddUserAsync(string userName, string userPassword, string userEmail, string userTel, string userRole)
+        public async Task<UserDTO> AddUserAsync(string userName, string userPassword, string userEmail, string userTel, string userRole)
         {
             User newUser = new User() { Name = userName, Password = userPassword, Email = userEmail, Tel = userTel, Role = userRole };
             PortfolioUser userPortfolio = new PortfolioUser
@@ -27,10 +32,10 @@ namespace StocksMarketWebAPI.Services
             await _stockMarketDbContext.SaveChangesAsync();
             Log.Warning($"Kullanıcı başarıyla eklendi: " +
                 $"Name:{userPortfolio.User.Name} - Role:{userPortfolio.User.Role} - Bakiye: {userPortfolio.Portfolio.Balance}");
-            return newUser;
+            return _mapper.Map<UserDTO>(newUser);
 
         }
-        public async Task<User> UpdateUserRoleByIdAsync(int id,string role)
+        public async Task<UserDTO> UpdateUserRoleByIdAsync(int id,string role)
         {
             User userChanged= await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Id == id);
             if(userChanged != null)
@@ -39,12 +44,12 @@ namespace StocksMarketWebAPI.Services
                await _stockMarketDbContext.SaveChangesAsync();
 
                 Log.Warning($"{userChanged.Id} id'li {userChanged.Name} adındaki kullanıcının rolünü -{userChanged.Role}- olarak değiştirdi.");
-                return userChanged;
+                return _mapper.Map<UserDTO>(userChanged);
             }
             Log.Warning($"{id} id'li kullanıcı bulunamadı");
             throw new Exception($"{id} id'li kullanıcı bulunamadı");
         }
-        public async Task<PortfolioUser> UpdateUserPortfolioBalanceByIdAsync(int id,int newBalance)
+        public async Task<PortfolioUserDTO> UpdateUserPortfolioBalanceByIdAsync(int id,int newBalance)
         {
             PortfolioUser portfolioChanged = await _stockMarketDbContext.PortfolioUser
                 .Include(portfolioUser=>portfolioUser.Portfolio)
@@ -56,7 +61,7 @@ namespace StocksMarketWebAPI.Services
                 await _stockMarketDbContext.SaveChangesAsync();
 
                 Log.Warning($"{portfolioChanged.UserId} id'li {portfolioChanged.User.Name} adındaki kullanıcının bakiyesini -{portfolioChanged.Portfolio.Balance}- olarak değiştirdi.");
-                return portfolioChanged;
+                return _mapper.Map<PortfolioUserDTO>(portfolioChanged);
             }
             Log.Warning($"{id} id'li kullanıcı bulunamadı");
             throw new Exception($"{id} id'li kullanıcı bulunamadı");

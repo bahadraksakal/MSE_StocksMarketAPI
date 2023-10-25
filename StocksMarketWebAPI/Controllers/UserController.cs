@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
+using StocksMarketWebAPI.DTOs.UserDTOs;
 using StocksMarketWebAPI.Entities;
 using StocksMarketWebAPI.Services;
 using System.Data;
@@ -27,21 +29,12 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUser(string userName, string userPassword, string userEmail, string userTel, string userRole)
+        public async Task<IActionResult> AddUser([FromBody]UserDTO user)
         {
             try
             {
-                User newUser = await _userService.AddUserAsync(userName, userPassword, userEmail, userTel, userRole);
-                var options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve
-                };
-                return new ContentResult
-                {
-                    Content = JsonSerializer.Serialize(newUser, options),
-                    ContentType = "application/json",
-                    StatusCode = 201 // Başarı durumu
-                };
+                UserDTO newUser = await _userService.AddUserAsync(user.Name, user.Password, user.Email, user.Tel, user.Role);
+                return StatusCode(StatusCodes.Status201Created, newUser);
 
             }
             catch (Exception ex)
@@ -59,17 +52,8 @@ namespace StocksMarketWebAPI.Controllers
                 bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    User changedUser = await _userService.UpdateUserRoleByIdAsync(id, role);
-                    var options = new JsonSerializerOptions
-                    {
-                        ReferenceHandler = ReferenceHandler.Preserve
-                    };
-                    return new ContentResult
-                    {
-                        Content = JsonSerializer.Serialize(changedUser, options),
-                        ContentType = "application/json",
-                        StatusCode = 200 // Başarı durumu
-                    };
+                    UserDTO changedUser = await _userService.UpdateUserRoleByIdAsync(id, role);
+                    return Ok(changedUser);
                 }
                 return BadRequest("UserController:ChangeStatusUser hata: Admin değilsiniz.");
             }
@@ -88,23 +72,14 @@ namespace StocksMarketWebAPI.Controllers
                 bool isAdmin = await _userService.isAdminAsync(adminId);
                 if (isAdmin)
                 {
-                    PortfolioUser changedPortfolio = await _userService.UpdateUserPortfolioBalanceByIdAsync(id, balance);
-                    var options = new JsonSerializerOptions
-                    {
-                        ReferenceHandler = ReferenceHandler.Preserve
-                    };
-                    return new ContentResult
-                    {
-                        Content = JsonSerializer.Serialize(changedPortfolio, options),
-                        ContentType = "application/json",
-                        StatusCode = 200 // Başarı durumu
-                    };
+                    PortfolioUserDTO changedPortfolio = await _userService.UpdateUserPortfolioBalanceByIdAsync(id, balance);
+                    return Ok(changedPortfolio);
                 }
                 return BadRequest("UserController:ChangePortfolioBalanceUser hata: Admin değilsiniz.");
             }
             catch (Exception ex)
             {
-                return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
+                return BadRequest("UserController:ChangePortfolioBalanceUser hata:" + ex.Message);
             }
         }
     }

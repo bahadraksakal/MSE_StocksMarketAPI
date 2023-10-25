@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.UserDTOs;
 using StocksMarketWebAPI.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -13,26 +15,28 @@ namespace StocksMarketWebAPI.Services
     {
         private readonly StockMarketDbContext _stockMarketDbContext;
         private readonly IConfiguration _configuration;
+        private readonly IMapper _mapper;
 
-        public AuthService(StockMarketDbContext stockMarketDbContext, IConfiguration configuration)
+        public AuthService(StockMarketDbContext stockMarketDbContext, IConfiguration configuration,IMapper mapper)
         {
             _stockMarketDbContext = stockMarketDbContext;
             _configuration = configuration;
+            _mapper = mapper;
         }
 
-        public async Task<User> CheckCredentialsAsync(string userName, string userPassword)
+        public async Task<UserDTO> CheckCredentialsAsync(string userName, string userPassword)
         {            
-            var user = await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
+            User user = await _stockMarketDbContext.Users.FirstOrDefaultAsync(user => user.Name == userName && user.Password == userPassword);
             if (user != null)
             {
                 Log.Warning($"AuthService-CheckCredentialsAsync: {userName} giriş yaptı.");
-                return user;
+                return _mapper.Map<UserDTO>(user);
             }
             Log.Warning($"AuthService-CheckCredentialsAsync: {userName} hatalı giriş denemesi yaptı.");
             return null;
         }
 
-        public string CreateToken(User user)
+        public string CreateToken(UserDTO user)
         {
             var Claims = new[]
                     {

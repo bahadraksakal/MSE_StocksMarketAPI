@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
 using StocksMarketWebAPI.Entities;
 
 namespace StocksMarketWebAPI.Services
@@ -8,12 +10,14 @@ namespace StocksMarketWebAPI.Services
     public class MoneyCardService
     {
         private readonly StockMarketDbContext _stockMarketDbContext;
+        private readonly IMapper _mapper;
 
-        public MoneyCardService(StockMarketDbContext stockMarketDbContext) 
+        public MoneyCardService(StockMarketDbContext stockMarketDbContext, IMapper mapper) 
         { 
             _stockMarketDbContext = stockMarketDbContext;
+            _mapper = mapper;
         }
-        public async Task<UserMoneyCard> AddMoneyCardAsync(int userId,int balance)
+        public async Task<UserMoneyCardDTO> AddMoneyCardAsync(int userId,int balance)
         {
             User userTemp=await _stockMarketDbContext.Users.FirstOrDefaultAsync(user=>user.Id == userId);
             if(userTemp!=null){
@@ -26,12 +30,12 @@ namespace StocksMarketWebAPI.Services
                 await _stockMarketDbContext.SaveChangesAsync();
                 Log.Warning($"MoneyCardService:AddMoneyCardAsync: admin, {newUserMoneyCard.User.Id} id'li {newUserMoneyCard.User.Name} adındaki kullanıcıya" +
                     $" -{newUserMoneyCard.MoneyCard.Balance}- değerinde para kartı tanımladı.");
-                return newUserMoneyCard;            
+                return _mapper.Map<UserMoneyCardDTO>(newUserMoneyCard);            
             }
             Log.Warning($"MoneyCardService:AddMoneyCardAsync: {userId} id'sine sahip bir kullanıcı bulunamadı");
             throw new Exception($"{userId} id'sine sahip bir kullanıcı bulunamadı");
         }
-        public async Task<UserMoneyCard> UseMoneyCardAsync(int userId, int moneyCardId)
+        public async Task<UserMoneyCardDTO> UseMoneyCardAsync(int userId, int moneyCardId)
         {
             UserMoneyCard userMoneyCard=await _stockMarketDbContext.UsersMoneyCard
                 .Include(userMoneyCards=>userMoneyCards.MoneyCard)
@@ -47,10 +51,11 @@ namespace StocksMarketWebAPI.Services
                 {
                     userMoneyCard.Status = true;
                     userMoneyCard.User.PortfolioUser.Portfolio.Balance += userMoneyCard.MoneyCard.Balance;
+                    userMoneyCard.MoneyCard.UsedDate= DateTime.Now;
                     await _stockMarketDbContext.SaveChangesAsync();
                     Log.Warning($"MoneyCardService:UseMoneyCardAsync: {userMoneyCard.User.Id} id'li {userMoneyCard.User.Name} adındaki kullanıcı" +
                         $"{userMoneyCard.MoneyCard.Id} id'li {userMoneyCard.MoneyCard.Balance} değerindeki para kartını kullandı.");
-                    return userMoneyCard;
+                    return _mapper.Map<UserMoneyCardDTO>(userMoneyCard);
                 }
                 Log.Warning($"MoneyCardService:UseMoneyCardAsync: moneyCardId:{userMoneyCard.MoneyCardId} - UserId:{userMoneyCard.UserId} değerlerine sahip bir UserMoneyCard zaten kullanılmış.");
                 throw new Exception($"moneyCardId:{userMoneyCard.MoneyCardId} - UserId:{userMoneyCard.UserId} değerlerine sahip bir UserMoneyCard zaten kullanılmış.");

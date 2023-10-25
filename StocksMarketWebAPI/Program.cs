@@ -56,6 +56,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddAuthorization();
 
+//AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));//IMapper
 
 var app = builder.Build();
 
