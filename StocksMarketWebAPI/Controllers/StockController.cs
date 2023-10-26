@@ -48,6 +48,20 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
 
+        [HttpGet("{stockName}")]
+        public async Task<IActionResult> GetListStockPricesByName(string stockName)
+        {
+            try
+            {
+                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetListStockPricesByName(stockName);
+                return Ok(stockPriceDTOs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:GetStocks hata:" + ex.Message);
+            }
+        }
+
 
     }
 }

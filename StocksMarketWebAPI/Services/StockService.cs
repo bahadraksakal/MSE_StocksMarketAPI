@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
@@ -21,12 +22,7 @@ namespace StocksMarketWebAPI.Services
         public async Task SetStocks(List<StockPriceDTO> stockPriceDTOs)
         {
             /*
-             * Api tüm değerleri alamıyor. Big Para bazı hisselerde bazen veri göndermiyor.
-             * Veri gönderilmeyen durumlarda Status=True set ediliyor.
-             * Eğer Status true ise bu değer veri tabanına işlenmiyor.
-             * Status u true gelen değerin veri tabanın önceden bulunan doğru bir değeri var ise (Status=False) bu değer kullanılmaya devam ediliyor.
-             * 
-             * Hisse senedi fiyat haraketlerini kayıt etmek için StockPrice tablosuna yeni gelen doğru veri (Status=False) eklenir.
+             * Api tüm değerleri alamıyor. Big Para bazı hisselerde bazen veri göndermiyor. Veyaz az veri gönderiyor.
              * Yani bir veri güncelleme işlemi yapılmaz, sadece senedin yeni gelen değeri güncel tarih ile eklenir.
              */
             if (stockPriceDTOs != null)
@@ -38,34 +34,28 @@ namespace StocksMarketWebAPI.Services
                 {
                     StockPrice existingStock = stockPricesFromDB.FirstOrDefault(stockPrice => stockPrice.Stock.Name == stockPriceDTO.StockName);
 
-                    if (stockPriceDTO.StockStatus == false)
+                    if (existingStock != null)
                     {
-                        if (existingStock != null)
+                        // Eşleşen bir Stock bulundu, yeni fiyatını StockPrice'e ekle.
+                        await _stockMarketDbContext.StockPrices.AddAsync(new StockPrice
                         {
-                            // stock'a belki önceden veri gelemediği için true ayarlnamıs olabilir. Önce false set et.
-                            existingStock.Stock.Status = stockPriceDTO.StockStatus;
-                            // Eşleşen bir Stock bulundu, yeni fiyatını StockPrice'e ekle.
-                            await _stockMarketDbContext.StockPrices.AddAsync(new StockPrice
-                            {
-                                StockId = existingStock.Stock.Id,
-                                Price = stockPriceDTO.Price,
-                                Date = stockPriceDTO.Date,
+                            StockId = existingStock.Stock.Id,
+                            Price = stockPriceDTO.Price,
+                            Date = stockPriceDTO.Date,
 
-                            });
-                        }
-                        else
-                        {
-                            // Eşleşen bir Stock bulunamadı, yeni bir Stock ekle // fiyatı olmayabilir yani status true gelebilir.
-                            await _stockMarketDbContext.StockPrices.AddAsync(new StockPrice
-                            {
-                                Stock = new Stock { Name = stockPriceDTO.StockName, Unit = 10000, Status = stockPriceDTO.StockStatus },
-                                Date = stockPriceDTO.Date,
-                                Price = stockPriceDTO.Price,
-                            });
-                        }
+                        });
                     }
-                                                    
-                }
+                    else
+                    {
+                        // Eşleşen bir Stock bulunamadı, yeni bir Stock ekle // fiyatı olmayabilir yani status true gelebilir.
+                        await _stockMarketDbContext.StockPrices.AddAsync(new StockPrice
+                        {
+                            Stock = new Stock { Name = stockPriceDTO.StockName, Unit = 10000, Status = stockPriceDTO.StockStatus },
+                            Date = stockPriceDTO.Date,
+                            Price = stockPriceDTO.Price,
+                        });
+                    }
+                }       
                 await _stockMarketDbContext.SaveChangesAsync();
                 Log.Warning($"StockService-SetStocks işlemi çalıştı.");
                 return;
@@ -84,6 +74,21 @@ namespace StocksMarketWebAPI.Services
                                             .ToList();
             Log.Warning($"StockService-GetStocks çalıştı.");
             return _mapper.Map<List<StockPriceDTO>>(stockPrices);
+        }
+
+        public async Task<List<StockPriceDTO>> GetListStockPricesByName(string stockName)
+        {
+            List<StockPrice> stockPrices = _stockMarketDbContext.StockPrices
+                                            .Include(stockPrices => stockPrices.Stock)
+                                            .Where(stockPrices => stockPrices.Stock.Status == false && stockPrices.Stock.Name == stockName)
+                                            .OrderByDescending(stockPrices => stockPrices.Date).ToList();
+
+            Log.Warning($"StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: {stockName}");
+            if (!stockPrices.IsNullOrEmpty())
+            {
+                return _mapper.Map<List<StockPriceDTO>>(stockPrices);
+            }
+            throw new Exception($"Bu hisse senedi yok veya şuan bu hisse senedinin bilgisi sistemlerimizde mevcut değil. Sorgulanan Hisse: {stockName}");
         }
     }
 }

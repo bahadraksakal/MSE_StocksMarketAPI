@@ -1,5 +1,7 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Text.Json;
+using System.Threading;
 
 namespace GetStocksService
 {
@@ -11,7 +13,7 @@ namespace GetStocksService
             string BaseUrl = "https://localhost:7261/api/Stock/SetStocks";
 
             string apiUrl = "http://bigpara.hurriyet.com.tr/api/v1/hisse/list";
-            string apiUrlDetay = "https://bigpara.hurriyet.com.tr/api/v1/borsa/hisseyuzeysel/";
+            string apiUrlDetail = "https://bigpara.hurriyet.com.tr/api/v1/borsa/hisseyuzeysel/";
 
             using (var httpClient = new HttpClient())
             {
@@ -28,56 +30,17 @@ namespace GetStocksService
 
                     if (result != null && result.code == "0")
                     {
-                        HttpResponseMessage responseDetail;
-                        string jsonStockDetail;
-                        ApiResponseDetail apiResponseDetail;
-                        List<StockDTO> stockDTOs = new List<StockDTO>();
-
-                        foreach (var dataItem in result.data)
-                        {
-                            if(dataItem.tip == "Hisse") 
-                            {
-                                try
-                                {
-
-                                    responseDetail = await httpClient.GetAsync(apiUrlDetay + dataItem.kod);
-                                    response.EnsureSuccessStatusCode();
-
-                                    jsonStockDetail = await responseDetail.Content.ReadAsStringAsync();
-                                    //Console.WriteLine(jsonStockDetail);
-
-                                    apiResponseDetail = JsonSerializer.Deserialize<ApiResponseDetail>(jsonStockDetail);
-                                    if (apiResponseDetail.data.hisseYuzeysel != null)
-                                    {
-                                        stockDTOs.Add(new StockDTO
-                                        {
-                                            StockName = apiResponseDetail.data.hisseYuzeysel.sembol,
-                                            Price = apiResponseDetail.data.hisseYuzeysel.satis,
-                                            Date = DateTime.Now,
-                                            StockStatus = false
-                                        });
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    stockDTOs.Add(new StockDTO
-                                    {
-                                        StockName = dataItem.kod,
-                                        Price = 0.00f,
-                                        Date = DateTime.Now,
-                                        StockStatus = true
-                                    });
-                                }
-                            }
-                        }
+                        Methods methods = new Methods();
+                        List<StockDTO> stockDTOs = await methods.GetStockDetail(httpClient,result,apiUrlDetail);
                         Console.WriteLine("Tüm veriler çekildi. İşlem Başarılı.");
-                        //Console.WriteLine("Alınan Veriler:");
 
-                        //foreach (var stockDTO in stockDTOs)
-                        //{
-                        //    Console.WriteLine($"Name: {stockDTO.StockName} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
-                        //}
-                        // JSON verisini hazırla
+                        Console.WriteLine("Alınan Veriler:");
+                        foreach (var stockDTO in stockDTOs)
+                        {
+                            Debug.WriteLine($"Name: {stockDTO.StockName} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
+                        }
+                        
+                        //JSON verisini hazırla
                         string jsonstockDTOs = JsonSerializer.Serialize(stockDTOs);
                         var content = new StringContent(jsonstockDTOs, Encoding.UTF8, "application/json");
                         HttpResponseMessage responseBase = await httpClient.PostAsync(BaseUrl, content);
@@ -103,7 +66,69 @@ namespace GetStocksService
                 {
                     Console.WriteLine($"HTTP isteği sırasında hata oluştu: {e.Message}");
                 }
+                finally
+                {
+                    Environment.Exit(0);
+                }
             }
+        }
+        
+    }
+    
+    class Methods
+    {
+        public async Task<List<StockDTO>> GetStockDetail(HttpClient httpClient, ApiResponse result, string apiUrlDetail)
+        {
+            HttpResponseMessage responseDetail;
+            string jsonStockDetail;
+            ApiResponseDetail apiResponseDetail;
+            //Paralel kullanınca bazı senetleri 2 kere veya 3 kere yazıyordu, durumu çözmek için uğraştım fakat tam anlamıyla çözemedim.
+            //Dictionary ile aynı işlem 2-3 kere olsa bile bunu engelleyebiliyorum.
+            //paralel kullanmaz isem işlem 2-3 dk sürüyor paralel ile 20 saniye.
+            Dictionary<string, StockDTO> stockDTOsKeyValuePairs = new Dictionary<string, StockDTO>();
+
+            var options = new ParallelOptions()
+            {
+                MaxDegreeOfParallelism = 20
+            };
+
+            await Parallel.ForEachAsync(result.data, options, async (dataItem, ct) =>
+            {
+                if (dataItem.tip == "Hisse")
+                {
+                    try
+                    {
+
+                        responseDetail = await httpClient.GetAsync(apiUrlDetail + dataItem.kod);
+                        if (responseDetail.IsSuccessStatusCode)
+                        {
+                            jsonStockDetail = await responseDetail.Content.ReadAsStringAsync();
+                            //Console.WriteLine(jsonStockDetail);
+
+                            apiResponseDetail = JsonSerializer.Deserialize<ApiResponseDetail>(jsonStockDetail);
+                            if (apiResponseDetail.data.hisseYuzeysel != null && apiResponseDetail.data.hisseYuzeysel.satis != 0)
+                            {
+                                lock (stockDTOsKeyValuePairs)
+                                {
+                                    stockDTOsKeyValuePairs.TryAdd(apiResponseDetail.data.hisseYuzeysel.sembol, new StockDTO
+                                    {
+                                        StockName = apiResponseDetail.data.hisseYuzeysel.sembol,
+                                        Price = apiResponseDetail.data.hisseYuzeysel.satis,
+                                        Date = DateTime.Now,
+                                        StockStatus = false
+                                    });
+                                }
+                            }
+                        }                       
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine("Hisse Detay Çekerken Hata: " + ex.Message);
+                    }
+                }
+            });
+
+            return stockDTOsKeyValuePairs.Values.ToList();
         }
     }
 }

@@ -1,0 +1,18 @@
+SELECT [Id]
+      ,[Name]
+      ,[Unit]
+      ,[Status]
+  FROM [StockMarketDb].[dbo].[Stocks]
+  WHERE [Name] IN (
+    SELECT [Name]
+    FROM [StockMarketDb].[dbo].[Stocks]
+    GROUP BY [Name]
+    HAVING COUNT(*) > 1
+  )
+  ORDER BY [Name]
+
+SELECT sp.*
+FROM StockPrices sp
+INNER JOIN Stocks s ON sp.StockId = s.Id
+WHERE s.Status = 0 AND s.Name = 'ADEL'
+ORDER BY sp.Date DESC;
