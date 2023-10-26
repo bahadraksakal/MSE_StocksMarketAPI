@@ -28,6 +28,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<MoneyCardService>();
 builder.Services.AddScoped<MainBoardService>();
+builder.Services.AddScoped<StockService>();
 
 //seri log
 builder.Services.AddSerilog();

@@ -8,12 +8,12 @@ namespace GetStocksService
 {
     public class StockDTO
     {
-        public string Name { get; set; }
+        public string StockName { get; set; }
 
         public float Price { get; set; }
 
         public DateTime Date { get; set; }
 
-        public bool Status { get; set; }
+        public bool StockStatus { get; set; }
     }
 }

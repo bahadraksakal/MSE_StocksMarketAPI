@@ -8,7 +8,7 @@
 
         public string StockName { get; set; }
 
-        public int StockUnit { get; set; }
+        public int? StockUnit { get; set; }
 
         public bool StockStatus { get; set; }
 

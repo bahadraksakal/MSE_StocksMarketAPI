@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 
 namespace GetStocksService
 {
@@ -6,6 +7,9 @@ namespace GetStocksService
     {
         static async Task Main(string[] args)
         {
+
+            string BaseUrl = "https://localhost:7261/api/Stock/SetStocks";
+
             string apiUrl = "http://bigpara.hurriyet.com.tr/api/v1/hisse/list";
             string apiUrlDetay = "https://bigpara.hurriyet.com.tr/api/v1/borsa/hisseyuzeysel/";
 
@@ -13,6 +17,7 @@ namespace GetStocksService
             {
                 try
                 {
+                    Console.WriteLine("Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...");
                     // Web API'den verileri çek
                     HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
                     response.EnsureSuccessStatusCode();
@@ -27,48 +32,67 @@ namespace GetStocksService
                         string jsonStockDetail;
                         ApiResponseDetail apiResponseDetail;
                         List<StockDTO> stockDTOs = new List<StockDTO>();
-                        var tasks = result.data.Where(dataItem => dataItem.tip == "Hisse").Select(async dataItem =>
+
+                        foreach (var dataItem in result.data)
                         {
-                            try
+                            if(dataItem.tip == "Hisse") 
                             {
+                                try
+                                {
 
-                                responseDetail = await httpClient.GetAsync(apiUrlDetay + dataItem.kod);
-                                response.EnsureSuccessStatusCode();
+                                    responseDetail = await httpClient.GetAsync(apiUrlDetay + dataItem.kod);
+                                    response.EnsureSuccessStatusCode();
 
-                                jsonStockDetail = await responseDetail.Content.ReadAsStringAsync();
-                                //Console.WriteLine(jsonStockDetail);
+                                    jsonStockDetail = await responseDetail.Content.ReadAsStringAsync();
+                                    //Console.WriteLine(jsonStockDetail);
 
-                                apiResponseDetail = JsonSerializer.Deserialize<ApiResponseDetail>(jsonStockDetail);
-                                if (apiResponseDetail.data.hisseYuzeysel != null)
+                                    apiResponseDetail = JsonSerializer.Deserialize<ApiResponseDetail>(jsonStockDetail);
+                                    if (apiResponseDetail.data.hisseYuzeysel != null)
+                                    {
+                                        stockDTOs.Add(new StockDTO
+                                        {
+                                            StockName = apiResponseDetail.data.hisseYuzeysel.sembol,
+                                            Price = apiResponseDetail.data.hisseYuzeysel.satis,
+                                            Date = DateTime.Now,
+                                            StockStatus = false
+                                        });
+                                    }
+                                }
+                                catch (Exception ex)
                                 {
                                     stockDTOs.Add(new StockDTO
                                     {
-                                        Name = apiResponseDetail.data.hisseYuzeysel.sembol,
-                                        Price = apiResponseDetail.data.hisseYuzeysel.satis,
+                                        StockName = dataItem.kod,
+                                        Price = 0.00f,
                                         Date = DateTime.Now,
-                                        Status = false
+                                        StockStatus = true
                                     });
                                 }
                             }
-                            catch (Exception ex)
-                            {
-                                stockDTOs.Add(new StockDTO
-                                {
-                                    Name = dataItem.kod,
-                                    Price = 0.00f,
-                                    Date = DateTime.Now,
-                                    Status = true
-                                });
-                            }
-                        });
-                        await Task.WhenAll(tasks);
-
-                        Console.WriteLine("Alınan Veriler:");
-
-                        foreach (var stockDTO in stockDTOs)
-                        {
-                            Console.WriteLine($"Name: {stockDTO.Name} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
                         }
+                        Console.WriteLine("Tüm veriler çekildi. İşlem Başarılı.");
+                        //Console.WriteLine("Alınan Veriler:");
+
+                        //foreach (var stockDTO in stockDTOs)
+                        //{
+                        //    Console.WriteLine($"Name: {stockDTO.StockName} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
+                        //}
+                        // JSON verisini hazırla
+                        string jsonstockDTOs = JsonSerializer.Serialize(stockDTOs);
+                        var content = new StringContent(jsonstockDTOs, Encoding.UTF8, "application/json");
+                        HttpResponseMessage responseBase = await httpClient.PostAsync(BaseUrl, content);
+
+                        if (responseBase.IsSuccessStatusCode)
+                        {
+                            Console.WriteLine("POST isteği başarılı.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("POST isteği başarısız. Hata kodu: " + responseBase.StatusCode);
+                            string errorResponse = await responseBase.Content.ReadAsStringAsync();
+                            Console.WriteLine("Hata Mesajı: " + errorResponse);
+                        }
+
                     }
                     else
                     {
