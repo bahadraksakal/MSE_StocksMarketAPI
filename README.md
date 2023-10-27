@@ -1,5 +1,5 @@
 # MSE_StocksMarketAPI
-**asp.net core projesi 
+asp.net core projesi 
 
 - Hisse senetlerini çekmek için: Önce ana projeyi çalıştırın. Daha sonra GetStockService projesini derleyin ve .exe dosyası üzerinden çalıştırın.
 GetStockService tüm hisseleri çekip otomatik olarak veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler,, var ise son fiyatını sisteme ekler.)
