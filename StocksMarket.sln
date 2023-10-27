@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketWebAPI", "StocksMarketWebAPI\StocksMarketWebAPI.csproj", "{C8774AED-4BBE-45E4-B37F-23162FC0281C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1AFAD475-4BA6-40D1-B918-182EE170282A} = {1AFAD475-4BA6-40D1-B918-182EE170282A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetStocksService", "GetStocksService\GetStocksService.csproj", "{A5EF0687-E06E-4087-9951-C0085AA7E940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireApp", "HangFireApp\HangFireApp.csproj", "{1AFAD475-4BA6-40D1-B918-182EE170282A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{A5EF0687-E06E-4087-9951-C0085AA7E940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5EF0687-E06E-4087-9951-C0085AA7E940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5EF0687-E06E-4087-9951-C0085AA7E940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFAD475-4BA6-40D1-B918-182EE170282A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFAD475-4BA6-40D1-B918-182EE170282A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFAD475-4BA6-40D1-B918-182EE170282A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFAD475-4BA6-40D1-B918-182EE170282A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -81,3 +81,6 @@ Yeni bakiyeniz 17112,174 TL. Sistemde kalan hisse senedi 9990 adettir.
 2023-10-27 13:36:33.680 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet satın adlınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 17112,174 TL.
 Yeni bakiyeniz 16697,633 TL. Sistemde kalan hisse senedi 9980 adettir.
 2023-10-27 13:37:35.360 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-27 16:08:53.049 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-27 16:09:04.309 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-27 16:09:34.310 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
