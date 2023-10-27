@@ -1,7 +1,6 @@
 # MSE_StocksMarketAPI
-*asp.net core projesi 
+**asp.net core projesi 
 
-**
 - Hisse senetlerini çekmek için: Önce ana projeyi çalıştırın. Daha sonra GetStockService projesini derleyin ve .exe dosyası üzerinden çalıştırın.
 GetStockService tüm hisseleri çekip otomatik olarak veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler,, var ise son fiyatını sisteme ekler.)
 Ana proje çalışıyor olmasına rağmen GetStockService'in post metodu hata verir ise baseUrl'i güncelleyin.
@@ -13,4 +12,3 @@ Bu hatayı engellemek için komutarı çalıştırırken projeyi belirtin. Örne
 - Projede Bearer Token kullanılmaktır, login olduktan sonra backend tokeni geri döndürür.
 
 - Bazı metotlar için admin yetkisi gerekir. Admin hesabını kullanmak için - username: admin password: admin
-**
