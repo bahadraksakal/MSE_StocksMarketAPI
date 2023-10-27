@@ -12,12 +12,42 @@ namespace StocksMarketWebAPI.Controllers
     [ApiController]
     public class StockController:ControllerBase
     {
-        private readonly StockMarketDbContext _stockMarketDbContext;
         private readonly StockService _stockService;
-        public StockController(StockMarketDbContext stockMarketDbContext, StockService stockService) 
+        public StockController(StockService stockService) 
         {
-            _stockMarketDbContext = stockMarketDbContext;
             _stockService = stockService;
+        }
+
+        [Authorize]
+        [HttpGet("{buyingStockUnit}/{stockName}")]
+        public async Task<IActionResult> BuyStock(int buyingStockUnit, string stockName)
+        {
+            try
+            {
+                int userId = int.Parse(User.FindFirstValue("userId"));
+                string info=await _stockService.BuyStockAsync(userId,buyingStockUnit,stockName);
+                return Ok(info);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:SetStocks hata:" + ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("{sellingStockUnit}/{stockName}")]
+        public async Task<IActionResult> SellStock(int sellingStockUnit, string stockName)
+        {
+            try
+            {
+                int userId = int.Parse(User.FindFirstValue("userId"));
+                string info = await _stockService.SellStockAsync(userId, sellingStockUnit, stockName);
+                return Ok(info);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:SetStocks hata:" + ex.Message);
+            }
         }
 
         [HttpPost]
@@ -25,7 +55,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                await _stockService.SetStocks(stockPriceDTOs);
+                await _stockService.SetStocksAsync(stockPriceDTOs);
                 return Ok("Hisse senetleri ve verileri başarıyla eklendi");
             }
             catch (Exception ex)
@@ -39,7 +69,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetStocks();
+                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetStocksAsync();
                 return Ok(stockPriceDTOs);
             }
             catch (Exception ex)
@@ -53,7 +83,7 @@ namespace StocksMarketWebAPI.Controllers
         {
             try
             {
-                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetListStockPricesByName(stockName);
+                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetListStockPricesByNameAsync(stockName);
                 return Ok(stockPriceDTOs);
             }
             catch (Exception ex)

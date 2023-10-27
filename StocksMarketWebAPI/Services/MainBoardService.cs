@@ -18,12 +18,12 @@ namespace StocksMarketWebAPI.Services
             _mapper = mapper;
             
         }
-        public async Task<MainBoard> GetMainBoardAsync()
+        public async Task<MainBoardDTO> GetMainBoardAsync()
         {
-            MainBoard mainBoard = await _stockMarketDbContext.MainBoards.FirstOrDefaultAsync();
+            MainBoard mainBoard = await _stockMarketDbContext.MainBoards.AsNoTracking().FirstOrDefaultAsync();
             if(mainBoard != null) {
                 Log.Warning($"MainBoardService-GetMainBoardAsync: çalıştı. MainBoard Id:{mainBoard.Id}");
-                return mainBoard;
+                return _mapper.Map<MainBoardDTO>(mainBoard);
             }
             Log.Warning($"MainBoardService-GetMainBoardAsync: MainBoard bulunamadı");
             throw new Exception("MainBoard bulunamadı");
@@ -42,7 +42,5 @@ namespace StocksMarketWebAPI.Services
             Log.Warning($"MainBoardService-ChangeCommissionRateAsync: MainBoard bulunamadı");
             throw new Exception("MainBoard bulunamadı");
         }
-
-
     }
 }

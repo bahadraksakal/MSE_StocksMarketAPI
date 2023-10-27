@@ -15,6 +15,7 @@ namespace StocksMarketWebAPI.Context
         public virtual DbSet<UserMoneyCard> UsersMoneyCard { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
         public virtual DbSet<StockPrice> StockPrices { get; set; }
+        public virtual DbSet<PortfolioStock> PortfolioStock { get; set; }
         public virtual DbSet<StockBuyAndSale> StockBuyAndSale { get; set; }
 
         public StockMarketDbContext(DbContextOptions<StockMarketDbContext> options):base(options)

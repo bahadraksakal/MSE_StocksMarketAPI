@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketWebAPI", "StocksMarketWebAPI\StocksMarketWebAPI.csproj", "{C8774AED-4BBE-45E4-B37F-23162FC0281C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetStocksService", "GetStocksService\GetStocksService.csproj", "{A5EF0687-E06E-4087-9951-C0085AA7E940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetStocksService", "GetStocksService\GetStocksService.csproj", "{A5EF0687-E06E-4087-9951-C0085AA7E940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -34,3 +34,50 @@
 2023-10-26 17:31:50.834 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-26 17:33:10.592 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-26 17:33:30.593 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-26 17:40:47.705 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-26 17:40:59.087 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-27 12:45:51.599 +03:00 [WRN] AuthService-CheckCredentialsAsync: deneme2 giriş yaptı.
+2023-10-27 12:45:51.943 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTIiLCJ1c2VySWQiOiI0IiwibmJmIjoxNjk4Mzk5OTUxLCJleHAiOjE2OTg0MDM1NTEsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.hQDU7k2zljik5KellAohDN9CqGv_fRUGPtfKgqLY4u4
+2023-10-27 12:46:35.238 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-27 12:48:21.842 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-27 12:49:55.351 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-27 12:49:55.406 +03:00 [WRN] AEFES kodlu hisse senedinden,103,6 TL fiyatından, 10 adet satın adlınız.İşlem 1036 TL, komisyon 51,8 TL tuttu.Eski bakiyeniz 23400 TL.
+Yeni bakiyeniz 22312,2 TL.Sistemde kalan hisse senedi 10000 adettir.
+2023-10-27 13:02:54.069 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-27 13:02:54.270 +03:00 [WRN] AEFES kodlu hisse senedinden,103,6 TL fiyatından, 10 adet satın adlınız.İşlem 1036 TL, komisyon 51,8 TL tuttu.Eski bakiyeniz 22312,2 TL.
+Yeni bakiyeniz 21224,398 TL.Sistemde kalan hisse senedi 9990 adettir.
+2023-10-27 13:03:06.833 +03:00 [WRN] AEFES kodlu hisse senedinden,103,6 TL fiyatından, 10 adet satın adlınız.İşlem 1036 TL, komisyon 51,8 TL tuttu.Eski bakiyeniz 21224,398 TL.
+Yeni bakiyeniz 20136,598 TL.Sistemde kalan hisse senedi 9980 adettir.
+2023-10-27 13:03:11.450 +03:00 [WRN] StockService-BuyStockAsync Hata: stockPrice bulunamadı. AEFESs isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir
+2023-10-27 13:03:22.225 +03:00 [WRN] AEFES kodlu hisse senedinden,103,6 TL fiyatından, 10 adet satın adlınız.İşlem 1036 TL, komisyon 51,8 TL tuttu.Eski bakiyeniz 20136,598 TL.
+Yeni bakiyeniz 19048,797 TL.Sistemde kalan hisse senedi 9970 adettir.
+2023-10-27 13:03:36.487 +03:00 [WRN] StockService-BuyStockAsync Hata: Satın alabileceğiniz kadar hisse senedi yok. Sistemdeki hisse senedi adeti: 9970Almak istediğini miktar: 10000
+2023-10-27 13:04:03.963 +03:00 [WRN] StockService-BuyStockAsync Hata: Satın alabileceğiniz kadar hisse senedi yok. Sistemdeki hisse senedi adeti: 9970Almak istediğini miktar: 10000
+2023-10-27 13:05:13.019 +03:00 [WRN]  StockService-BuyStockAsync Hata: 103600 TL'lik işlem miktarı için ödemeniz gerek komisyon 5180 TL'dir. İşlem sonrası hesabınızda kalan tutar -89731,2 TL'dir. Bakiye 0'ın altına düşemez!
+2023-10-27 13:05:50.853 +03:00 [WRN] AEFES kodlu hisse senedinden,103,6 TL fiyatından, 10 adet satın adlınız.İşlem 1036 TL, komisyon 51,8 TL tuttu.Eski bakiyeniz 19048,797 TL.
+Yeni bakiyeniz 17960,996 TL.Sistemde kalan hisse senedi 9960 adettir.
+2023-10-27 13:06:56.218 +03:00 [WRN] A1CAP kodlu hisse senedinden,39,48 TL fiyatından, 10 adet satın adlınız.İşlem 394,8 TL, komisyon 19,74 TL tuttu.Eski bakiyeniz 17960,996 TL.
+Yeni bakiyeniz 17546,455 TL.Sistemde kalan hisse senedi 9990 adettir.
+2023-10-27 13:32:05.925 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-27 13:32:06.128 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet sattınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 17546,455 TL.
+Yeni bakiyeniz 17921,516 TL. Sistemde kalan hisse senedi 10000 adettir.
+2023-10-27 13:32:18.061 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet satın adlınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 17921,516 TL.
+Yeni bakiyeniz 17506,975 TL. Sistemde kalan hisse senedi 9990 adettir.
+2023-10-27 13:32:29.857 +03:00 [WRN] StockService-BuyStockAsync Hata: stockPrice bulunamadı. A1CAP1 isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir
+2023-10-27 13:33:02.400 +03:00 [WRN] StockService-BuyStockAsync Hata: Satmak istediğiniz kadar hisse senedine sahip değilsiniz. Portföyünüzdeki hisse senedi adeti: 10 Satmak istediğini miktar: 11
+2023-10-27 13:33:10.100 +03:00 [WRN] StockService-BuyStockAsync Hata: Satmak istediğiniz kadar hisse senedine sahip değilsiniz. Portföyünüzdeki hisse senedi adeti: 10 Satmak istediğini miktar: 11
+2023-10-27 13:33:17.299 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet sattınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 17506,975 TL.
+Yeni bakiyeniz 17882,035 TL. Sistemde kalan hisse senedi 10000 adettir.
+2023-10-27 13:34:12.252 +03:00 [WRN] StockService-BuyStockAsync Hata: Satmak istediğiniz kadar hisse senedine sahip değilsiniz. Portföyünüzdeki hisse senedi adeti: 0 Satmak istediğini miktar: 10
+2023-10-27 13:34:48.100 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-27 13:35:59.838 +03:00 [WRN]  StockService-BuyStockAsync Hata: 394800 TL'lik işlem miktarı için ödemeniz gerek komisyon 19740 TL'dir. İşlem sonrası hesabınızda kalan tutar -396657,97 TL'dir. Bakiye 0'ın altına düşemez!
+2023-10-27 13:36:03.975 +03:00 [WRN]  StockService-BuyStockAsync Hata: 39480 TL'lik işlem miktarı için ödemeniz gerek komisyon 1974 TL'dir. İşlem sonrası hesabınızda kalan tutar -23571,965 TL'dir. Bakiye 0'ın altına düşemez!
+2023-10-27 13:36:06.956 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 100 adet satın adlınız. İşlem 3948 TL, komisyon 197,40001 TL tuttu. Eski bakiyeniz 17882,035 TL.
+Yeni bakiyeniz 13736,635 TL. Sistemde kalan hisse senedi 9900 adettir.
+2023-10-27 13:36:18.609 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet sattınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 13736,635 TL.
+Yeni bakiyeniz 14111,694 TL. Sistemde kalan hisse senedi 9910 adettir.
+2023-10-27 13:36:27.133 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 80 adet sattınız. İşlem 3158,4 TL, komisyon 157,92 TL tuttu. Eski bakiyeniz 14111,694 TL.
+Yeni bakiyeniz 17112,174 TL. Sistemde kalan hisse senedi 9990 adettir.
+2023-10-27 13:36:33.680 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,48 TL fiyatından, 10 adet satın adlınız. İşlem 394,8 TL, komisyon 19,74 TL tuttu. Eski bakiyeniz 17112,174 TL.
+Yeni bakiyeniz 16697,633 TL. Sistemde kalan hisse senedi 9980 adettir.
+2023-10-27 13:37:35.360 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
