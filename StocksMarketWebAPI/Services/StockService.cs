@@ -30,11 +30,12 @@ namespace StocksMarketWebAPI.Services
                 Log.Warning($"StockService-BuyStockAsync Hata: {userId} id li bir kullanıcı yok.");
                 throw new Exception($"StockService-BuyStockAsync Hata: {userId} id li bir kullanıcı yok.");
             }
-
-            StockPrice stockPrice = _stockMarketDbContext.StockPrices
+            //order by kullanırken first or default içinde where tarzı bir yazım yapmak ef tarafından önerilmemektedir.
+            StockPrice stockPrice = await _stockMarketDbContext.StockPrices
                 .Include(stockPrices => stockPrices.Stock)
+                .Where(stockPrice => stockPrice.Stock.Name == stockName && stockPrice.Stock.Status == false)
                 .OrderByDescending(stockPrice => stockPrice.Date)
-                .FirstOrDefault(stockPrice => stockPrice.Stock.Name == stockName && stockPrice.Stock.Status == false);
+                .FirstOrDefaultAsync();
             if (stockPrice == null)
             {
                 Log.Warning($"StockService-BuyStockAsync Hata: stockPrice bulunamadı." +
@@ -131,11 +132,14 @@ namespace StocksMarketWebAPI.Services
                 throw new Exception($"StockService-BuyStockAsync Hata: {userId} id li bir kullanıcı yok.");
             }
 
-            StockPrice stockPrice = _stockMarketDbContext.StockPrices
+            //order by kullanırken first or default içinde where tarzı bir yazım yapmak ef tarafından önerilmemektedir.
+            StockPrice stockPrice = await _stockMarketDbContext.StockPrices
                 .Include(stockPrices => stockPrices.Stock)
+                .Where(stockPrice => stockPrice.Stock.Name == stockName && stockPrice.Stock.Status == false)
                 .OrderByDescending(stockPrice => stockPrice.Date)
-                .FirstOrDefault(stockPrice => stockPrice.Stock.Name == stockName &&stockPrice.Stock.Status == false);
-            if(stockPrice == null)
+                .FirstOrDefaultAsync();
+
+            if (stockPrice == null)
             {
                 Log.Warning($"StockService-BuyStockAsync Hata: stockPrice bulunamadı." +
                    $" {stockName} isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir");

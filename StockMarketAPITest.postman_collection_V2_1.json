@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "397b81e9-01da-4c02-ac4a-22239d469efc",
+		"name": "StockMarketAPITest",
+		"description": "Hisse alım-satımı yapılan asp.net core wep API projesi için postman testleri.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17672848"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/api/User/ChangeStatusUser/{UserId}/{Role}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/User/ChangeStatusUser/4/User",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"ChangeStatusUser",
+								"4",
+								"User"
+							]
+						},
+						"description": "User status değiştirme \"Admin/User\" - sadece admin kullanabilir."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/User/ChangePortfolioBalanceUser/{UserId}/{PortfolioBalance}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/User/ChangePortfolioBalanceUser/52/2340",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"ChangePortfolioBalanceUser",
+								"52",
+								"2340"
+							]
+						},
+						"description": "Kullanıcın portfoyündeki para miktarını değiştirir - Auth zorunlu"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/User/AddUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"deneme30\",\r\n  \"password\": \"deneme30\",\r\n  \"email\": \"deneme30@gmail.com\",\r\n  \"tel\": \"05554443311\",\r\n  \"role\": \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/User/AddUser",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"AddUser"
+							]
+						},
+						"description": "AddUser - sadece admin kullanabilir. admin tokeni alın."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/User/GetUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/User/GetUsers",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"GetUsers"
+							]
+						},
+						"description": "Kullanıcı Bilgilerini getirir. - Sadece Admin"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/User/GetUsersWithDeatil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/User/GetUsersWithDeatil",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"GetUsersWithDeatil"
+							]
+						},
+						"description": "Kullanıcı bilgilerini portfoy bakiyeleri ile getirir - Yalnızca Admin"
+					},
+					"response": []
+				}
+			],
+			"description": "User ile ilgili işlemler -UserController \"Sadece Admin\""
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/api/Auth/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"admin\",\r\n    \"Password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/Auth/Login",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"Login"
+							]
+						},
+						"description": "Login metodu geriye auth için kullanılcak tokeni döndürür. \r\nGüncel Tokeni, postman testleri için env. kısmına set edin."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Auth/Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"deneme31\",\r\n  \"password\": \"deneme31\",\r\n  \"email\": \"deneme31@gmail.com\",\r\n  \"tel\": \"05554443322\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/Auth/Register",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"Register"
+							]
+						},
+						"description": "Kayıt Ol - Kullanıcı Role Default User atanır. -Auth gerekli değil."
+					},
+					"response": []
+				}
+			],
+			"description": "Login, Register işlemleri -AuthController \"Auth gerekmez\""
+		},
+		{
+			"name": "MainBoard",
+			"item": [
+				{
+					"name": "/api/MainBoard/ChangeCommissionRate/{KomisyonOranı}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/MainBoard/ChangeCommissionRate/5",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MainBoard",
+								"ChangeCommissionRate",
+								"5"
+							]
+						},
+						"description": "Komisyon oranını değiştir - Sadece admin kullanabilir."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/MainBoard/GetMainBoard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/MainBoard/GetMainBoard",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MainBoard",
+								"GetMainBoard"
+							]
+						},
+						"description": "Sitemin komisyon oranı ve bakiyesi gibi temel bilgileri getirir.\r\n- Sadece Admin kullanabilir."
+					},
+					"response": []
+				}
+			],
+			"description": "Ana sistem özellikleri ile ilgili işlemler -MainBoardController \"Sadece Admin\""
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "/api/Stock/GetStocks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/GetStocks",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"GetStocks"
+							]
+						},
+						"description": "Tüm hisse senetlerini listeler - auth olan herkes kullanabilir"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Stock/SellStock/{SellingStockUnit}/{StockCode}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/SellStock/10/A1CAP",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"SellStock",
+								"10",
+								"A1CAP"
+							]
+						},
+						"description": "Hisse senedi sat - Auth olan kullanıcılar kullanabilir."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Stock/BuyStock/10/A1CAP",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/BuyStock/10/A1CAP",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"BuyStock",
+								"10",
+								"A1CAP"
+							]
+						},
+						"description": "Hisse senedi al - auth olanlar"
+					},
+					"response": []
+				}
+			],
+			"description": "Hisse senetleri ile ilgili işlemler -StockController \"Auth Zorunlu\""
+		},
+		{
+			"name": "MoneyCard",
+			"item": [
+				{
+					"name": "/api/MoneyCard/AddMoneyCard/{UserId}/{MoneyCardBalance}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/MoneyCard/AddMoneyCard/1/3000",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MoneyCard",
+								"AddMoneyCard",
+								"1",
+								"3000"
+							]
+						},
+						"description": "Bir kullanıcıya kullanabileceği bir para kartı tanımlar.\r\n- Sadece admin kullanabilir."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/MoneyCard/UseMoneyCard/{MoneyCardId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/MoneyCard/UseMoneyCard/11",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MoneyCard",
+								"UseMoneyCard",
+								"11"
+							]
+						},
+						"description": "Tanımlı para kartını kullan. - Auth zorunlu"
+					},
+					"response": []
+				}
+			],
+			"description": "Para kartları ile ilgili işlemler -MoneyCard \"Sadece Admin veya Auth olanların kullanabildiği karışık\""
+		}
+	]
+}

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using Hangfire;
+﻿using Hangfire;
+using Microsoft.Extensions.Configuration;
 
 namespace HangFireApp
 {
@@ -9,17 +7,18 @@ namespace HangFireApp
     {
         static void Main()
         {
+            IConfiguration configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-            string GetStocksServiceExePath = @"..\..\..\..\GetStocksService\\bin\\Debug\\net7.0\\GetStocksService.exe";
-
-            GlobalConfiguration.Configuration.UseSqlServerStorage("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StockMarketDbHangFire;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            GlobalConfiguration.Configuration.UseSqlServerStorage(configuration["ConnectionString:ConStr"]);
             
             BackGroundJobRunGetStocksService jobRunGetStocksService = new BackGroundJobRunGetStocksService();
-            
+
             using (var server = new BackgroundJobServer())
             {
                 //5 dakikada bir çalıştırmak için Hangfire.
-                RecurringJob.AddOrUpdate(() => jobRunGetStocksService.RunGetStocksService(GetStocksServiceExePath), "*/30 * * * * *");
+                RecurringJob.AddOrUpdate(() => jobRunGetStocksService.RunGetStocksService(configuration["Path:GetStockServicePath"]), "*/1 * * * *");
 
                 Console.WriteLine("Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.");
                 Console.ReadLine();

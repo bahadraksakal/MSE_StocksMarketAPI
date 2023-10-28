@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using StocksMarketWebAPI.Context;
-using StocksMarketWebAPI.DTOs.MainBoardDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
 
 namespace StocksMarketWebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class StockController:ControllerBase
@@ -18,8 +17,7 @@ namespace StocksMarketWebAPI.Controllers
             _stockService = stockService;
         }
 
-        [Authorize]
-        [HttpGet("{buyingStockUnit}/{stockName}")]
+        [HttpPut("{buyingStockUnit}/{stockName}")]
         public async Task<IActionResult> BuyStock(int buyingStockUnit, string stockName)
         {
             try
@@ -34,8 +32,7 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
 
-        [Authorize]
-        [HttpGet("{sellingStockUnit}/{stockName}")]
+        [HttpPut("{sellingStockUnit}/{stockName}")]
         public async Task<IActionResult> SellStock(int sellingStockUnit, string stockName)
         {
             try
@@ -50,7 +47,8 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
 
-        [HttpPost]
+        [Authorize(Policy = "CustomServerPolicy")]
+        [HttpPut]
         public async Task<IActionResult> SetStocks([FromBody] List<StockPriceDTO> stockPriceDTOs)
         {
             try

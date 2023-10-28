@@ -20,6 +20,18 @@ namespace StocksMarketWebAPI.Services
             _stockMarketDbContext = stockMarketDbContext;        
             _mapper = mapper;
         }
+        public async Task<List<UserDTO>> GetUsersAsync()
+        {
+            List<User> users= _stockMarketDbContext.Users.AsNoTracking().ToList();
+            return _mapper.Map<List<UserDTO>>(users);
+        }
+        public async Task<List<PortfolioUserDTO>> GetUsersWithDetailAsync()
+        {
+            List<PortfolioUser> portfolioUsers = _stockMarketDbContext.PortfolioUser.AsNoTracking()
+                .Include(portfolioUsers => portfolioUsers.Portfolio)
+                .Include(portfolioUsers => portfolioUsers.User).ToList();
+            return _mapper.Map<List<PortfolioUserDTO>>(portfolioUsers);
+        }
         public async Task<UserDTO> AddUserAsync(string userName, string userPassword, string userEmail, string userTel, string userRole)
         {
             User newUser = new User() { Name = userName, Password = userPassword, Email = userEmail, Tel = userTel, Role = userRole };

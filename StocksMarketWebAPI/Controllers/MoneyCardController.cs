@@ -1,13 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Serilog;
-using StocksMarketWebAPI.Context;
-using StocksMarketWebAPI.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using StocksMarketWebAPI.Services;
-using System.Data;
 using System.Security.Claims;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
 
@@ -26,7 +19,7 @@ namespace StocksMarketWebAPI.Controllers
             _moneyCardService = moneyCardService;
         }
 
-        [HttpGet("{userId}/{balance}")]
+        [HttpPost("{userId}/{balance}")]
         public async Task<IActionResult> AddMoneyCard(int userId,int balance)
         {
             try
@@ -46,7 +39,7 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
 
-        [HttpGet("{moneyCardId}")]
+        [HttpPatch("{moneyCardId}")]
         public async Task<IActionResult> UseMoneyCard(int moneyCardId)
         {
             try

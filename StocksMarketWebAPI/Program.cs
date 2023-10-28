@@ -1,12 +1,10 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using Serilog.Core;
 using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.Services;
-using System;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -56,6 +54,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 builder.Services.AddAuthorization();
+
+//özel authorize ekleme
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("CustomServerPolicy", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim(ClaimTypes.Role, "Server");
+    });
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("CustomAdminPolicy", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim(ClaimTypes.Role, "Admin");
+
+    });
+});
+
 
 //AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));//IMapper

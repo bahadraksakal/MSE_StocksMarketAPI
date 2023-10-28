@@ -13,10 +13,17 @@ namespace HangFireApp
 
         public void RunGetStocksService(string getStocksServicePath)
         {
-            Process.Start(getStocksServicePath);
-            Console.WriteLine($"GetStocksService {counter}. kere çalışıyor");
-            Debug.WriteLine($"GetStocksService {counter}. kere çalışıyor");
-            counter++;
+            try
+            {
+                Process.Start(getStocksServicePath);
+                Console.WriteLine($"GetStocksService {counter}. kere çalışıyor");
+                Debug.WriteLine($"GetStocksService {counter}. kere çalışıyor");
+                counter++;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("FileNotFound or File is used");
+            }
         }
 
     }

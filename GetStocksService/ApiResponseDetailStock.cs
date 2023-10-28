@@ -11,5 +11,6 @@ namespace GetStocksService
         public string sembol {  get; set; }
         public DateTime tarih { get; set; }
         public float satis {  get; set; }
+        public float alis { get; set; }
     }
 }

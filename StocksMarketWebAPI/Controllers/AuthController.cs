@@ -44,11 +44,11 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(string userName,string userPassword)
+        public async Task<IActionResult> Login([FromBody] UserDTO user)
         {
             try
             {
-                UserDTO userTemp = await _authService.CheckCredentialsAsync(userName, userPassword);
+                UserDTO userTemp = await _authService.CheckCredentialsAsync(user.Name, user.Password);
                 if (userTemp != null)
                 {
                     string token = _authService.CreateToken(userTemp);

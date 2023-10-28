@@ -38,11 +38,13 @@ namespace StocksMarketWebAPI.Services
 
         public string CreateToken(UserDTO user)
         {
-            var Claims = new[]
+            
+            Claim[] Claims = new[]
                     {
-                    new Claim("userName", user.Name),
-                    new Claim("userId", user.Id.ToString()),
-                };
+                        new Claim("userName", user.Name),
+                        new Claim("userId", user.Id.ToString()), 
+                        new Claim(ClaimTypes.Role, user.Role),
+                    };
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtConfig:SigningKey"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 

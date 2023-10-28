@@ -16,3 +16,20 @@ FROM StockPrices sp
 INNER JOIN Stocks s ON sp.StockId = s.Id
 WHERE s.Status = 0 AND s.Name = 'ADEL'
 ORDER BY sp.Date DESC;
+
+SELECT TOP 1000 [Id]
+      ,[PortfolioId]
+      ,[StockId]
+      ,[Status]
+      ,[Unit]
+      ,[Price]
+      ,[Date]
+FROM [StockMarketDb].[dbo].[StockBuyAndSale]
+ORDER BY [Date] DESC;
+
+SELECT TOP (1000) [Id]
+      ,[StockId]
+      ,[Price]
+      ,[Date]
+  FROM [StockMarketDb].[dbo].[StockPrices]
+ORDER BY [Date] DESC;

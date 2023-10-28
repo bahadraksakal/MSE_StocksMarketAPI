@@ -10,7 +10,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketWebAPI", "Stock
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetStocksService", "GetStocksService\GetStocksService.csproj", "{A5EF0687-E06E-4087-9951-C0085AA7E940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireApp", "HangFireApp\HangFireApp.csproj", "{1AFAD475-4BA6-40D1-B918-182EE170282A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangFireApp", "HangFireApp\HangFireApp.csproj", "{1AFAD475-4BA6-40D1-B918-182EE170282A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5EF0687-E06E-4087-9951-C0085AA7E940} = {A5EF0687-E06E-4087-9951-C0085AA7E940}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

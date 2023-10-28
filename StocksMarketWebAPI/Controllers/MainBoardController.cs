@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using StocksMarketWebAPI.Entities;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using StocksMarketWebAPI.DTOs.MainBoardDTOs;
 
 namespace StocksMarketWebAPI.Controllers
@@ -23,7 +20,23 @@ namespace StocksMarketWebAPI.Controllers
             _userService = userService;
         }
 
-        [HttpGet("{commissionRate}")]
+        [Authorize(Policy = "CustomAdminPolicy")]
+        [HttpGet]
+        public async Task<IActionResult> GetMainBoard()
+        {
+            try
+            {
+                
+                MainBoardDTO mainBoard = await _mainBoardService.GetMainBoardAsync();
+                return Ok(mainBoard);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("MainBoardController:GetMainBoard hata:" + ex.Message);
+            }
+        }
+
+        [HttpPatch("{commissionRate}")]
         public async Task<IActionResult> ChangeCommissionRate(int commissionRate)
         {
             try

@@ -1,18 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Serilog;
-using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
 using StocksMarketWebAPI.DTOs.UserDTOs;
 using StocksMarketWebAPI.Entities;
 using StocksMarketWebAPI.Services;
-using System.Data;
-using System.Net;
 using System.Security.Claims;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace StocksMarketWebAPI.Controllers
 {
@@ -43,7 +35,7 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
         
-        [HttpGet("{id}/{role}")]
+        [HttpPatch("{id}/{role}")]
         public async Task<IActionResult> ChangeStatusUser(int id,string role)
         {
             try
@@ -63,7 +55,7 @@ namespace StocksMarketWebAPI.Controllers
             }            
         }
 
-        [HttpGet("{id}/{balance}")]
+        [HttpPatch("{id}/{balance}")]
         public async Task<IActionResult> ChangePortfolioBalanceUser(int id,int balance)
         {
             try
@@ -80,6 +72,33 @@ namespace StocksMarketWebAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest("UserController:ChangePortfolioBalanceUser hata:" + ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            try
+            {
+                List<UserDTO> userDTOs = await _userService.GetUsersAsync();
+                return Ok(userDTOs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:GetUsershata:" + ex.Message);
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetUsersWithDeatil()
+        {
+            try
+            {
+                List<PortfolioUserDTO> portfolioUserDTOs = await _userService.GetUsersWithDetailAsync();
+                return Ok(portfolioUserDTOs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:GetUsershata:" + ex.Message);
             }
         }
     }

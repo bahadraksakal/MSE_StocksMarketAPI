@@ -1,19 +1,30 @@
-﻿using System.Diagnostics;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http.Headers;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using System.Threading;
 
 namespace GetStocksService
 {
     class Program
     {
+
         static async Task Main(string[] args)
         {
 
-            string BaseUrl = "https://localhost:7261/api/Stock/SetStocks";
+            IConfiguration configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-            string apiUrl = "http://bigpara.hurriyet.com.tr/api/v1/hisse/list";
-            string apiUrlDetail = "https://bigpara.hurriyet.com.tr/api/v1/borsa/hisseyuzeysel/";
+
+            string BaseUrl = configuration["Url:BaseUrl"];
+            string apiUrl = configuration["Url:ApiUrl"];
+            string apiUrlDetail = configuration["Url:ApiUrlDetail"];
+
+            string token = CreateToken(configuration);
 
             using (var httpClient = new HttpClient())
             {
@@ -33,25 +44,26 @@ namespace GetStocksService
                         Methods methods = new Methods();
                         List<StockDTO> stockDTOs = await methods.GetStockDetail(httpClient,result,apiUrlDetail);
                         Console.WriteLine("Tüm veriler çekildi. İşlem Başarılı.");
+                        //Console.WriteLine("Alınan Veriler:");
+                        //foreach (var stockDTO in stockDTOs)
+                        //{
+                        //    Debug.WriteLine($"Name: {stockDTO.StockName} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
+                        //}
 
-                        Console.WriteLine("Alınan Veriler:");
-                        foreach (var stockDTO in stockDTOs)
-                        {
-                            Debug.WriteLine($"Name: {stockDTO.StockName} - Price: {stockDTO.Price} - Date: {stockDTO.Date}");
-                        }
-                        
                         //JSON verisini hazırla
+                        httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                        httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                         string jsonstockDTOs = JsonSerializer.Serialize(stockDTOs);
                         var content = new StringContent(jsonstockDTOs, Encoding.UTF8, "application/json");
-                        HttpResponseMessage responseBase = await httpClient.PostAsync(BaseUrl, content);
+                        HttpResponseMessage responseBase = await httpClient.PutAsync(BaseUrl, content);
 
                         if (responseBase.IsSuccessStatusCode)
                         {
-                            Console.WriteLine("POST isteği başarılı.");
+                            Console.WriteLine("PUT isteği başarılı. İşlem başarıyla tamamlandı.");
                         }
                         else
                         {
-                            Console.WriteLine("POST isteği başarısız. Hata kodu: " + responseBase.StatusCode);
+                            Console.WriteLine("PUT isteği başarısız. İşlem tamamlanamadı. Hata kodu: " + responseBase.StatusCode);
                             string errorResponse = await responseBase.Content.ReadAsStringAsync();
                             Console.WriteLine("Hata Mesajı: " + errorResponse);
                         }
@@ -72,9 +84,33 @@ namespace GetStocksService
                 }
             }
         }
-        
+
+        public static string CreateToken(IConfiguration _configuration)
+        {
+            var Claims = new[]
+                    {
+                    new Claim("userName", "Server"),
+                    new Claim("userId", "-1"),
+                    new Claim(ClaimTypes.Role, "Server") // buradaki role göre auth oluyor.
+                };
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtConfig:SigningKey"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var jwtSecurityToken = new JwtSecurityToken(
+                    issuer: _configuration["JwtConfig:Issuer"], //token sağlayıcısı kim
+                    audience: _configuration["JwtConfig:Audience"],
+                    claims: Claims, // tokeni doğruladığımda erişebileceğim gömülü değerler
+                    expires: DateTime.Now.AddMinutes(2), // 1 dk sonra token yok olsun
+                    notBefore: DateTime.Now, // token geçerliği hemen başlasın
+                    signingCredentials: credentials
+                );
+            var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+            return token;
+        }
+
+
     }
-    
+
     class Methods
     {
         public async Task<List<StockDTO>> GetStockDetail(HttpClient httpClient, ApiResponse result, string apiUrlDetail)
@@ -106,14 +142,15 @@ namespace GetStocksService
                             //Console.WriteLine(jsonStockDetail);
 
                             apiResponseDetail = JsonSerializer.Deserialize<ApiResponseDetail>(jsonStockDetail);
-                            if (apiResponseDetail.data.hisseYuzeysel != null && apiResponseDetail.data.hisseYuzeysel.satis != 0)
+                            if (apiResponseDetail.data.hisseYuzeysel != null)
                             {
                                 lock (stockDTOsKeyValuePairs)
-                                {
+                                {                                    
                                     stockDTOsKeyValuePairs.TryAdd(apiResponseDetail.data.hisseYuzeysel.sembol, new StockDTO
                                     {
                                         StockName = apiResponseDetail.data.hisseYuzeysel.sembol,
-                                        Price = apiResponseDetail.data.hisseYuzeysel.satis,
+                                        // hisse tavan ise alış için 0 değeri geliyor.
+                                        Price = apiResponseDetail.data.hisseYuzeysel.satis == 0 ? apiResponseDetail.data.hisseYuzeysel.alis : apiResponseDetail.data.hisseYuzeysel.satis,
                                         Date = DateTime.Now,
                                         StockStatus = false
                                     });

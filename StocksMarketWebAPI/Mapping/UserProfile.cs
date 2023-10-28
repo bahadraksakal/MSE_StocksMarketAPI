@@ -8,7 +8,7 @@ namespace StocksMarketWebAPI.Mapping
     {
         public UserProfile()
         {
-            CreateMap<User, UserDTO>();
+            CreateMap<User, UserDTO>().ForMember(dest => dest.Password, opt => opt.Ignore());
             CreateMap<UserDTO, User>();
         }
     }
