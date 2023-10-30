@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using StocksMarketWebAPI.Context;
+using StocksMarketWebAPI.DTOs.PortfolioStockDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Entities;
 
@@ -278,22 +279,22 @@ namespace StocksMarketWebAPI.Services
 
         public async Task<List<StockPriceDTO>> GetStocksAsync()
         {
-            List<StockPrice> stockPrices = _stockMarketDbContext.StockPrices
+            List<StockPrice> stockPrices = await _stockMarketDbContext.StockPrices
                                             .Include(stockPrices => stockPrices.Stock)
                                             .Where(stockPrice => stockPrice.Stock.Status == false)
                                             .GroupBy(stockPrice => stockPrice.StockId)
                                             .Select(group => group.OrderByDescending(stockPrice => stockPrice.Date).First())
-                                            .ToList();
+                                            .ToListAsync();
             Log.Warning($"StockService-GetStocks çalıştı.");
             return _mapper.Map<List<StockPriceDTO>>(stockPrices);
         }
 
         public async Task<List<StockPriceDTO>> GetListStockPricesByNameAsync(string stockName)
         {
-            List<StockPrice> stockPrices = _stockMarketDbContext.StockPrices
+            List<StockPrice> stockPrices = await _stockMarketDbContext.StockPrices
                                             .Include(stockPrices => stockPrices.Stock)
                                             .Where(stockPrices => stockPrices.Stock.Status == false && stockPrices.Stock.Name == stockName)
-                                            .OrderByDescending(stockPrices => stockPrices.Date).ToList();
+                                            .OrderByDescending(stockPrices => stockPrices.Date).ToListAsync();
 
             Log.Warning($"StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: {stockName}");
             if (!stockPrices.IsNullOrEmpty())
@@ -301,6 +302,21 @@ namespace StocksMarketWebAPI.Services
                 return _mapper.Map<List<StockPriceDTO>>(stockPrices);
             }
             throw new Exception($"Bu hisse senedi yok veya şuan bu hisse senedinin bilgisi sistemlerimizde mevcut değil. Sorgulanan Hisse: {stockName}");
+        }
+
+        public async Task<List<PortfolioStockDTO>> GetOwnedStocksAsync(int userId) 
+        {
+            PortfolioUser portfolioUser = await _stockMarketDbContext.PortfolioUser.FirstOrDefaultAsync(portfolioUser => portfolioUser.UserId == userId);
+            if(portfolioUser == null)
+            {
+                throw new Exception("Size ait bir portfoy bulunamadı.");
+            }
+            List<PortfolioStock> portfolioStocks = await _stockMarketDbContext.PortfolioStock
+                                                    .Include(portfolioStock => portfolioStock.Portfolio)
+                                                    .Include(portfolioStock => portfolioStock.Stock)
+                                                    .Where(portfolioStock=> portfolioStock.PortfolioId == portfolioUser.PortfolioId)
+                                                    .ToListAsync();
+            return _mapper.Map<List<PortfolioStockDTO>>(portfolioStocks);
         }
     }
 }

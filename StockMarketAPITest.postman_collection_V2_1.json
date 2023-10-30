@@ -412,6 +412,36 @@
 						"description": "Hisse senedi al - auth olanlar"
 					},
 					"response": []
+				},
+				{
+					"name": "/api/Stock/GetOwnedStocks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/GetOwnedStocks",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"GetOwnedStocks"
+							]
+						},
+						"description": "Sahip olunan hisse senetlerini getirir. - Auth gerekli"
+					},
+					"response": []
 				}
 			],
 			"description": "Hisse senetleri ile ilgili işlemler -StockController \"Auth Zorunlu\""

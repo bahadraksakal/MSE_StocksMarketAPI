@@ -838,3 +838,18 @@ Yeni bakiyeniz 39583,938 TL. Sistemde kalan hisse senedi 9920 adettir.
 2023-10-29 00:23:53.989 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-29 00:23:57.781 +03:00 [WRN] StockService-GetStocks çalıştı.
 2023-10-29 00:24:06.397 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:04:07.980 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:04:18.529 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:04:50.933 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-29 13:04:50.949 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NTczODkwLCJleHAiOjE2OTg1Nzc0OTAsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.QEngcoGMgxMaWMZQCM8i4jmSz9VqJt8bxQY1t24KE24
+2023-10-29 13:05:14.232 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-29 13:05:21.763 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:05:30.342 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-29 13:05:35.255 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-29 13:05:35.321 +03:00 [WRN] A1CAP kodlu hisse senedinden, 41,26 TL fiyatından, 10 adet satın adlınız. İşlem 412,59998 TL, komisyon 20,63 TL tuttu. Eski bakiyeniz 39583,938 TL.
+Yeni bakiyeniz 39150,707 TL. Sistemde kalan hisse senedi 9910 adettir.
+2023-10-29 13:06:17.775 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:18:41.406 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:19:10.156 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:20:10.268 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-29 13:21:05.733 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.

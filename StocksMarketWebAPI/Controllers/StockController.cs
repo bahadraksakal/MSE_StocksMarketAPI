@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using StocksMarketWebAPI.DTOs.PortfolioStockDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StocksMarketWebAPI.Controllers
 {
@@ -87,6 +89,21 @@ namespace StocksMarketWebAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest("StockController:GetStocks hata:" + ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOwnedStocks()
+        {
+            try
+            {
+                int userId = int.Parse(User.FindFirstValue("userId"));
+                List<PortfolioStockDTO> portfolioStockDTOs = await _stockService.GetOwnedStocksAsync(userId);
+                return Ok(portfolioStockDTOs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:GetOwnedStocks hata:" + ex.Message);
             }
         }
 
