@@ -65,7 +65,7 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 ## Proje Ayağa Kaldırma Adımları, Projenin Genel Çalışma Mantığı Ve Notlar
 
-## Projenin Genel Çalışma Mantığı
+### Projenin Genel Çalışma Mantığı
 
 - Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
 - StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
@@ -81,13 +81,13 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 2. Projeyi çalıştırmadan önce gerekli paketleri yüklemek için NuGet Paket Yöneticisi'ni kullanarak projenin bağımlılıklarını yükleyin.
 
-3. Projeyi Default ayarlar ile çalıştırın:
-a) Projeyi çalıştırın.
+3. Projeyi Default olarak çalıştırmak için:
+   a) Projeyi çalıştırın.
 
-3. Projeyi Manuel olarak çalıştırmak için:
-a) StocksMarketWebAPI uygulamasını çalıştırın.
-b) Ardından GetStockService uygulamasını derleyin.
-c) HangFireApp uygulamasını çalıştırın.
+4. Projeyi Manuel olarak çalıştırmak için:
+   a) StocksMarketWebAPI uygulamasını çalıştırın.
+   b) Ardından GetStockService uygulamasını derleyin.
+   c) HangFireApp uygulamasını çalıştırın.
 
 4. HangFireApp, dakikada bir kez GetStockService uygulamasını çalıştırır. GetStockService, tüm hisseleri çeker ve bu verileri Web API'ye gönderir.
 
@@ -117,7 +117,7 @@ c) HangFireApp uygulamasını çalıştırın.
 
 
 ![Resim 30](/img/30.png)
-![Resim 31(/img/cover-image.png)
+![Resim 31](/img/cover-image.png)
 ![Resim 1](/img/1.png)
 ![Resim 2](/img/2.png)
 ![Resim 3](/img/3.png)
