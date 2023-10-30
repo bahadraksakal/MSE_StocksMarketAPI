@@ -1076,3 +1076,6 @@ Yeni bakiyeniz 39542,758 TL. Sistemde kalan hisse senedi 9900 adettir.
 2023-10-30 11:30:10.765 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-30 11:31:14.119 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-30 11:32:10.572 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 13:55:35.477 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 13:56:16.213 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 13:57:15.458 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
