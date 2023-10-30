@@ -63,22 +63,31 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 - Swashbuckle.AspNetCore | Version="6.5.0"
 - Microsoft SQL Server | Version="15.0.4153"
 
-## Proje Ayağa Kaldırma Adımları
+## Proje Ayağa Kaldırma Adımları, Projenin Genel Çalışma Mantığı Ve Notlar
+
+## Projenin Genel Çalışma Mantığı
+
+- Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
+- StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
+- HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır.
+- GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir.
+- HangFireApp dakikada 1 kez GetStockService uygulamasını çalıştırır.
+- GetStockService tüm hisseleri çekip, StocksMarketWebAPI uygulamasına istek atıcaktır. (Token ile güvenlik kontrolü)
+- StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
+
+### Proje Ayağa Kaldırma Adımları
 
 1. Projeyi klonlayın.
 
 2. Projeyi çalıştırmadan önce gerekli paketleri yüklemek için NuGet Paket Yöneticisi'ni kullanarak projenin bağımlılıklarını yükleyin.
 
-3. Projeyi çalıştırın:
-		a) Default ayarlar için genel çalışma prensibi:
-				- Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
-				StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
-				HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır. GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede 
-				Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir. HangFireApp dakikada 1 kez GetStockService uygulamasını çalıştırır. GetStockService tüm hisseleri çekip, Web API e istek atıcaktır.
-				StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
-		b)Manuel olarak çalıştırmak için:
-		   - Önce StocksMarketWebAPI uygulamasını çalıştırın.
-		   - Ardından GetStockService uygulamasını derleyin. Bu adımdan sonra HangFireApp uygulamasını çalıştırın.
+3. Projeyi Default ayarlar ile çalıştırın:
+a) Projeyi çalıştırın.
+
+3. Projeyi Manuel olarak çalıştırmak için:
+a) StocksMarketWebAPI uygulamasını çalıştırın.
+b) Ardından GetStockService uygulamasını derleyin.
+c) HangFireApp uygulamasını çalıştırın.
 
 4. HangFireApp, dakikada bir kez GetStockService uygulamasını çalıştırır. GetStockService, tüm hisseleri çeker ve bu verileri Web API'ye gönderir.
 
@@ -106,6 +115,9 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 ## Programdan Görseller
 
+
+![Resim 30](/img/30.png)
+![Resim 31(/img/cover-image.png)
 ![Resim 1](/img/1.png)
 ![Resim 2](/img/2.png)
 ![Resim 3](/img/3.png)
@@ -135,4 +147,3 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 ![Resim 27](/img/27.png)
 ![Resim 28](/img/28.png)
 ![Resim 29](/img/29.png)
-![Resim 30](/img/30.png)
