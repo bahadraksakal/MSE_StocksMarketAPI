@@ -542,6 +542,66 @@
 						"description": "Tanımlı para kartını kullan. - Auth zorunlu"
 					},
 					"response": []
+				},
+				{
+					"name": "/api/MoneyCard/GetAllMoneyCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/MoneyCard/GetAllMoneyCards",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MoneyCard",
+								"GetAllMoneyCards"
+							]
+						},
+						"description": "Sitemdeki tüm kullanıcılarım tüm para kartlarını listeler. - Admin tokeni gerekli"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/MoneyCard/GetOwnedMoneyCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/MoneyCard/GetOwnedMoneyCards",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"MoneyCard",
+								"GetOwnedMoneyCards"
+							]
+						},
+						"description": "Sahip olunan tüm para kartlarını getirir - Auth zorunlu"
+					},
+					"response": []
 				}
 			],
 			"description": "Para kartları ile ilgili işlemler -MoneyCard \"Sadece Admin veya Auth olanların kullanabildiği karışık\""

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using StocksMarketWebAPI.Context;
 using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
@@ -16,6 +17,32 @@ namespace StocksMarketWebAPI.Services
         { 
             _stockMarketDbContext = stockMarketDbContext;
             _mapper = mapper;
+        }
+        public async Task<List<UserMoneyCardOwnedCardListLiteDTO>> GetOwnedMoneyCardAsync(int userId)
+        {
+            List<UserMoneyCard> userMoneyCards = await _stockMarketDbContext.UsersMoneyCard
+                .Include(userMoneyCard => userMoneyCard.User)
+                .Include(userMoneyCard => userMoneyCard.MoneyCard)
+                .Where(userMoneyCard => userMoneyCard.UserId==userId)
+                .ToListAsync();
+            if(userMoneyCards.IsNullOrEmpty())
+            {
+                throw new Exception("Tanımlı hiçbir para kartınız yok.");
+            }
+            return _mapper.Map<List<UserMoneyCardOwnedCardListLiteDTO>>(userMoneyCards);
+        }
+        public async Task<List<UserMoneyCardAllCardListLiteDTO>> GetAllMoneyCardsAsync()
+        {
+            List<UserMoneyCard> userMoneyCards = await _stockMarketDbContext.UsersMoneyCard
+                .Include(userMoneyCard => userMoneyCard.User)
+                .Include(userMoneyCard => userMoneyCard.MoneyCard)
+                .OrderByDescending(userMoneyCard => userMoneyCard.MoneyCard.CreationDate)
+                .ToListAsync();
+            if (userMoneyCards.IsNullOrEmpty())
+            {
+                throw new Exception("Hiçbir kullanıcı adına Tanımlı hiçbir para kartınız yok.");
+            }
+            return _mapper.Map<List<UserMoneyCardAllCardListLiteDTO>>(userMoneyCards);
         }
         public async Task<UserMoneyCardDTO> AddMoneyCardAsync(int userId,int balance)
         {

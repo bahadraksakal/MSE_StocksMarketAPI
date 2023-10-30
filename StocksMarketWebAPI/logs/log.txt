@@ -863,3 +863,46 @@ Yeni bakiyeniz 39150,707 TL. Sistemde kalan hisse senedi 9910 adettir.
 2023-10-30 09:46:18.543 +03:00 [WRN] StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: {stockName}
 2023-10-30 09:47:03.518 +03:00 [WRN] StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: A1CAP
 2023-10-30 09:47:19.365 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:29:39.463 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:30:07.815 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:30:19.595 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-30 10:30:19.609 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NjUxMDE5LCJleHAiOjE2OTg2NTQ2MTksImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.7lBO4_b3rBcYvKh1zahPhGj4wy_bZspGzA9K1iPcmjM
+2023-10-30 10:30:31.395 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-30 10:30:31.397 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NjUxMDMxLCJleHAiOjE2OTg2NTQ2MzEsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.dbgKmV8fa1GMejemdXhwTu15Hlw-odVmomjS7lf87R8
+2023-10-30 10:30:35.826 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-30 10:30:39.942 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-30 10:30:40.011 +03:00 [WRN] A1CAP kodlu hisse senedinden, 41,26 TL fiyatından, 10 adet satın adlınız. İşlem 412,59998 TL, komisyon 20,63 TL tuttu. Eski bakiyeniz 39150,707 TL.
+Yeni bakiyeniz 38717,477 TL. Sistemde kalan hisse senedi 9900 adettir.
+2023-10-30 10:30:48.903 +03:00 [WRN] StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: A1CAP
+2023-10-30 10:31:10.045 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:32:06.991 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:33:07.930 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:34:34.782 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:35:22.543 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:36:05.248 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:36:34.084 +03:00 [WRN] MoneyCardService:AddMoneyCardAsync: admin, 1 id'li admin adındaki kullanıcıya -432- değerinde para kartı tanımladı.
+2023-10-30 10:36:38.881 +03:00 [WRN] MoneyCardService:AddMoneyCardAsync: admin, 1 id'li admin adındaki kullanıcıya -433- değerinde para kartı tanımladı.
+2023-10-30 10:36:43.769 +03:00 [WRN] MoneyCardService:AddMoneyCardAsync: admin, 1 id'li admin adındaki kullanıcıya -434- değerinde para kartı tanımladı.
+2023-10-30 10:37:05.433 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:37:19.920 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: 1 id'li admin adındaki kullanıcı15 id'li 434 değerindeki para kartını kullandı.
+2023-10-30 10:37:24.050 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: moneyCardId:15 - UserId:1 değerlerine sahip bir UserMoneyCard zaten kullanılmış.
+2023-10-30 10:37:28.706 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: 1 id'li admin adındaki kullanıcı14 id'li 433 değerindeki para kartını kullandı.
+2023-10-30 10:38:05.687 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:40:14.085 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:41:09.263 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:42:03.447 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:43:02.931 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:44:03.044 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:45:15.659 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:46:15.679 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:47:14.896 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:48:14.842 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:49:14.803 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:50:14.762 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:51:37.938 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:52:05.270 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:53:06.075 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:54:05.506 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:55:46.098 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:56:16.707 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 10:57:14.732 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
