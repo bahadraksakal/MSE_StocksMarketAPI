@@ -114,7 +114,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/User/GetUsers",
+					"name": "/api/User/GetAllUsers",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -129,14 +129,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/User/GetUsers",
+							"raw": "{{BaseUrl}}/api/User/GetAllUsers",
 							"host": [
 								"{{BaseUrl}}"
 							],
 							"path": [
 								"api",
 								"User",
-								"GetUsers"
+								"GetAllUsers"
 							]
 						},
 						"description": "Kullanıcı Bilgilerini getirir. - Sadece Admin"
@@ -144,7 +144,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/User/GetUsersWithDeatil",
+					"name": "/api/User/GetAllUsersWithDeatil",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -244,7 +244,7 @@
 			"name": "MainBoard",
 			"item": [
 				{
-					"name": "/api/MainBoard/ChangeCommissionRate/{KomisyonOranı}",
+					"name": "/api/MainBoard/ChangeCommissionRate/{CommissionRate}",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -382,7 +382,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/Stock/BuyStock/10/A1CAP",
+					"name": "/api/Stock/BuyStock/{BuyingStockUnit}/{StockName}",
 					"request": {
 						"auth": {
 							"type": "bearer",

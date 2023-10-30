@@ -906,3 +906,173 @@ Yeni bakiyeniz 38717,477 TL. Sistemde kalan hisse senedi 9900 adettir.
 2023-10-30 10:55:46.098 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-30 10:56:16.707 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-30 10:57:14.732 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:01:25.685 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:02:08.728 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:03:09.008 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:03:49.631 +03:00 [WRN] 4 id'li deneme2 adındaki kullanıcının rolünü -User- olarak değiştirdi.
+2023-10-30 11:04:08.886 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:05:08.815 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:05:32.222 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-30 11:05:32.232 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NjUzMTMyLCJleHAiOjE2OTg2NTY3MzIsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.7nBh501BLQUsiyAXT9rkDVRWZuUqj59DY-MOHYe5YM8
+2023-10-30 11:06:10.741 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:06:26.488 +03:00 [WRN] Kullanıcı başarıyla eklendi: Name:deneme32 - Role:User - Bakiye: 0
+2023-10-30 11:07:09.092 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:07:19.062 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'StocksMarketWebAPI.Context.StockMarketDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Users' with unique index 'IX_Users_Name'. The duplicate key value is (deneme32).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5d8838da-181a-4092-a134-fdd62b8465e0
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Users' with unique index 'IX_Users_Name'. The duplicate key value is (deneme32).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5d8838da-181a-4092-a134-fdd62b8465e0
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-10-30 11:08:09.158 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:08:34.950 +03:00 [WRN] Kullanıcı başarıyla eklendi: Name:deneme33 - Role:Admin - Bakiye: 0
+2023-10-30 11:09:00.544 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'StocksMarketWebAPI.Context.StockMarketDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Users' with unique index 'IX_Users_Name'. The duplicate key value is (deneme33).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5d8838da-181a-4092-a134-fdd62b8465e0
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Users' with unique index 'IX_Users_Name'. The duplicate key value is (deneme33).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5d8838da-181a-4092-a134-fdd62b8465e0
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-10-30 11:09:09.199 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:11:57.516 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:12:10.535 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:13:10.158 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:14:11.136 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:14:24.673 +03:00 [WRN] 4 id'li deneme2 adındaki kullanıcının rolünü -User- olarak değiştirdi.
+2023-10-30 11:14:55.094 +03:00 [WRN] 4 id'li deneme2 adındaki kullanıcının bakiyesini -23400- olarak değiştirdi.
+2023-10-30 11:15:10.226 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:15:29.341 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-30 11:15:29.353 +03:00 [WRN] MainBoardService-ChangeCommissionRateAsync: Main Board Komisyon oranını 5 olarak ayarladı.
+2023-10-30 11:16:03.690 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-30 11:16:03.697 +03:00 [WRN] MainBoardService-GetMainBoardAsync: çalıştı. MainBoard Id:5
+2023-10-30 11:16:10.075 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:16:45.662 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-10-30 11:17:10.693 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:17:23.422 +03:00 [WRN] A1CAP kodlu hisse senedinden, 41,72 TL fiyatından, 10 adet sattınız. İşlem 417,2 TL, komisyon 20,86 TL tuttu. Eski bakiyeniz 39584,477 TL.
+Yeni bakiyeniz 39980,816 TL. Sistemde kalan hisse senedi 9910 adettir.
+2023-10-30 11:17:56.246 +03:00 [WRN] StockService-BuyStockAsync Hata: Satmak istediğiniz kadar hisse senedine sahip değilsiniz. Portföyünüzdeki hisse senedi adeti: 70 Satmak istediğini miktar: 10000
+2023-10-30 11:18:10.243 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:18:30.762 +03:00 [WRN] StockService-BuyStockAsync Hata: stockPrice bulunamadı. A1CAPxx isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir
+2023-10-30 11:19:02.447 +03:00 [WRN] A1CAP kodlu hisse senedinden, 41,72 TL fiyatından, 10 adet satın adlınız. İşlem 417,2 TL, komisyon 20,86 TL tuttu. Eski bakiyeniz 39980,816 TL.
+Yeni bakiyeniz 39542,758 TL. Sistemde kalan hisse senedi 9900 adettir.
+2023-10-30 11:19:10.600 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:19:33.316 +03:00 [WRN] StockService-BuyStockAsync Hata: Satın alabileceğiniz kadar hisse senedi yok. Sistemdeki hisse senedi adeti: 9900 Almak istediğini miktar: 10000
+2023-10-30 11:20:04.212 +03:00 [WRN] StockService-BuyStockAsync Hata: stockPrice bulunamadı. A1CAPxx isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir
+2023-10-30 11:20:10.295 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:21:14.545 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:22:10.410 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:22:12.386 +03:00 [WRN] StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: A1CAP
+2023-10-30 11:23:04.385 +03:00 [WRN] StockService-GetListStockPricesByName çalıştı. Sorgulanan Hisse: A1CAPxx
+2023-10-30 11:23:10.229 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:23:44.331 +03:00 [WRN] MoneyCardService:AddMoneyCardAsync: admin, 1 id'li admin adındaki kullanıcıya -12340- değerinde para kartı tanımladı.
+2023-10-30 11:24:10.172 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:24:22.594 +03:00 [WRN] MoneyCardService:AddMoneyCardAsync: 99 id'sine sahip bir kullanıcı bulunamadı
+2023-10-30 11:25:01.343 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: moneyCardId:14 - UserId:1 değerlerine sahip bir UserMoneyCard zaten kullanılmış.
+2023-10-30 11:25:10.222 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:25:19.074 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: moneyCardId:15 - UserId:1 değerlerine sahip bir UserMoneyCard zaten kullanılmış.
+2023-10-30 11:25:23.857 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: 1 id'li admin adındaki kullanıcı16 id'li 12340 değerindeki para kartını kullandı.
+2023-10-30 11:25:48.579 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: moneyCardId:16 - UserId:1 değerlerine sahip bir UserMoneyCard zaten kullanılmış.
+2023-10-30 11:26:12.371 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:26:12.811 +03:00 [WRN] MoneyCardService:UseMoneyCardAsync: moneyCardId:160 - UserId:1 değerlerine sahip bir UserMoneyCard bulunamadı.
+2023-10-30 11:27:11.071 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:28:11.379 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:29:11.205 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:30:10.765 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:31:14.119 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-30 11:32:10.572 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.

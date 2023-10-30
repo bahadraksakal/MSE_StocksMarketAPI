@@ -76,11 +76,11 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<IActionResult> GetAllUsers()
         {
             try
             {
-                List<UserDTO> userDTOs = await _userService.GetUsersAsync();
+                List<UserDTO> userDTOs = await _userService.GetAllUsersAsync();
                 return Ok(userDTOs);
             }
             catch (Exception ex)
@@ -89,11 +89,11 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
         [HttpGet]
-        public async Task<IActionResult> GetUsersWithDeatil()
+        public async Task<IActionResult> GetAllUsersWithDeatil()
         {
             try
             {
-                List<PortfolioUserDTO> portfolioUserDTOs = await _userService.GetUsersWithDetailAsync();
+                List<PortfolioUserDTO> portfolioUserDTOs = await _userService.GetAllUsersWithDetailAsync();
                 return Ok(portfolioUserDTOs);
             }
             catch (Exception ex)
