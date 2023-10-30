@@ -70,15 +70,13 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 2. Projeyi çalıştırmadan önce gerekli paketleri yüklemek için NuGet Paket Yöneticisi'ni kullanarak projenin bağımlılıklarını yükleyin.
 
 3. Projeyi çalıştırın:
-
-		Default ayarlar için genel çalışma prensibi:
-			- Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
-			StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
-			HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır. GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede 
-			Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir. HangFireApp dakikada 1 kez GetStockService uygulamasını çalıştırır. GetStockService tüm hisseleri çekip, Web API e istek atıcaktır.
-		StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
-		
-		Manuel olarak çalıştırmak için:
+		a) Default ayarlar için genel çalışma prensibi:
+				- Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
+				StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
+				HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır. GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede 
+				Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir. HangFireApp dakikada 1 kez GetStockService uygulamasını çalıştırır. GetStockService tüm hisseleri çekip, Web API e istek atıcaktır.
+				StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
+		b)Manuel olarak çalıştırmak için:
 		   - Önce StocksMarketWebAPI uygulamasını çalıştırın.
 		   - Ardından GetStockService uygulamasını derleyin. Bu adımdan sonra HangFireApp uygulamasını çalıştırın.
 
@@ -108,4 +106,33 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 ## Programdan Görseller
 
-- [Görüntüler burada bulunabilir](/img)
+![Resim 1](/img/1.png)
+![Resim 2](/img/2.png)
+![Resim 3](/img/3.png)
+![Resim 4](/img/4.png)
+![Resim 5](/img/5.png)
+![Resim 6](/img/6.png)
+![Resim 7](/img/7.png)
+![Resim 8](/img/8.png)
+![Resim 9](/img/9.png)
+![Resim 10](/img/10.png)
+![Resim 11](/img/11.png)
+![Resim 12](/img/12.png)
+![Resim 13](/img/13.png)
+![Resim 14](/img/14.png)
+![Resim 15](/img/15.png)
+![Resim 16](/img/16.png)
+![Resim 17](/img/17.png)
+![Resim 18](/img/18.png)
+![Resim 19](/img/19.png)
+![Resim 20](/img/20.png)
+![Resim 21](/img/21.png)
+![Resim 22](/img/22.png)
+![Resim 23](/img/23.png)
+![Resim 24](/img/24.png)
+![Resim 25](/img/25.png)
+![Resim 26](/img/26.png)
+![Resim 27](/img/27.png)
+![Resim 28](/img/28.png)
+![Resim 29](/img/29.png)
+![Resim 30](/img/30.png)
