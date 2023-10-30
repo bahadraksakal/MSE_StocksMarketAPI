@@ -1,6 +1,6 @@
-# StockMarketAPI
+# Mert Yazlım - Uzun Dönem Imep Staj - StockMarket Web API Uygulaması
 
-![Uzun Dönem Imep Staj StockMarket Web API Uygulaması](/img/cover-image.png)
+![Mert Yazlım - Uzun Dönem Imep Staj - StockMarket Web API Uygulaması](/img/cover-image.png)
 
 ## Problem Tanımı
 
