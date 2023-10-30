@@ -320,7 +320,7 @@
 			"name": "Stock",
 			"item": [
 				{
-					"name": "/api/Stock/GetStocks",
+					"name": "/api/Stock/GetAllStocks",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -335,14 +335,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/Stock/GetStocks",
+							"raw": "{{BaseUrl}}/api/Stock/GetAllStocks",
 							"host": [
 								"{{BaseUrl}}"
 							],
 							"path": [
 								"api",
 								"Stock",
-								"GetStocks"
+								"GetAllStocks"
 							]
 						},
 						"description": "Tüm hisse senetlerini listeler - auth olan herkes kullanabilir"
@@ -440,6 +440,37 @@
 							]
 						},
 						"description": "Sahip olunan hisse senetlerini getirir. - Auth gerekli"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Stock/GetListStockPricesByName/{stockName}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/GetListStockPricesByName/A1CAP",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"GetListStockPricesByName",
+								"A1CAP"
+							]
+						},
+						"description": "Kodu girilen hisse senedinin geçmişe yönelik tüm fiyat hareketlerini sorgular. -Auth gerekli"
 					},
 					"response": []
 				}

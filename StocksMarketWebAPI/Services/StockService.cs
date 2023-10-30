@@ -277,7 +277,7 @@ namespace StocksMarketWebAPI.Services
             throw new Exception($"StockService-SetStocks Hata: stockPrices is null.");
         }
 
-        public async Task<List<StockPriceDTO>> GetStocksAsync()
+        public async Task<List<StockPriceDTO>> GetAllStocksAsync()
         {
             List<StockPrice> stockPrices = await _stockMarketDbContext.StockPrices
                                             .Include(stockPrices => stockPrices.Stock)

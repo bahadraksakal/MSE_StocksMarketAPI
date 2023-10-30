@@ -65,11 +65,11 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetStocks()
+        public async Task<IActionResult> GetAllStocks()
         {
             try
             {
-                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetStocksAsync();
+                List<StockPriceDTO> stockPriceDTOs = await _stockService.GetAllStocksAsync();
                 return Ok(stockPriceDTOs);
             }
             catch (Exception ex)
