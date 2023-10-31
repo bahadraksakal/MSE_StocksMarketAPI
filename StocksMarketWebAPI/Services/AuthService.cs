@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using StocksMarketWebAPI.Context;
+using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.DTOs.UserDTOs;
-using StocksMarketWebAPI.Entities;
+using StockMarketEntitiesLibrary.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;

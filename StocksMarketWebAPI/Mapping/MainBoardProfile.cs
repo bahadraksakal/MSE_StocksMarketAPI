@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using StocksMarketWebAPI.DTOs.MainBoardDTOs;
-using StocksMarketWebAPI.Entities;
+using StockMarketEntitiesLibrary.Entities;
 
 namespace StocksMarketWebAPI.Mapping
 {

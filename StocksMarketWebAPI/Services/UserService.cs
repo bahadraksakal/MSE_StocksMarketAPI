@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using StocksMarketWebAPI.Context;
-using StocksMarketWebAPI.Entities;
+using StockMarketDbContextLibrary.Context;
+using StockMarketEntitiesLibrary.Entities;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using AutoMapper;

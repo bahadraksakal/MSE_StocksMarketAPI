@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using StocksMarketWebAPI.Context;
+using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.DTOs.MainBoardDTOs;
-using StocksMarketWebAPI.Entities;
+using StockMarketEntitiesLibrary.Entities;
 
 namespace StocksMarketWebAPI.Services
 {

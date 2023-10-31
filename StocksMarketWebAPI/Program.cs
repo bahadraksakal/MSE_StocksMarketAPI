@@ -1,8 +1,9 @@
+using HangFireDbContextLibrary.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using StocksMarketWebAPI.Context;
+using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
 using System.Text;
@@ -20,6 +21,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StockMarketDbContext>(options => {
     options.UseSqlServer(builder.Configuration["ConnectionString:ConStr"]);
+});
+
+builder.Services.AddDbContext<HangFireDbContext>(options => {
+    options.UseSqlServer(builder.Configuration["ConnectionString:ConStrHangFire"]);
 });
 
 builder.Services.AddScoped<UserService>();

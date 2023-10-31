@@ -1,6 +1,6 @@
 ﻿using Hangfire;
 using HangFireApp.BackGroundJobs;
-using HangFireDbContextLibrary;
+using HangFireDbContextLibrary.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Serilog;

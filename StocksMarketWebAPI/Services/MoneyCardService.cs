@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using StocksMarketWebAPI.Context;
+using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
-using StocksMarketWebAPI.Entities;
+using StockMarketEntitiesLibrary.Entities;
 
 namespace StocksMarketWebAPI.Services
 {

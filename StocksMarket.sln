@@ -15,7 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangFireApp", "HangFireApp\
 		{A5EF0687-E06E-4087-9951-C0085AA7E940} = {A5EF0687-E06E-4087-9951-C0085AA7E940}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireDbContextLibrary", "HangFireDbContextLibrary\HangFireDbContextLibrary.csproj", "{0B341525-D2F0-436F-AC19-868383B8B22D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangFireDbContextLibrary", "HangFireDbContextLibrary\HangFireDbContextLibrary.csproj", "{0B341525-D2F0-436F-AC19-868383B8B22D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketDbContextLibrary", "StocksMarketDbContextLibrary\StocksMarketDbContextLibrary.csproj", "{AFDB3B5B-1B37-46E0-96FE-A41B9A4B7704}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketEntitiesLibrary", "StocksMarketEntitiesLibrary\StocksMarketEntitiesLibrary.csproj", "{3EBF62DA-8664-4084-BA85-944F04FCF292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices", "SharedServices\SharedServices.csproj", "{4F3DAC47-6CDD-4046-8F92-55AFCC151805}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{0B341525-D2F0-436F-AC19-868383B8B22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B341525-D2F0-436F-AC19-868383B8B22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B341525-D2F0-436F-AC19-868383B8B22D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDB3B5B-1B37-46E0-96FE-A41B9A4B7704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDB3B5B-1B37-46E0-96FE-A41B9A4B7704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDB3B5B-1B37-46E0-96FE-A41B9A4B7704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDB3B5B-1B37-46E0-96FE-A41B9A4B7704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBF62DA-8664-4084-BA85-944F04FCF292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBF62DA-8664-4084-BA85-944F04FCF292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBF62DA-8664-4084-BA85-944F04FCF292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBF62DA-8664-4084-BA85-944F04FCF292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

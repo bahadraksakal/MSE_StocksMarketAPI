@@ -1,0 +1,21 @@
+2023-10-31 13:52:48.026 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-10-31 13:52:53.747 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-10-31 13:52:55.477 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-10-31 14:19:51.059 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 14:19:51.177 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 14:19:51.195 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-10-31 14:19:51.196 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 14:19:51.197 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 14:19:51.271 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 successfully announced in 59,896 ms
+2023-10-31 14:19:51.276 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 14:19:51.317 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 all the dispatchers started
+2023-10-31 14:19:51.319 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 14:19:51.449 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 14:20:02.944 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 caught stopping signal...
+2023-10-31 14:20:02.956 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 All dispatchers stopped
+2023-10-31 14:20:02.960 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 successfully reported itself as stopped in 1,5871 ms
+2023-10-31 14:20:02.961 +03:00 [INF] Server bahadir-aksakal:17244:c4473570 has been stopped in total 14,4103 ms

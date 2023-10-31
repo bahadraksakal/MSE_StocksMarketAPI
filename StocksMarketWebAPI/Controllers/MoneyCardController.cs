@@ -3,7 +3,7 @@ using StocksMarketWebAPI.Services;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using StocksMarketWebAPI.DTOs.UserMoneyCardDTOs;
-using StocksMarketWebAPI.Entities;
+using StockMarketEntitiesLibrary.Entities;
 
 namespace StocksMarketWebAPI.Controllers
 {

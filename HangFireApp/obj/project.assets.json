@@ -1261,13 +1261,27 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
+          "StocksMarketEntitiesLibrary": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HangFireDbContextLibrary.dll": {}
         },
         "runtime": {
           "bin/placeholder/HangFireDbContextLibrary.dll": {}
+        }
+      },
+      "StocksMarketEntitiesLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/StocksMarketEntitiesLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StocksMarketEntitiesLibrary.dll": {}
         }
       }
     }
@@ -3384,6 +3398,11 @@
       "type": "project",
       "path": "../HangFireDbContextLibrary/HangFireDbContextLibrary.csproj",
       "msbuildProject": "../HangFireDbContextLibrary/HangFireDbContextLibrary.csproj"
+    },
+    "StocksMarketEntitiesLibrary/1.0.0": {
+      "type": "project",
+      "path": "../StocksMarketEntitiesLibrary/StocksMarketEntitiesLibrary.csproj",
+      "msbuildProject": "../StocksMarketEntitiesLibrary/StocksMarketEntitiesLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {

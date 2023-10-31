@@ -81,3 +81,20 @@ Yeni bakiyeniz 2546,6702 TL. Sistemde kalan hisse senedi 9990 adettir.
 2023-10-31 11:17:43.021 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-31 11:18:10.601 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-10-31 11:21:12.505 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 13:28:02.009 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 13:28:04.107 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-31 13:28:04.136 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NzQ4MDg0LCJleHAiOjE2OTg3NTE2ODQsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.Ponr_tK65pR6g1WtuWs1En7NechHmD8aq8cZ29guex4
+2023-10-31 13:52:55.459 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 14:19:55.155 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 15:52:38.073 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-31 15:52:38.139 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NzU2NzU4LCJleHAiOjE2OTg3NjAzNTgsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.oo-hTc7Mzhj4XLAMbfgit0uYn0YL2UpOkAZfAr__nuI
+2023-10-31 15:54:19.312 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 15:54:57.620 +03:00 [WRN] Kullanıcı başarıyla eklendi: Name:deneme5 - Role:Admin - Bakiye: 0
+2023-10-31 17:17:18.751 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-31 17:17:19.047 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NzYxODM4LCJleHAiOjE2OTg3NjU0MzgsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.ikcfzQBjFyqKSrrNq6ZIqmHTFm3Ma3EEVoz4QMOCmlE
+2023-10-31 18:27:32.197 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-10-31 18:27:37.194 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-10-31 18:27:37.211 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4NzY2MDU3LCJleHAiOjE2OTg3Njk2NTcsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.hDhFig0wVpBpFU_jYGDNuR55xCqBs6gbkKR7XjwFZB8
+2023-10-31 18:27:45.519 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-10-31 18:27:45.583 +03:00 [WRN] A1CAP kodlu hisse senedinden, 39,16 TL fiyatından, 10 adet satın adlınız. İşlem 391,6 TL, komisyon 19,58 TL tuttu. Eski bakiyeniz 2546,6702 TL.
+Yeni bakiyeniz 2135,49 TL. Sistemde kalan hisse senedi 9980 adettir.

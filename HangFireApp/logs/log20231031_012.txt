@@ -1,0 +1,22 @@
+2023-10-31 17:15:38.939 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-10-31 17:15:46.774 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-10-31 17:15:50.849 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)
+2023-10-31 17:49:00.268 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 17:49:00.463 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 17:49:00.484 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-10-31 17:49:00.485 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 17:49:00.486 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 17:49:00.790 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 successfully announced in 265,191 ms
+2023-10-31 17:49:00.798 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 17:49:00.807 +03:00 [INF] 1 servers were removed due to timeout
+2023-10-31 17:49:00.902 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 all the dispatchers started
+2023-10-31 17:49:00.913 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 17:49:01.287 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 17:49:13.218 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 caught stopping signal...
+2023-10-31 17:49:13.274 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 All dispatchers stopped
+2023-10-31 17:49:13.281 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 successfully reported itself as stopped in 1,7909 ms
+2023-10-31 17:49:13.281 +03:00 [INF] Server bahadir-aksakal:3684:61bcb139 has been stopped in total 49,5121 ms
