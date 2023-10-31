@@ -1,0 +1,6 @@
+2023-10-31 11:03:23.209 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-10-31 11:03:25.436 +03:00 [INF] Hisse Detay Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-10-31 11:03:25.470 +03:00 [INF] Hisse Detay Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-10-31 11:03:25.470 +03:00 [INF] Hisse Detay Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-10-31 11:03:29.378 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-10-31 11:03:33.500 +03:00 [ERR] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)

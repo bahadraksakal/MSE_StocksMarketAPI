@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Events;
 using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http.Headers;
@@ -19,6 +21,12 @@ namespace GetStocksService
             .AddJsonFile("appsettings.json")
             .Build();
 
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .WriteTo.Console()
+                .WriteTo.File(configuration["SeriLog:FilePath"], rollingInterval: RollingInterval.Day)
+                .CreateLogger();
 
             string BaseUrl = configuration["Url:BaseUrl"];
             string apiUrl = configuration["Url:ApiUrl"];
@@ -30,7 +38,7 @@ namespace GetStocksService
             {
                 try
                 {
-                    Console.WriteLine("Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...");
+                    Log.Information("Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...");
                     // Web API'den verileri çek
                     HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
                     response.EnsureSuccessStatusCode();
@@ -43,7 +51,7 @@ namespace GetStocksService
                     {
                         Methods methods = new Methods();
                         List<StockDTO> stockDTOs = await methods.GetStockDetail(httpClient,result,apiUrlDetail);
-                        Console.WriteLine("Tüm veriler çekildi. İşlem Başarılı.");
+                        Log.Information("Tüm veriler çekildi. İşlem Başarılı.");
                         //Console.WriteLine("Alınan Veriler:");
                         //foreach (var stockDTO in stockDTOs)
                         //{
@@ -59,24 +67,24 @@ namespace GetStocksService
 
                         if (responseBase.IsSuccessStatusCode)
                         {
-                            Console.WriteLine("PUT isteği başarılı. İşlem başarıyla tamamlandı.");
+                            Log.Information("PUT isteği başarılı. İşlem başarıyla tamamlandı.");
                         }
                         else
                         {
-                            Console.WriteLine("PUT isteği başarısız. İşlem tamamlanamadı. Hata kodu: " + responseBase.StatusCode);
                             string errorResponse = await responseBase.Content.ReadAsStringAsync();
-                            Console.WriteLine("Hata Mesajı: " + errorResponse);
+                            Log.Warning($"PUT isteği başarısız. İşlem tamamlanamadı. Hata kodu: {responseBase.StatusCode}. \n" +
+                                $"Hata Detayı: \n{errorResponse}");
                         }
 
                     }
                     else
                     {
-                        Console.WriteLine("API'den geçersiz bir yanıt alındı.");
+                        Log.Error(" BigPara API'den geçersiz bir yanıt alındı.");
                     }
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine($"HTTP isteği sırasında hata oluştu: {e.Message}");
+                    Log.Warning($"HTTP isteği sırasında hata oluştu: {e.Message}");
                 }
                 finally
                 {
@@ -160,7 +168,7 @@ namespace GetStocksService
                     }
                     catch (Exception ex)
                     {
-                        Debug.WriteLine("Hisse Detay Çekerken Hata: " + ex.Message);
+                        Log.Information($"{dataItem.kod} Kodlu Hissenin Detayını Çekerken Hata: " + ex.Message);
                     }
                 }
             });

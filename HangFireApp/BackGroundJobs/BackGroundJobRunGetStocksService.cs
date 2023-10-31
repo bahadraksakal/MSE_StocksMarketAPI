@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Serilog;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HangFireApp
+namespace HangFireApp.BackGroundJobs
 {
     public class BackGroundJobRunGetStocksService
     {
@@ -16,13 +12,12 @@ namespace HangFireApp
             try
             {
                 Process.Start(getStocksServicePath);
-                Console.WriteLine($"GetStocksService {counter}. kere çalışıyor");
-                Debug.WriteLine($"GetStocksService {counter}. kere çalışıyor");
+                Log.Information($"GetStocksService {counter}. kere çalışıyor");
                 counter++;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("FileNotFound or File is used");
+                Log.Warning("FileNotFound or File is used");
             }
         }
 

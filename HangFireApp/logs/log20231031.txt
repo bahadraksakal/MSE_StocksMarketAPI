@@ -1,0 +1,142 @@
+2023-10-31 10:19:24.618 +03:00 [ERR] oluşturuldu
+2023-10-31 10:19:24.707 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:19:24.920 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:19:24.954 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire4'
+2023-10-31 10:19:24.956 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:19:24.957 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:19:25.202 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 successfully announced in 217,8052 ms
+2023-10-31 10:19:25.214 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:19:25.372 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 all the dispatchers started
+2023-10-31 10:20:15.831 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 caught stopping signal...
+2023-10-31 10:20:15.890 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 All dispatchers stopped
+2023-10-31 10:20:15.899 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 successfully reported itself as stopped in 1,5947 ms
+2023-10-31 10:20:15.899 +03:00 [INF] Server bahadir-aksakal:25848:615c3192 has been stopped in total 42,9132 ms
+2023-10-31 10:35:05.533 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:35:05.725 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:35:05.750 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire4'
+2023-10-31 10:35:05.752 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:35:05.752 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:35:05.886 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e successfully announced in 107,6137 ms
+2023-10-31 10:35:05.895 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:35:05.904 +03:00 [INF] 1 servers were removed due to timeout
+2023-10-31 10:35:05.996 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e all the dispatchers started
+2023-10-31 10:35:18.290 +03:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2023-10-31 10:35:18.291 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e caught stopping signal...
+2023-10-31 10:35:18.299 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e caught stopped signal...
+2023-10-31 10:35:18.301 +03:00 [WRN] Server bahadir-aksakal:25192:5c55a74e caught shutdown signal...
+2023-10-31 10:35:18.302 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e All dispatchers stopped
+2023-10-31 10:35:18.312 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e successfully reported itself as stopped in 5,1799 ms
+2023-10-31 10:35:18.313 +03:00 [INF] Server bahadir-aksakal:25192:5c55a74e has been stopped in total 17,9288 ms
+2023-10-31 10:35:42.715 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:35:42.948 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:35:42.969 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire44'
+2023-10-31 10:35:42.970 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:35:42.971 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:35:43.104 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 successfully announced in 103,5617 ms
+2023-10-31 10:35:43.114 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:35:43.235 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 all the dispatchers started
+2023-10-31 10:37:11.933 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 caught stopping signal...
+2023-10-31 10:37:11.996 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 All dispatchers stopped
+2023-10-31 10:37:12.003 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 successfully reported itself as stopped in 1,6429 ms
+2023-10-31 10:37:12.003 +03:00 [INF] Server bahadir-aksakal:15232:ec4ab6b8 has been stopped in total 51,1248 ms
+2023-10-31 10:42:06.661 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:42:06.888 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:42:06.922 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire44'
+2023-10-31 10:42:06.925 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:42:06.927 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:42:07.225 +03:00 [INF] Server bahadir-aksakal:3936:d599effc successfully announced in 263,7268 ms
+2023-10-31 10:42:07.272 +03:00 [INF] Server bahadir-aksakal:3936:d599effc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:42:07.396 +03:00 [INF] Server bahadir-aksakal:3936:d599effc all the dispatchers started
+2023-10-31 10:42:07.422 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 10:42:07.635 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 10:43:07.632 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-10-31 10:43:25.988 +03:00 [INF] Server bahadir-aksakal:3936:d599effc caught stopping signal...
+2023-10-31 10:43:26.039 +03:00 [INF] Server bahadir-aksakal:3936:d599effc All dispatchers stopped
+2023-10-31 10:43:26.052 +03:00 [INF] Server bahadir-aksakal:3936:d599effc successfully reported itself as stopped in 1,8486 ms
+2023-10-31 10:43:26.053 +03:00 [INF] Server bahadir-aksakal:3936:d599effc has been stopped in total 43,2897 ms
+2023-10-31 10:53:27.115 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:53:27.330 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:53:27.350 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire44'
+2023-10-31 10:53:27.352 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:53:27.360 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:53:27.474 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 successfully announced in 92,7231 ms
+2023-10-31 10:53:27.482 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:53:27.592 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 all the dispatchers started
+2023-10-31 10:53:27.619 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 10:54:12.799 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 10:54:57.063 +03:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2023-10-31 10:54:57.065 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 caught stopping signal...
+2023-10-31 10:54:57.072 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 caught stopped signal...
+2023-10-31 10:54:57.080 +03:00 [WRN] Server bahadir-aksakal:1000:8ea89f84 caught shutdown signal...
+2023-10-31 10:54:57.114 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 All dispatchers stopped
+2023-10-31 10:54:57.125 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 successfully reported itself as stopped in 4,5446 ms
+2023-10-31 10:54:57.126 +03:00 [INF] Server bahadir-aksakal:1000:8ea89f84 has been stopped in total 53,6087 ms
+2023-10-31 10:55:58.847 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 10:55:59.016 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 10:55:59.036 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire44'
+2023-10-31 10:55:59.038 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 10:55:59.039 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 10:55:59.211 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 successfully announced in 144,6529 ms
+2023-10-31 10:55:59.220 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 10:55:59.336 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 all the dispatchers started
+2023-10-31 10:55:59.352 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 10:55:59.527 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 10:56:14.470 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-10-31 10:56:16.974 +03:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2023-10-31 10:56:16.975 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 caught stopping signal...
+2023-10-31 10:56:16.980 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 caught stopped signal...
+2023-10-31 10:56:16.986 +03:00 [WRN] Server bahadir-aksakal:23688:ef969038 caught shutdown signal...
+2023-10-31 10:56:16.990 +03:00 [WRN] Server bahadir-aksakal:23688:ef969038 stopped non-gracefully due to ServerWatchdog. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2023-10-31 10:56:17.004 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 successfully reported itself as stopped in 5,3022 ms
+2023-10-31 10:56:17.005 +03:00 [INF] Server bahadir-aksakal:23688:ef969038 has been stopped in total 25,3466 ms
+2023-10-31 11:06:59.319 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-10-31 11:06:59.468 +03:00 [INF] Hangfire SQL objects installed.
+2023-10-31 11:06:59.489 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-10-31 11:06:59.490 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-10-31 11:06:59.491 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-10-31 11:06:59.613 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 successfully announced in 101,036 ms
+2023-10-31 11:06:59.621 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-10-31 11:06:59.632 +03:00 [INF] 2 servers were removed due to timeout
+2023-10-31 11:06:59.722 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 all the dispatchers started
+2023-10-31 11:06:59.804 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-10-31 11:06:59.958 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-10-31 11:07:14.865 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-10-31 11:08:14.891 +03:00 [INF] GetStocksService 2. kere çalışıyor
+2023-10-31 11:09:14.941 +03:00 [INF] GetStocksService 3. kere çalışıyor
+2023-10-31 11:10:14.980 +03:00 [INF] GetStocksService 4. kere çalışıyor
+2023-10-31 11:11:15.010 +03:00 [INF] GetStocksService 5. kere çalışıyor
+2023-10-31 11:12:00.023 +03:00 [INF] GetStocksService 6. kere çalışıyor
+2023-10-31 11:13:00.044 +03:00 [INF] GetStocksService 7. kere çalışıyor
+2023-10-31 11:14:00.069 +03:00 [INF] GetStocksService 8. kere çalışıyor
+2023-10-31 11:14:16.158 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 caught stopping signal...
+2023-10-31 11:14:16.223 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 All dispatchers stopped
+2023-10-31 11:14:16.233 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 successfully reported itself as stopped in 1,6734 ms
+2023-10-31 11:14:16.233 +03:00 [INF] Server bahadir-aksakal:20156:3e458349 has been stopped in total 45,3953 ms

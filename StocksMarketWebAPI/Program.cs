@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<StockMarketDbContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConStr"));
+    options.UseSqlServer(builder.Configuration["ConnectionString:ConStr"]);
 });
 
 builder.Services.AddScoped<UserService>();
@@ -86,6 +86,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    try
+    {
+        var context = serviceScope.ServiceProvider.GetRequiredService<StockMarketDbContext>();
+        await context.Database.MigrateAsync();
+    }
+    catch(Exception ex)
+    {
+        Log.Error("Veri tabaný güncellenemedi veya baþarýyla oluþturulamadý. Mesaj: "+ex.Message);
+    }
 }
 
 app.UseHttpsRedirection();
