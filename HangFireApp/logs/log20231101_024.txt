@@ -1,0 +1,10 @@
+2023-11-01 17:31:52.337 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:31:53.359 +03:00 [INF] BUCIM Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:31:55.167 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:31:59.265 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)
+2023-11-01 17:32:56.109 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:32:56.803 +03:00 [INF] AKSEN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:32:58.167 +03:00 [INF] KERVN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:32:58.167 +03:00 [INF] KFEIN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:32:59.221 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:33:03.326 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)

@@ -37,6 +37,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HangFireDbContextLibrary\HangFireDbContextLibrary.csproj" />
+    <ProjectReference Include="..\SharedServices\SharedServices.csproj" />
+    <ProjectReference Include="..\StocksMarketEntitiesLibrary\StocksMarketEntitiesLibrary.csproj" />
   </ItemGroup>
 
 </Project>

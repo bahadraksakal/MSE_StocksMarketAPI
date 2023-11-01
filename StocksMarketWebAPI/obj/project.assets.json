@@ -1515,6 +1515,24 @@
           "bin/placeholder/HangFireDbContextLibrary.dll": {}
         }
       },
+      "SharedServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "HangFireDbContextLibrary": "1.0.0",
+          "Serilog.AspNetCore": "7.0.0",
+          "Serilog.Sinks.Debug": "2.0.0",
+          "Serilog.Sinks.File": "5.0.0",
+          "StocksMarketDbContextLibrary": "1.0.0",
+          "StocksMarketEntitiesLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SharedServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedServices.dll": {}
+        }
+      },
       "StocksMarketDbContextLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4131,6 +4149,11 @@
       "path": "../HangFireDbContextLibrary/HangFireDbContextLibrary.csproj",
       "msbuildProject": "../HangFireDbContextLibrary/HangFireDbContextLibrary.csproj"
     },
+    "SharedServices/1.0.0": {
+      "type": "project",
+      "path": "../SharedServices/SharedServices.csproj",
+      "msbuildProject": "../SharedServices/SharedServices.csproj"
+    },
     "StocksMarketDbContextLibrary/1.0.0": {
       "type": "project",
       "path": "../StocksMarketDbContextLibrary/StocksMarketDbContextLibrary.csproj",
@@ -4152,6 +4175,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
       "Serilog.AspNetCore >= 7.0.0",
       "Serilog.Sinks.MSSqlServer >= 6.3.0",
+      "SharedServices >= 1.0.0",
       "StocksMarketDbContextLibrary >= 1.0.0",
       "StocksMarketEntitiesLibrary >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -4186,6 +4210,9 @@
           "projectReferences": {
             "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj": {
               "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj"
+            },
+            "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj": {
+              "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj"
             },
             "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj": {
               "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj"

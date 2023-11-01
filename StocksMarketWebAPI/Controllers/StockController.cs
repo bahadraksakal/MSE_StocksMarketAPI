@@ -4,7 +4,6 @@ using StocksMarketWebAPI.DTOs.PortfolioStockDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
-using System.Security.Cryptography.X509Certificates;
 
 namespace StocksMarketWebAPI.Controllers
 {
@@ -106,7 +105,5 @@ namespace StocksMarketWebAPI.Controllers
                 return BadRequest("StockController:GetOwnedStocks hata:" + ex.Message);
             }
         }
-
-
     }
 }

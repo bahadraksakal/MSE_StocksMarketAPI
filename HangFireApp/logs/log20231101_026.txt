@@ -1,0 +1,8 @@
+2023-11-01 17:33:13.675 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:33:14.648 +03:00 [INF] BNTAS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:33:17.887 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:33:21.974 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)
+2023-11-01 17:36:13.884 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:36:15.811 +03:00 [INF] KRPLS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:36:16.764 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:36:20.858 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)

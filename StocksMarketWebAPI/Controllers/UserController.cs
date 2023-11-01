@@ -21,7 +21,7 @@ namespace StocksMarketWebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUser([FromBody]UserDTO user)
+        public async Task<IActionResult> AddUser([FromBody] UserDTO user)
         {
             try
             {
@@ -34,9 +34,9 @@ namespace StocksMarketWebAPI.Controllers
                 return BadRequest("Veri tabanı hatası:" + ex.InnerException.Message);
             }
         }
-        
+
         [HttpPatch("{id}/{role}")]
-        public async Task<IActionResult> ChangeStatusUser(int id,string role)
+        public async Task<IActionResult> ChangeStatusUser(int id, string role)
         {
             try
             {
@@ -52,11 +52,11 @@ namespace StocksMarketWebAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest("UserController:ChangeStatusUser hata:" + ex.Message);
-            }            
+            }
         }
 
         [HttpPatch("{id}/{balance}")]
-        public async Task<IActionResult> ChangePortfolioBalanceUser(int id,int balance)
+        public async Task<IActionResult> ChangePortfolioBalanceUser(int id, int balance)
         {
             try
             {
@@ -75,6 +75,7 @@ namespace StocksMarketWebAPI.Controllers
             }
         }
 
+        [Authorize(Policy = "CustomAdminPolicy")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -88,6 +89,7 @@ namespace StocksMarketWebAPI.Controllers
                 return BadRequest("StockController:GetUsershata:" + ex.Message);
             }
         }
+        [Authorize(Policy = "CustomAdminPolicy")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsersWithDeatil()
         {

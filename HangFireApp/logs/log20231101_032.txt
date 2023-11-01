@@ -1,0 +1,208 @@
+2023-11-01 17:59:07.451 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:59:09.769 +03:00 [INF] HALKB Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:59:10.356 +03:00 [INF] MIATK Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:59:12.503 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:59:14.665 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-01 18:00:07.430 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 18:00:12.282 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 18:00:12.553 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-01 18:03:07.449 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 18:03:09.318 +03:00 [INF] DENGE Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 18:03:11.617 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 18:03:11.773 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-01 18:09:31.542 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-01 18:09:31.693 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-01 18:09:31.716 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-01 18:09:31.718 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-01 18:09:31.720 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-01 18:09:31.852 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a successfully announced in 106,5508 ms
+2023-11-01 18:09:31.859 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-01 18:09:31.955 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a all the dispatchers started
+2023-11-01 18:09:32.035 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-01 18:09:32.216 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-01 18:09:32.646 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-01 18:10:02.193 +03:00 [INF] ALARK Fiyat değişti
+2023-11-01 18:10:02.194 +03:00 [INF] ASTOR Fiyat değişti
+2023-11-01 18:10:02.194 +03:00 [INF] ASELS Fiyat değişti
+2023-11-01 18:10:02.195 +03:00 [INF] BFREN Fiyat değişti
+2023-11-01 18:10:02.195 +03:00 [INF] BIENY Fiyat değişti
+2023-11-01 18:10:02.196 +03:00 [INF] BORLS Fiyat değişti
+2023-11-01 18:10:02.196 +03:00 [INF] BRLSM Fiyat değişti
+2023-11-01 18:10:02.197 +03:00 [INF] BRSAN Fiyat değişti
+2023-11-01 18:10:02.197 +03:00 [INF] BURCE Fiyat değişti
+2023-11-01 18:10:02.198 +03:00 [INF] BVSAN Fiyat değişti
+2023-11-01 18:10:02.199 +03:00 [INF] CANTE Fiyat değişti
+2023-11-01 18:10:02.199 +03:00 [INF] CEMTS Fiyat değişti
+2023-11-01 18:10:02.200 +03:00 [INF] CCOLA Fiyat değişti
+2023-11-01 18:10:02.200 +03:00 [INF] CIMSA Fiyat değişti
+2023-11-01 18:10:02.201 +03:00 [INF] DOAS Fiyat değişti
+2023-11-01 18:10:02.201 +03:00 [INF] ECILC Fiyat değişti
+2023-11-01 18:10:02.202 +03:00 [INF] EGEEN Fiyat değişti
+2023-11-01 18:10:02.202 +03:00 [INF] DENGE Fiyat değişti
+2023-11-01 18:10:02.203 +03:00 [INF] ENKAI Fiyat değişti
+2023-11-01 18:10:02.203 +03:00 [INF] ERBOS Fiyat değişti
+2023-11-01 18:10:02.204 +03:00 [INF] EREGL Fiyat değişti
+2023-11-01 18:10:02.204 +03:00 [INF] EUPWR Fiyat değişti
+2023-11-01 18:10:02.205 +03:00 [INF] FENER Fiyat değişti
+2023-11-01 18:10:02.205 +03:00 [INF] FLAP Fiyat değişti
+2023-11-01 18:10:02.206 +03:00 [INF] FONET Fiyat değişti
+2023-11-01 18:10:02.207 +03:00 [INF] GARAN Fiyat değişti
+2023-11-01 18:10:02.207 +03:00 [INF] FROTO Fiyat değişti
+2023-11-01 18:10:02.208 +03:00 [INF] GSRAY Fiyat değişti
+2023-11-01 18:10:02.208 +03:00 [INF] ISCTR Fiyat değişti
+2023-11-01 18:10:02.209 +03:00 [INF] DARDL Fiyat değişti
+2023-11-01 18:10:02.209 +03:00 [INF] IZENR Fiyat değişti
+2023-11-01 18:10:02.210 +03:00 [INF] ISYAT Fiyat değişti
+2023-11-01 18:10:02.210 +03:00 [INF] KARSN Fiyat değişti
+2023-11-01 18:10:02.211 +03:00 [INF] KLSYN Fiyat değişti
+2023-11-01 18:10:02.211 +03:00 [INF] KONKA Fiyat değişti
+2023-11-01 18:10:02.212 +03:00 [INF] KOZAA Fiyat değişti
+2023-11-01 18:10:02.213 +03:00 [INF] KRDMD Fiyat değişti
+2023-11-01 18:10:02.213 +03:00 [INF] KRONT Fiyat değişti
+2023-11-01 18:10:02.214 +03:00 [INF] KZGYO Fiyat değişti
+2023-11-01 18:10:02.214 +03:00 [INF] LIDER Fiyat değişti
+2023-11-01 18:10:02.215 +03:00 [INF] LIDFA Fiyat değişti
+2023-11-01 18:10:02.215 +03:00 [INF] LOGO Fiyat değişti
+2023-11-01 18:10:02.216 +03:00 [INF] MACKO Fiyat değişti
+2023-11-01 18:10:02.217 +03:00 [INF] MEGAP Fiyat değişti
+2023-11-01 18:10:02.217 +03:00 [INF] MAALT Fiyat değişti
+2023-11-01 18:10:02.217 +03:00 [INF] MERIT Fiyat değişti
+2023-11-01 18:10:02.218 +03:00 [INF] MHRGY Fiyat değişti
+2023-11-01 18:10:02.218 +03:00 [INF] METRO Fiyat değişti
+2023-11-01 18:10:02.219 +03:00 [INF] NETAS Fiyat değişti
+2023-11-01 18:10:02.219 +03:00 [INF] NIBAS Fiyat değişti
+2023-11-01 18:10:02.220 +03:00 [INF] OBASE Fiyat değişti
+2023-11-01 18:10:02.220 +03:00 [INF] ONCSM Fiyat değişti
+2023-11-01 18:10:02.221 +03:00 [INF] OTKAR Fiyat değişti
+2023-11-01 18:10:02.221 +03:00 [INF] OYAKC Fiyat değişti
+2023-11-01 18:10:02.222 +03:00 [INF] PENTA Fiyat değişti
+2023-11-01 18:10:02.222 +03:00 [INF] PGSUS Fiyat değişti
+2023-11-01 18:10:02.223 +03:00 [INF] SASA Fiyat değişti
+2023-11-01 18:10:02.223 +03:00 [INF] SEGYO Fiyat değişti
+2023-11-01 18:10:02.224 +03:00 [INF] SKTAS Fiyat değişti
+2023-11-01 18:10:02.224 +03:00 [INF] SMRTG Fiyat değişti
+2023-11-01 18:10:02.225 +03:00 [INF] TABGD Fiyat değişti
+2023-11-01 18:10:02.225 +03:00 [INF] TAVHL Fiyat değişti
+2023-11-01 18:10:02.226 +03:00 [INF] TCELL Fiyat değişti
+2023-11-01 18:10:02.226 +03:00 [INF] THYAO Fiyat değişti
+2023-11-01 18:10:02.227 +03:00 [INF] TOASO Fiyat değişti
+2023-11-01 18:10:02.228 +03:00 [INF] TTRAK Fiyat değişti
+2023-11-01 18:10:02.228 +03:00 [INF] ULKER Fiyat değişti
+2023-11-01 18:10:02.229 +03:00 [INF] TRILC Fiyat değişti
+2023-11-01 18:10:02.229 +03:00 [INF] YEOTK Fiyat değişti
+2023-11-01 18:10:02.230 +03:00 [INF] YKSLN Fiyat değişti
+2023-11-01 18:10:02.230 +03:00 [INF] ZOREN Fiyat değişti
+2023-11-01 18:10:02.231 +03:00 [INF] AVHOL Fiyat değişti
+2023-11-01 18:10:02.232 +03:00 [INF] YESIL Fiyat değişti
+2023-11-01 18:10:02.232 +03:00 [INF] A1CAP Fiyat değişti
+2023-11-01 18:10:02.233 +03:00 [INF] BIMAS Fiyat değişti
+2023-11-01 18:10:02.233 +03:00 [INF] BOBET Fiyat değişti
+2023-11-01 18:10:02.234 +03:00 [INF] GOLTS Fiyat değişti
+2023-11-01 18:10:02.234 +03:00 [INF] HALKB Fiyat değişti
+2023-11-01 18:10:02.235 +03:00 [INF] INFO Fiyat değişti
+2023-11-01 18:10:02.236 +03:00 [INF] KATMR Fiyat değişti
+2023-11-01 18:10:02.236 +03:00 [INF] KCHOL Fiyat değişti
+2023-11-01 18:10:02.237 +03:00 [INF] KIMMR Fiyat değişti
+2023-11-01 18:10:02.237 +03:00 [INF] KOZAL Fiyat değişti
+2023-11-01 18:10:02.238 +03:00 [INF] KRGYO Fiyat değişti
+2023-11-01 18:10:02.238 +03:00 [INF] MGROS Fiyat değişti
+2023-11-01 18:10:02.239 +03:00 [INF] MRGYO Fiyat değişti
+2023-11-01 18:10:02.239 +03:00 [INF] MTRKS Fiyat değişti
+2023-11-01 18:10:02.240 +03:00 [INF] NUHCM Fiyat değişti
+2023-11-01 18:10:02.240 +03:00 [INF] OSTIM Fiyat değişti
+2023-11-01 18:10:02.241 +03:00 [INF] OZKGY Fiyat değişti
+2023-11-01 18:10:02.242 +03:00 [INF] POLTK Fiyat değişti
+2023-11-01 18:10:02.242 +03:00 [INF] SANKO Fiyat değişti
+2023-11-01 18:10:02.243 +03:00 [INF] TKFEN Fiyat değişti
+2023-11-01 18:10:02.243 +03:00 [INF] TMSN Fiyat değişti
+2023-11-01 18:10:02.244 +03:00 [INF] YKBNK Fiyat değişti
+2023-11-01 18:10:02.244 +03:00 [INF] ADGYO Fiyat değişti
+2023-11-01 18:10:02.245 +03:00 [INF] GESAN Fiyat değişti
+2023-11-01 18:10:02.246 +03:00 [INF] IEYHO Fiyat değişti
+2023-11-01 18:10:02.246 +03:00 [INF] IHAAS Fiyat değişti
+2023-11-01 18:10:02.247 +03:00 [INF] INDES Fiyat değişti
+2023-11-01 18:10:02.248 +03:00 [INF] IPEKE Fiyat değişti
+2023-11-01 18:10:02.248 +03:00 [INF] NTGAZ Fiyat değişti
+2023-11-01 18:10:02.249 +03:00 [INF] KCAER Fiyat değişti
+2023-11-01 18:10:02.249 +03:00 [INF] PETKM Fiyat değişti
+2023-11-01 18:10:02.250 +03:00 [INF] TATGD Fiyat değişti
+2023-11-01 18:10:02.250 +03:00 [INF] SARKY Fiyat değişti
+2023-11-01 18:10:02.251 +03:00 [INF] KLRHO Fiyat değişti
+2023-11-01 18:10:02.251 +03:00 [INF] KNFRT Fiyat değişti
+2023-11-01 18:10:02.252 +03:00 [INF] KOPOL Fiyat değişti
+2023-11-01 18:10:02.252 +03:00 [INF] KORDS Fiyat değişti
+2023-11-01 18:10:02.253 +03:00 [INF] KRDMA Fiyat değişti
+2023-11-01 18:10:02.253 +03:00 [INF] KRSTL Fiyat değişti
+2023-11-01 18:10:02.254 +03:00 [INF] KRTEK Fiyat değişti
+2023-11-01 18:10:02.254 +03:00 [INF] KTLEV Fiyat değişti
+2023-11-01 18:10:02.255 +03:00 [INF] KTSKR Fiyat değişti
+2023-11-01 18:10:02.255 +03:00 [INF] LINK Fiyat değişti
+2023-11-01 18:10:02.256 +03:00 [INF] KRVGD Fiyat değişti
+2023-11-01 18:10:02.256 +03:00 [INF] MAKTK Fiyat değişti
+2023-11-01 18:10:02.257 +03:00 [INF] MANAS Fiyat değişti
+2023-11-01 18:10:02.257 +03:00 [INF] KZBGY Fiyat değişti
+2023-11-01 18:10:02.258 +03:00 [INF] LKMNH Fiyat değişti
+2023-11-01 18:10:02.258 +03:00 [INF] KUTPO Fiyat değişti
+2023-11-01 18:10:02.259 +03:00 [INF] LUKSK Fiyat değişti
+2023-11-01 18:10:02.259 +03:00 [INF] KUYAS Fiyat değişti
+2023-11-01 18:10:02.260 +03:00 [INF] MARTI Fiyat değişti
+2023-11-01 18:10:02.260 +03:00 [INF] MAVI Fiyat değişti
+2023-11-01 18:10:02.261 +03:00 [INF] MAGEN Fiyat değişti
+2023-11-01 18:10:02.262 +03:00 [INF] MERCN Fiyat değişti
+2023-11-01 18:10:02.262 +03:00 [INF] MEDTR Fiyat değişti
+2023-11-01 18:10:02.263 +03:00 [INF] MEPET Fiyat değişti
+2023-11-01 18:10:02.263 +03:00 [INF] MERKO Fiyat değişti
+2023-11-01 18:10:02.264 +03:00 [INF] METUR Fiyat değişti
+2023-11-01 18:10:02.264 +03:00 [INF] MOBTL Fiyat değişti
+2023-11-01 18:10:02.265 +03:00 [INF] MIPAZ Fiyat değişti
+2023-11-01 18:10:02.265 +03:00 [INF] MNDRS Fiyat değişti
+2023-11-01 18:10:02.266 +03:00 [INF] MPARK Fiyat değişti
+2023-11-01 18:10:02.266 +03:00 [INF] MSGYO Fiyat değişti
+2023-11-01 18:10:02.267 +03:00 [INF] MTRYO Fiyat değişti
+2023-11-01 18:10:02.268 +03:00 [INF] NATEN Fiyat değişti
+2023-11-01 18:10:02.268 +03:00 [INF] NTHOL Fiyat değişti
+2023-11-01 18:10:02.269 +03:00 [INF] ODAS Fiyat değişti
+2023-11-01 18:10:02.269 +03:00 [INF] OFSYM Fiyat değişti
+2023-11-01 18:10:02.270 +03:00 [INF] ORCAY Fiyat değişti
+2023-11-01 18:10:02.270 +03:00 [INF] ORGE Fiyat değişti
+2023-11-01 18:10:02.271 +03:00 [INF] MZHLD Fiyat değişti
+2023-11-01 18:10:02.271 +03:00 [INF] OSMEN Fiyat değişti
+2023-11-01 18:10:02.272 +03:00 [INF] OYLUM Fiyat değişti
+2023-11-01 18:10:02.272 +03:00 [INF] OYYAT Fiyat değişti
+2023-11-01 18:10:02.273 +03:00 [INF] OZGYO Fiyat değişti
+2023-11-01 18:10:02.273 +03:00 [INF] OZSUB Fiyat değişti
+2023-11-01 18:10:02.274 +03:00 [INF] PAGYO Fiyat değişti
+2023-11-01 18:10:02.274 +03:00 [INF] OZRDN Fiyat değişti
+2023-11-01 18:10:02.275 +03:00 [INF] SONME Fiyat değişti
+2023-11-01 18:10:02.276 +03:00 [INF] ALMAD Fiyat değişti
+2023-11-01 18:10:02.277 +03:00 [INF] SOKM Fiyat değişti
+2023-11-01 18:10:02.277 +03:00 [INF] TUCLK Fiyat değişti
+2023-11-01 18:10:02.279 +03:00 [INF] BAKAB Fiyat değişti
+2023-11-01 18:10:02.279 +03:00 [INF] KRDMB Fiyat değişti
+2023-11-01 18:10:02.586 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 18:10:02.588 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:04.258 +03:00 [ERR] E-posta admin@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:04.261 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 18:10:04.261 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:05.704 +03:00 [ERR] E-posta deneme2@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:05.706 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:06.358 +03:00 [ERR] E-posta deneme3@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:06.359 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 18:10:06.360 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:07.840 +03:00 [ERR] E-posta admin@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:07.840 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:08.468 +03:00 [ERR] E-posta deneme2@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:08.468 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:09.102 +03:00 [ERR] E-posta deneme3@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:09.103 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 18:10:09.103 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 18:10:10.445 +03:00 [ERR] E-posta deneme2@gmail.com adresine gönderilirken bir hata oluştu: Transaction failed. The server response was: 5.2.0 STOREDRV.Submission.Exception:OutboundSpamException; Failed to process message due to a permanent exception with message [BeginDiagnosticData]WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade. OutboundSpamException: WASCL UserAction verdict is not None. Actual verdict is RefuseQuota, ShowTierUpgrade.[EndDiagnosticData] [Hostname=LO2P265MB5545.GBRP265.PROD.OUTLOOK.COM]
+2023-11-01 18:10:10.446 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-01 18:10:29.804 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a caught stopping signal...
+2023-11-01 18:10:29.865 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a All dispatchers stopped
+2023-11-01 18:10:29.874 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a successfully reported itself as stopped in 1,6927 ms
+2023-11-01 18:10:29.874 +03:00 [INF] Server bahadir-aksakal:23760:c0daf10a has been stopped in total 44,3328 ms

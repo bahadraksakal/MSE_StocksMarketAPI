@@ -79,6 +79,85 @@
         }
       }
     },
+    "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj",
+        "projectName": "SharedServices",
+        "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj",
+        "packagesPath": "C:\\Users\\Bahadr\\.nuget\\packages\\",
+        "outputPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Bahadr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj": {
+                "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj"
+              },
+              "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj": {
+                "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj"
+              },
+              "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketEntitiesLibrary\\StocksMarketEntitiesLibrary.csproj": {
+                "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketEntitiesLibrary\\StocksMarketEntitiesLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -241,6 +320,9 @@
             "projectReferences": {
               "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj": {
                 "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj"
+              },
+              "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj": {
+                "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj"
               },
               "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj": {
                 "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketDbContextLibrary\\StocksMarketDbContextLibrary.csproj"

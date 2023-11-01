@@ -1,0 +1,224 @@
+2023-11-01 11:38:18.736 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 11:38:19.254 +03:00 [INF] A1CAP Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 11:38:19.725 +03:00 [INF] BIZIM Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 11:38:21.583 +03:00 [INF] ONCSM Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 11:38:21.819 +03:00 [INF] SAHOL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 11:38:22.560 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 11:38:26.677 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)
+2023-11-01 15:07:03.353 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-01 15:07:03.489 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-01 15:07:03.532 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-01 15:07:03.532 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-01 15:07:03.533 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-01 15:07:03.728 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 successfully announced in 166,871 ms
+2023-11-01 15:07:03.734 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-01 15:07:03.742 +03:00 [INF] 3 servers were removed due to timeout
+2023-11-01 15:07:03.767 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 all the dispatchers started
+2023-11-01 15:07:03.798 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-01 15:07:03.949 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:03.949 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:03.949 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:03.949 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:03.954 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:03.956 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-01 15:07:03.959 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-11-01 15:07:03.963 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:34.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:07:03.963 +03:00 [WRN] Failed to process the job '7': an exception occurred. Retry attempt 4 of 10 will be performed in 00:01:52.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:07:03.963 +03:00 [WRN] Failed to process the job '9': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:52.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:07:03.977 +03:00 [WRN] Failed to process the job '5': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:51.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:07:04.001 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:07:04.038 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:07:04.040 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:07:05.584 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:07:05.587 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:07:48.821 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:07:48.823 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:38.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:08:03.828 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:08:03.830 +03:00 [WRN] Failed to process the job '9': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:20.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:08:04.001 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:08:04.002 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:08:04.003 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:08:04.003 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:08:05.353 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:08:05.355 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:08:33.842 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:08:33.844 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:01.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:09:03.867 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:09:03.870 +03:00 [WRN] Failed to process the job '7': an exception occurred. Retry attempt 5 of 10 will be performed in 00:04:46.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:09:04.036 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:09:04.038 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:09:04.038 +03:00 [INF] GetStocksService 2. kere çalışıyor
+2023-11-01 15:09:04.038 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:09:04.044 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:09:05.402 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:09:05.403 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:09:48.898 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:09:48.900 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:16.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:10:04.067 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:10:04.068 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:10:04.069 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:10:04.070 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:10:05.556 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:10:05.558 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:11:04.087 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:11:04.087 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:11:04.088 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:11:04.089 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:11:05.642 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:11:05.644 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:11:33.944 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:11:33.945 +03:00 [WRN] Failed to process the job '9': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:41.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:12:04.113 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:12:04.113 +03:00 [INF] GetStocksService 3. kere çalışıyor
+2023-11-01 15:12:04.113 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:12:04.115 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:12:04.116 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:12:05.383 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:12:05.384 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:12:18.971 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:12:18.973 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:06.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:13:03.991 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:13:03.994 +03:00 [WRN] Failed to process the job '5': an exception occurred. Retry attempt 6 of 10 will be performed in 00:11:40.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:13:04.160 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:13:04.161 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:13:04.161 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:13:04.162 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:13:05.739 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:13:05.740 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:13:49.020 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:13:49.022 +03:00 [WRN] Failed to process the job '7': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:28.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:14:04.201 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:14:04.202 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:14:04.202 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:14:04.203 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:14:05.533 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:14:05.534 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:15:04.251 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:15:04.251 +03:00 [INF] GetStocksService 4. kere çalışıyor
+2023-11-01 15:15:04.252 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:15:04.254 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:15:04.255 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:15:05.650 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:15:05.650 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:16:04.281 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:16:04.282 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:16:04.282 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:16:04.283 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:16:05.793 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:16:05.794 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:17:04.338 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:17:04.339 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:17:04.339 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:17:04.340 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:17:05.993 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:17:05.995 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:17:19.172 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:17:19.175 +03:00 [WRN] Failed to process the job '9': an exception occurred. Retry attempt 6 of 10 will be performed in 00:11:58.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:17:34.181 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:17:34.182 +03:00 [WRN] Failed to process the job '11': an exception occurred. Retry attempt 6 of 10 will be performed in 00:13:04.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HangFireApp.BackGroundJobs.BackGroundJobSendMailWhenPricesChanged.SendMailWhenPricesChanged(Emailer emailer) in D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\BackGroundJobs\BackGroundJobSendMailWhenPricesChanged.cs:line 25
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+2023-11-01 15:18:04.390 +03:00 [INF] GetStocksService 5. kere çalışıyor
+2023-11-01 15:18:04.406 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:18:04.408 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:18:04.409 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:18:04.411 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:18:05.805 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:18:05.806 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:19:04.461 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:19:04.462 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:19:04.463 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:19:04.464 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:19:05.925 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:19:05.927 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:20:04.515 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:20:04.515 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:20:04.516 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:20:04.516 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:20:05.842 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:20:05.844 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:21:04.581 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:21:04.582 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:21:04.582 +03:00 [INF] GetStocksService 6. kere çalışıyor
+2023-11-01 15:21:04.582 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:21:04.583 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:21:05.844 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:21:05.847 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:22:04.639 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:22:04.640 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:22:04.641 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:22:04.641 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:22:06.019 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:22:06.020 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:23:04.686 +03:00 [WRN] SendMailWhenPricesChanged çalıştı
+2023-11-01 15:23:04.687 +03:00 [INF] SendEmailsAsync çalıştı
+2023-11-01 15:23:04.687 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-01 15:23:04.688 +03:00 [INF] MailMessage oluşturuldu
+2023-11-01 15:23:06.152 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-01 15:23:06.154 +03:00 [WRN] SendMailWhenPricesChanged tamamlandı
+2023-11-01 15:23:10.330 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 caught stopping signal...
+2023-11-01 15:23:10.334 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 All dispatchers stopped
+2023-11-01 15:23:10.336 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 successfully reported itself as stopped in 1,4582 ms
+2023-11-01 15:23:10.337 +03:00 [INF] Server bahadir-aksakal:12356:bec20640 has been stopped in total 5,4189 ms

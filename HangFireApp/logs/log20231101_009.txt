@@ -1,0 +1,19 @@
+2023-11-01 15:29:13.116 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 15:29:15.097 +03:00 [INF] SODSN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 15:29:15.127 +03:00 [INF] TAVHL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 15:29:18.554 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 15:29:19.691 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-01 15:35:27.798 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-01 15:35:27.939 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-01 15:35:27.992 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-01 15:35:27.994 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-01 15:35:27.994 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-01 15:35:28.136 +03:00 [INF] Server bahadir-aksakal:14640:c8921a41 successfully announced in 112,7168 ms
+2023-11-01 15:35:28.171 +03:00 [INF] Server bahadir-aksakal:14640:c8921a41 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-01 15:35:28.182 +03:00 [INF] 2 servers were removed due to timeout
+2023-11-01 15:35:28.281 +03:00 [INF] Server bahadir-aksakal:14640:c8921a41 all the dispatchers started
+2023-11-01 15:35:28.342 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.

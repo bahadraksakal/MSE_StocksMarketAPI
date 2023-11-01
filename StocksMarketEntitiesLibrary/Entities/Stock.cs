@@ -1,5 +1,8 @@
-﻿namespace StockMarketEntitiesLibrary.Entities
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace StockMarketEntitiesLibrary.Entities
 {
+    [Index(nameof(Stock.Name), IsUnique = true)]
     public class Stock
     {
         public int Id { get; set; }

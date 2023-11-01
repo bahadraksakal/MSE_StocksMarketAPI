@@ -1,3 +1,0 @@
-2023-10-31 18:27:26.514 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
-2023-10-31 18:27:30.523 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
-2023-10-31 18:27:32.215 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

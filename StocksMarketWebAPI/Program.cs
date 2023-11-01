@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using Serilog.Events;
+using SharedServices.StockTrackingServices;
 using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
@@ -32,12 +34,16 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<MoneyCardService>();
 builder.Services.AddScoped<MainBoardService>();
 builder.Services.AddScoped<StockService>();
+builder.Services.AddScoped<StockTrackingService>();
+
 
 //seri log
 builder.Services.AddSerilog();
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Debug(Serilog.Events.LogEventLevel.Warning)
-    .WriteTo.File("logs/log.txt",Serilog.Events.LogEventLevel.Warning)
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .WriteTo.Debug()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 //JwtBearer

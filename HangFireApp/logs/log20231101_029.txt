@@ -1,0 +1,27 @@
+2023-11-01 17:39:16.860 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-01 17:39:19.476 +03:00 [INF] GLYHO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:39:20.034 +03:00 [INF] KZGYO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-01 17:39:20.931 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-01 17:39:25.045 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)
+2023-11-01 17:44:35.320 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-01 17:44:35.521 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-01 17:44:35.541 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-01 17:44:35.542 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-01 17:44:35.542 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-01 17:44:35.664 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac successfully announced in 94,4409 ms
+2023-11-01 17:44:35.673 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-01 17:44:35.823 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac all the dispatchers started
+2023-11-01 17:44:35.864 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-01 17:45:06.067 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-01 17:45:06.487 +03:00 [WRN] stockTrackingService-ChangedPricesStocks: StockPrices boş lütfen önce bigpara API den stock verilerini çekin
+2023-11-01 17:45:06.559 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: stockTrackingService-ChangedPricesStocks: StockPrices boş lütfen önce bigpara API den stock verilerini çekin
+2023-11-01 17:46:06.006 +03:00 [WRN] stockTrackingService-ChangedPricesStocks: StockPrices boş lütfen önce bigpara API den stock verilerini çekin
+2023-11-01 17:46:06.035 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: stockTrackingService-ChangedPricesStocks: StockPrices boş lütfen önce bigpara API den stock verilerini çekin
+2023-11-01 17:46:22.833 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac caught stopping signal...
+2023-11-01 17:46:22.857 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac All dispatchers stopped
+2023-11-01 17:46:22.880 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac successfully reported itself as stopped in 1,7581 ms
+2023-11-01 17:46:22.881 +03:00 [INF] Server bahadir-aksakal:5692:e7c762ac has been stopped in total 28,5113 ms
