@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StockMarketDbContextLibrary.Context;
 
@@ -11,9 +12,11 @@ using StockMarketDbContextLibrary.Context;
 namespace StockMarketDbContextLibrary.Migrations
 {
     [DbContext(typeof(StockMarketDbContext))]
-    partial class StockMarketDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231101170834_mig_14_portfolioStock_IsTracked")]
+    partial class mig_14_portfolioStock_IsTracked
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

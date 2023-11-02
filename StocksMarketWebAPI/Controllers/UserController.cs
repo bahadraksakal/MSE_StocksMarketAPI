@@ -86,7 +86,7 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("StockController:GetUsershata:" + ex.Message);
+                return BadRequest("UserController:GetUsershata:" + ex.Message);
             }
         }
         [Authorize(Policy = "CustomAdminPolicy")]
@@ -100,7 +100,7 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("StockController:GetUsershata:" + ex.Message);
+                return BadRequest("UserController:GetUsershata:" + ex.Message);
             }
         }
     }

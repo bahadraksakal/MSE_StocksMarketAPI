@@ -17,5 +17,7 @@
         public bool? StockStatus { get; set; }
 
         public int Unit { get; set; }
+
+        public bool? IsTracked { get; set; }
     }
 }

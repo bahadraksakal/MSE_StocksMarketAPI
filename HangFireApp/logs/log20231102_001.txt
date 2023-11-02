@@ -1,0 +1,13 @@
+2023-11-02 10:23:21.914 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-02 10:23:25.688 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-02 10:23:26.764 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-02 10:24:05.541 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-02 10:24:07.193 +03:00 [INF] EMKEL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-02 10:24:09.401 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-02 10:24:09.614 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-02 10:27:05.722 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-02 10:27:10.430 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-02 10:27:10.629 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-02 10:30:05.777 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-02 10:30:10.284 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-02 10:30:10.432 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

@@ -196,7 +196,8 @@ namespace StocksMarketWebAPI.Services
                 {
                     PortfolioId = portfolioUser.PortfolioId,
                     StockId = stockPrice.Stock.Id,
-                    Unit = buyingStockUnit                
+                    Unit = buyingStockUnit,
+                    IsTracked = false
                 };
                 await _stockMarketDbContext.PortfolioStock.AddAsync(portfolioStock);
             }
@@ -317,6 +318,30 @@ namespace StocksMarketWebAPI.Services
                                                     .Where(portfolioStock=> portfolioStock.PortfolioId == portfolioUser.PortfolioId)
                                                     .ToListAsync();
             return _mapper.Map<List<PortfolioStockDTO>>(portfolioStocks);
+        }
+
+        public async Task<PortfolioStockDTO> SetStockIsTrackedAsync(string stockName,bool isTracked, int userId)
+        {
+            PortfolioUser portfolioUser = await _stockMarketDbContext.PortfolioUser
+                                                    .AsNoTracking()
+                                                    .FirstOrDefaultAsync(portfolioUser => portfolioUser.UserId == userId);
+            if (portfolioUser == null)
+            {
+                Log.Error($"StockService SetStockIsTrackedAsync:Size ait bir portfoy bulunamadı.");
+                throw new Exception("StockService SetStockIsTrackedAsync:Size ait bir portfoy bulunamadı.");
+            }
+            PortfolioStock portfolioStock = await _stockMarketDbContext.PortfolioStock
+                                                    .Include(portfolioStock => portfolioStock.Stock)
+                                                    .FirstOrDefaultAsync(portfolioStock => portfolioStock.PortfolioId == portfolioUser.PortfolioId
+                                                     && portfolioStock.Stock.Name == stockName);
+            if (portfolioStock == null)
+            {
+                Log.Error($"StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.");
+                throw new Exception("StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.");
+            }
+            portfolioStock.IsTracked = isTracked;
+            await _stockMarketDbContext.SaveChangesAsync();
+            return _mapper.Map<PortfolioStockDTO>(portfolioStock);
         }
     }
 }

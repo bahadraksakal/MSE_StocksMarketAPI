@@ -1,0 +1,14 @@
+2023-11-02 10:08:15.208 +03:00 [WRN] AuthService-CheckCredentialsAsync: deneme3 giriş yaptı.
+2023-11-02 10:08:15.262 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTMiLCJ1c2VySWQiOiIzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsIm5iZiI6MTY5ODkwODg5NSwiZXhwIjoxNjk4OTEyNDk1LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.66YNXokXpxM8tti4ddNIgyINj3MwgzTgeZB93WA7XoM
+2023-11-02 10:11:46.429 +03:00 [WRN] AuthService-CheckCredentialsAsync: deneme3 giriş yaptı.
+2023-11-02 10:11:46.431 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTMiLCJ1c2VySWQiOiIzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsIm5iZiI6MTY5ODkwOTEwNiwiZXhwIjoxNjk4OTEyNzA2LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.l2cmiSfvEcOoMW0ZWyeO-IrCeE1SHJT73t6d5n8ZXHk
+2023-11-02 10:12:00.893 +03:00 [WRN] AuthService-CheckCredentialsAsync: deneme3 giriş yaptı.
+2023-11-02 10:12:00.897 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImRlbmVtZTMiLCJ1c2VySWQiOiIzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsIm5iZiI6MTY5ODkwOTEyMCwiZXhwIjoxNjk4OTEyNzIwLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJCdUJlbmltQXVkaWVuY2VEZcSfZXJpbSJ9.mZG7Zedqv22UhcunQmqugWz8mrBUpgRdSqiE_fmRE0k
+2023-11-02 10:12:22.288 +03:00 [WRN] StockService-GetStocks çalıştı.
+2023-11-02 10:15:53.807 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-11-02 10:15:54.036 +03:00 [WRN] A1CAP kodlu hisse senedinden, 36,2 TL fiyatından, 10 adet satın adlınız. İşlem 362 TL, komisyon 18,1 TL tuttu. Eski bakiyeniz 66158,25 TL.
+Yeni bakiyeniz 65778,15 TL. Sistemde kalan hisse senedi 9940 adettir.
+2023-11-02 10:16:30.827 +03:00 [WRN] BIMAS kodlu hisse senedinden, 276,5 TL fiyatından, 10 adet satın adlınız. İşlem 2765 TL, komisyon 138,25 TL tuttu. Eski bakiyeniz 65778,15 TL.
+Yeni bakiyeniz 62874,9 TL. Sistemde kalan hisse senedi 9990 adettir.
+2023-11-02 10:16:47.031 +03:00 [WRN] BIMAS kodlu hisse senedinden, 276,5 TL fiyatından, 10 adet satın adlınız. İşlem 2765 TL, komisyon 138,25 TL tuttu. Eski bakiyeniz 62874,9 TL.
+Yeni bakiyeniz 59971,65 TL. Sistemde kalan hisse senedi 9980 adettir.

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StocksMarketWebAPI.DTOs.PortfolioStockDTOs;
+using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
@@ -103,6 +104,22 @@ namespace StocksMarketWebAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest("StockController:GetOwnedStocks hata:" + ex.Message);
+            }
+        }
+
+
+        [HttpPatch("{stockName}/{isTracked}")]
+        public async Task<IActionResult> SetStockIsTracked(string stockName, bool isTracked)
+        {
+            try
+            {
+                int userId= int.Parse(User.FindFirstValue("userId"));
+                PortfolioStockDTO portfolioStockDTO = await _stockService.SetStockIsTrackedAsync(stockName,isTracked,userId);
+                return Ok(portfolioStockDTO);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("StockController:SetStockIsTracked:" + ex.Message);
             }
         }
     }

@@ -74,7 +74,8 @@ namespace SharedServices.StockTrackingServices
                                                 .AsNoTracking()
                                                 .Include(portfolioStocks => portfolioStocks.Stock)
                                                 .Where(portfolioStocks => portfolioStocks.Stock.Name == stockHangFire.Name
-                                                && portfolioStocks.Stock.Status == false && portfolioStocks.Unit>0)
+                                                && portfolioStocks.Stock.Status == false && portfolioStocks.Unit>0
+                                                && portfolioStocks.IsTracked == true)
                                                 .Select(portfolioStocks => portfolioStocks.PortfolioId)
                                                 .ToListAsync();
                 List<User> users = _stockMarketDbContext.PortfolioUser

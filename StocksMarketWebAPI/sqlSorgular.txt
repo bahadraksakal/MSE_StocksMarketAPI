@@ -33,3 +33,23 @@ SELECT TOP (1000) [Id]
       ,[Date]
   FROM [StockMarketDb].[dbo].[StockPrices]
 ORDER BY [Date] DESC;
+
+SELECT U.[Id]
+      ,U.[Name]
+      ,U.[Password]
+      ,U.[Email]
+      ,U.[Tel]
+      ,U.[Role]
+      ,P.[Balance]
+      ,PS.[Unit]
+      ,PS.[IsTracked]
+	  ,S.[Name] AS StockName
+      ,S.[Unit] AS StockUnit
+      ,S.[Status] AS StockStatus
+  FROM [StockMarketDb].[dbo].[Users] U
+  INNER JOIN [StockMarketDb].[dbo].[Portfolios] P
+  ON U.[Id] = P.[Id]
+  INNER JOIN [StockMarketDb].[dbo].[PortfolioStock] PS
+  ON P.[Id] = PS.[PortfolioId]
+  INNER JOIN [StockMarketDb].[dbo].[Stocks] S
+  ON PS.[StockId] = S.[Id]

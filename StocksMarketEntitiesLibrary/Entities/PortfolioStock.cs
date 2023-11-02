@@ -9,6 +9,8 @@
         public int StockId { get; set; }
 
         public int Unit { get; set; }
+        
+        public bool? IsTracked { get; set; }
 
         public virtual Portfolio Portfolio { get; set; }
 
