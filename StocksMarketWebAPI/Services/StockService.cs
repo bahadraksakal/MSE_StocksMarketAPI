@@ -315,7 +315,8 @@ namespace StocksMarketWebAPI.Services
             List<PortfolioStock> portfolioStocks = await _stockMarketDbContext.PortfolioStock
                                                     .Include(portfolioStock => portfolioStock.Portfolio)
                                                     .Include(portfolioStock => portfolioStock.Stock)
-                                                    .Where(portfolioStock=> portfolioStock.PortfolioId == portfolioUser.PortfolioId)
+                                                    .Where(portfolioStock=> portfolioStock.PortfolioId == portfolioUser.PortfolioId
+                                                    && portfolioStock.Unit>0)
                                                     .ToListAsync();
             return _mapper.Map<List<PortfolioStockDTO>>(portfolioStocks);
         }

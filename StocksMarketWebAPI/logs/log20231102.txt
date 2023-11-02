@@ -12,3 +12,7 @@ Yeni bakiyeniz 65778,15 TL. Sistemde kalan hisse senedi 9940 adettir.
 Yeni bakiyeniz 62874,9 TL. Sistemde kalan hisse senedi 9990 adettir.
 2023-11-02 10:16:47.031 +03:00 [WRN] BIMAS kodlu hisse senedinden, 276,5 TL fiyatından, 10 adet satın adlınız. İşlem 2765 TL, komisyon 138,25 TL tuttu. Eski bakiyeniz 62874,9 TL.
 Yeni bakiyeniz 59971,65 TL. Sistemde kalan hisse senedi 9980 adettir.
+2023-11-02 10:23:26.737 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-02 10:24:09.611 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-02 10:27:10.623 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-02 10:30:10.429 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
