@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Events;
+using SharedServices.ExcelServices;
 using SharedServices.StockTrackingServices;
 using StockMarketDbContextLibrary.Context;
 using StocksMarketWebAPI.Services;
@@ -35,6 +36,7 @@ builder.Services.AddScoped<MoneyCardService>();
 builder.Services.AddScoped<MainBoardService>();
 builder.Services.AddScoped<StockService>();
 builder.Services.AddScoped<StockTrackingService>();
+builder.Services.AddScoped<ExportExcelService>();
 
 
 //seri log

@@ -1,18 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using Serilog;
-using StockMarketDbContextLibrary.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using StocksMarketWebAPI.DTOs.UserDTOs;
-using StockMarketEntitiesLibrary.Entities;
 using StocksMarketWebAPI.Services;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace StocksMarketWebAPI.Controllers
 {

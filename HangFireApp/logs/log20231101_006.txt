@@ -1,5 +1,0 @@
-2023-11-01 15:07:04.829 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
-2023-11-01 15:07:06.061 +03:00 [INF] AVGYO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
-2023-11-01 15:07:09.033 +03:00 [INF] THYAO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
-2023-11-01 15:07:09.462 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
-2023-11-01 15:07:10.638 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

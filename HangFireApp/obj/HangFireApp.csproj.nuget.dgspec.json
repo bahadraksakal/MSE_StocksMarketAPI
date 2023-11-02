@@ -232,6 +232,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[7.0.0, )"

@@ -58,7 +58,7 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/User/ChangePortfolioBalanceUser/52/2340",
+							"raw": "{{BaseUrl}}/api/User/ChangePortfolioBalanceUser/3/23400",
 							"host": [
 								"{{BaseUrl}}"
 							],
@@ -66,8 +66,8 @@
 								"api",
 								"User",
 								"ChangePortfolioBalanceUser",
-								"52",
-								"2340"
+								"3",
+								"23400"
 							]
 						},
 						"description": "Kullanıcın portfoyündeki para miktarını değiştirir - Auth zorunlu"
@@ -91,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"deneme30\",\r\n  \"password\": \"deneme30\",\r\n  \"email\": \"deneme30@gmail.com\",\r\n  \"tel\": \"05554443311\",\r\n  \"role\": \"User\"\r\n}",
+							"raw": "{\r\n  \"name\": \"deneme5\",\r\n  \"password\": \"deneme5\",\r\n  \"email\": \"deneme5@gmail.com\",\r\n  \"tel\": \"05554443311\",\r\n  \"role\": \"Admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -159,14 +159,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/User/GetUsersWithDeatil",
+							"raw": "{{BaseUrl}}/api/User/GetAllUsersWithDeatil",
 							"host": [
 								"{{BaseUrl}}"
 							],
 							"path": [
 								"api",
 								"User",
-								"GetUsersWithDeatil"
+								"GetAllUsersWithDeatil"
 							]
 						},
 						"description": "Kullanıcı bilgilerini portfoy bakiyeleri ile getirir - Yalnızca Admin"
@@ -181,6 +181,19 @@
 			"item": [
 				{
 					"name": "/api/Auth/Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseData=pm.response.json();\r",
+									"console.log(responseData);\r",
+									"pm.environment.set(\"Token\", responseData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -215,7 +228,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"deneme31\",\r\n  \"password\": \"deneme31\",\r\n  \"email\": \"deneme31@gmail.com\",\r\n  \"tel\": \"05554443322\"\r\n}",
+							"raw": "{\r\n  \"name\": \"deneme4\",\r\n  \"password\": \"deneme4\",\r\n  \"email\": \"deneme4@gmail.com\",\r\n  \"tel\": \"05554443322\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -473,6 +486,69 @@
 						"description": "Kodu girilen hisse senedinin geçmişe yönelik tüm fiyat hareketlerini sorgular. -Auth gerekli"
 					},
 					"response": []
+				},
+				{
+					"name": "/api/Stock/SetStockIsTracked/{stockName}/{isTracked-bool}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/SetStockIsTracked/BIMAS/true",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"SetStockIsTracked",
+								"BIMAS",
+								"true"
+							]
+						},
+						"description": "Hisse senedi hakkında bildirim almak isteyip istemdiğinizi belirtiniz.\r\nAuth gerekli"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Stock/GetListStockPricesByName/{stockName}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Stock/GetListStockPricesByName/A1CAP",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Stock",
+								"GetListStockPricesByName",
+								"A1CAP"
+							]
+						},
+						"description": "Kodu girilen hisse senedine ait tüm fiyat hareketlerini listeler.\r\nAuth gerekli"
+					},
+					"response": []
 				}
 			],
 			"description": "Hisse senetleri ile ilgili işlemler -StockController \"Auth Zorunlu\""
@@ -496,7 +572,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/MoneyCard/AddMoneyCard/1/3000",
+							"raw": "{{BaseUrl}}/api/MoneyCard/AddMoneyCard/3/70000",
 							"host": [
 								"{{BaseUrl}}"
 							],
@@ -504,8 +580,8 @@
 								"api",
 								"MoneyCard",
 								"AddMoneyCard",
-								"1",
-								"3000"
+								"3",
+								"70000"
 							]
 						},
 						"description": "Bir kullanıcıya kullanabileceği bir para kartı tanımlar.\r\n- Sadece admin kullanabilir."
@@ -528,7 +604,7 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/MoneyCard/UseMoneyCard/11",
+							"raw": "{{BaseUrl}}/api/MoneyCard/UseMoneyCard/9",
 							"host": [
 								"{{BaseUrl}}"
 							],
@@ -536,7 +612,7 @@
 								"api",
 								"MoneyCard",
 								"UseMoneyCard",
-								"11"
+								"9"
 							]
 						},
 						"description": "Tanımlı para kartını kullan. - Auth zorunlu"
@@ -605,6 +681,139 @@
 				}
 			],
 			"description": "Para kartları ile ilgili işlemler -MoneyCard \"Sadece Admin veya Auth olanların kullanabildiği karışık\""
+		},
+		{
+			"name": "Excel",
+			"item": [
+				{
+					"name": "/api/Excel/ExportExcelStockPricesByName/{stockName}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Excel/ExportExcelStockPricesByName/A1CAP",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Excel",
+								"ExportExcelStockPricesByName",
+								"A1CAP"
+							]
+						},
+						"description": "Kodu girilen hisse senedina ait tüm fiyat hareketlerini excel tablosu olarak kullacıya verir. \r\nAuth gerekli."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Excel/ExportExcelUserStockBuyAndSale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/Excel/ExportExcelUserStockBuyAndSale",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Excel",
+								"ExportExcelUserStockBuyAndSale"
+							]
+						},
+						"description": "Kullanıcıya ait tüm hisse alım satım işlemlerini excel tablosu olarak verir.\r\nAuth gerekli"
+					},
+					"response": []
+				}
+			],
+			"description": "Bilgilerinizi excel çıktısı olarak almak için olan controller - auth gerekli"
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var BaseUrl = pm.environment.get('BaseUrl');",
+					"var AuthUrl= BaseUrl+pm.environment.get('LoginPath')",
+					"var UserName = pm.environment.get('Username');",
+					"var UserPassword = pm.environment.get('UserPassword');",
+					"",
+					"pm.sendRequest({",
+					"    url: AuthUrl,",
+					"    method: 'POST',",
+					"    header: 'Content-Type:application/x-www-form-urlencoded',",
+					"    body: {",
+					"                mode: 'urlencoded',",
+					"                urlencoded: [",
+					"                        { key: \"username\", value: 'UsernNme' },",
+					"                        { key: \"password\", value: 'UserPassword' },",
+					"                ]",
+					"        }",
+					"        });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "LoginPath",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "UserName",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "UserPassword",
+			"value": "",
+			"type": "string"
 		}
 	]
 }

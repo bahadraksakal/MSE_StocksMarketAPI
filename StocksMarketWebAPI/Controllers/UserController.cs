@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
 using StocksMarketWebAPI.DTOs.UserDTOs;
-using StockMarketEntitiesLibrary.Entities;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
 

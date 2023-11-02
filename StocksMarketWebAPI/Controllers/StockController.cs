@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StocksMarketWebAPI.DTOs.PortfolioStockDTOs;
-using StocksMarketWebAPI.DTOs.PortfolioUserDTOs;
 using StocksMarketWebAPI.DTOs.StockPriceDTOs;
 using StocksMarketWebAPI.Services;
 using System.Security.Claims;
@@ -119,7 +118,7 @@ namespace StocksMarketWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("StockController:SetStockIsTracked:" + ex.Message);
+                return BadRequest("StockController:SetStockIsTracked: Hata:" + ex.Message);
             }
         }
     }
