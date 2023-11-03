@@ -4,3 +4,6 @@
 2023-11-03 10:52:04.935 +03:00 [INF] ExportExcelService-ExportToExcel: A1CAPStockPrices.xlsx3e785b19-3ac7-4733-bdea-827debedfcd3.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\StocksPricesExportedExcel klasörüne kayıt edildi.
 2023-11-03 10:52:18.436 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsx711af81a-4dd5-4748-87b2-ce01d794697d.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
 2023-11-03 10:54:15.997 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 10:59:53.198 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 11:00:06.267 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 11:03:07.243 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
