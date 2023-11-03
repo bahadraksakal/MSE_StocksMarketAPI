@@ -160,6 +160,10 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 - Bazı işlemler için yönetici yetkisi gerekebilir. Yönetici hesabı: { kullanıcı adı: admin, şifre: admin }.
 
+## Veritabanı Tasarımı
+
+![dbdiagram](/img/dbdiagram.png)
+
 ## Programdan Görseller
 
 ![Resim 34](/img/34.png)
