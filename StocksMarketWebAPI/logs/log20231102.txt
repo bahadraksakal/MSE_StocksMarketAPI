@@ -91,3 +91,20 @@ Yeni bakiyeniz 59971,65 TL. Sistemde kalan hisse senedi 9980 adettir.
 2023-11-02 15:03:17.261 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
 2023-11-02 15:03:17.519 +03:00 [WRN] CANTE kodlu hisse senedinden, 18,53 TL fiyatından, 23 adet satın adlınız. İşlem 426,19 TL, komisyon 21,3095 TL tuttu. Eski bakiyeniz 70441,62 TL.
 Yeni bakiyeniz 69994,12 TL. Sistemde kalan hisse senedi 9967 adettir.
+2023-11-02 15:04:23.732 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsx0345dd14-92a6-4251-b227-78d95c1c87b6.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-02 15:04:30.563 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsxa91e83bb-02d4-4f19-a352-c094e8525e9a.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-02 15:12:38.087 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-02 15:12:49.874 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-11-02 15:12:49.890 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4OTI3MTY5LCJleHAiOjE2OTg5MzA3NjksImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.nZ3Nf0uA5xp9EVJWR7JLLTjmprOnbMtzLsoKwG-ONvY
+2023-11-02 15:13:14.716 +03:00 [WRN] StockService-BuyStockAsync Hata: stockPrice bulunamadı. THYO isimli hisse senedine ait veri olamayabilir veya hisse senedi işleme kapalı olabilir
+2023-11-02 15:13:59.170 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-11-02 15:13:59.248 +03:00 [WRN] THYAO kodlu hisse senedinden, 225,8 TL fiyatından, 10 adet satın adlınız. İşlem 2258 TL, komisyon 112,9 TL tuttu. Eski bakiyeniz 69994,12 TL.
+Yeni bakiyeniz 67623,22 TL. Sistemde kalan hisse senedi 9990 adettir.
+2023-11-02 15:14:27.421 +03:00 [ERR] StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.
+2023-11-02 15:15:16.952 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-02 15:17:24.673 +03:00 [ERR] StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.
+2023-11-02 15:17:36.087 +03:00 [WRN] MIATK kodlu hisse senedinden, 776 TL fiyatından, 33 adet satın adlınız. İşlem 25608 TL, komisyon 1280,4 TL tuttu. Eski bakiyeniz 67623,22 TL.
+Yeni bakiyeniz 40734,82 TL. Sistemde kalan hisse senedi 9967 adettir.
+2023-11-02 15:18:03.933 +03:00 [WRN] EREGL kodlu hisse senedinden, 37,56 TL fiyatından, 46 adet satın adlınız. İşlem 1727,76 TL, komisyon 86,388 TL tuttu. Eski bakiyeniz 40734,82 TL.
+Yeni bakiyeniz 38920,67 TL. Sistemde kalan hisse senedi 9954 adettir.
+2023-11-02 15:18:16.890 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.

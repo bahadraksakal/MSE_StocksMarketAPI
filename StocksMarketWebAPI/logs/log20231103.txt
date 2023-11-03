@@ -1,0 +1,6 @@
+2023-11-03 10:51:18.062 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 10:51:59.787 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-11-03 10:51:59.803 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk4OTk3OTE5LCJleHAiOjE2OTkwMDE1MTksImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.bdoJJ9lvFtL-TEsC0R51H8Bt3d7HsnQwI3Dv2XKHb2s
+2023-11-03 10:52:04.935 +03:00 [INF] ExportExcelService-ExportToExcel: A1CAPStockPrices.xlsx3e785b19-3ac7-4733-bdea-827debedfcd3.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\StocksPricesExportedExcel klasörüne kayıt edildi.
+2023-11-03 10:52:18.436 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsx711af81a-4dd5-4748-87b2-ce01d794697d.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-03 10:54:15.997 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.

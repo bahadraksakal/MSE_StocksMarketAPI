@@ -1,0 +1,13 @@
+2023-11-03 10:59:48.861 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 10:59:49.765 +03:00 [INF] ATLAS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 10:59:51.707 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 10:59:53.229 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 11:00:03.754 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 11:00:06.008 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 11:00:06.271 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 11:03:03.894 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 11:03:04.506 +03:00 [INF] ALFAS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 11:03:04.711 +03:00 [INF] CUSAN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 11:03:05.046 +03:00 [INF] ISDMR Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 11:03:07.054 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 11:03:07.248 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

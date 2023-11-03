@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wvOTSexezJ6Sq0ET/4QRylOdj7JzaU+GmQk4S0NdsCGPBrmgufUipTeQsp5AdsMDeYGTpuynO6DT7rjIP9E/1A==",
+  "dgSpecHash": "VOVQt2dVuVJzgHFw+SI3HThEc/untPqM1dIxUqrkZufY9PYFwWzqswZBNt3DzWWJtn3vMSz+tLfmH7bltOiWFA==",
   "success": true,
   "projectFilePath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\StocksMarketWebAPI\\StocksMarketWebAPI.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,8 @@
     "C:\\Users\\Bahadr\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.12\\microsoft.aspnetcore.authentication.jwtbearer.7.0.12.nupkg.sha512",
-    "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
+    "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.13\\microsoft.aspnetcore.authentication.jwtbearer.7.0.13.nupkg.sha512",
+    "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Bahadr\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

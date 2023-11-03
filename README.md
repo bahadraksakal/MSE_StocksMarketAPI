@@ -32,7 +32,16 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 - Kullanıcılar hisse senetlerinde alt veya üst miktar limiti belirleyerek kural setleri oluşturabilir. Hisse senedi fiyatı güncellendiğinde e-posta ile bilgilendirme alabilirler.
 - Kullanıcılar tarafından hisse senedi fiyat ve alım satım hareketleri Excel dosyası olarak çıktı alınabilir.
 
-## Projede Kullanılan Teknoloji ve Diller
+## Projelerde Kullanılan Teknoloji Ve Diller
+
+- Asp.Net Core 7
+- .Net 7 (Console)
+- C#
+- MSSQL
+- Postman (Test Script)
+- JavaScript
+
+## Projede Kullanılan Paketler
 
 ### GetStockServiceApp
 
@@ -40,6 +49,9 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 - Microsoft.AspNetCore.Authentication.JwtBearer | Version="7.0.13"
 - Microsoft.Extensions.Configuration | Version="7.0.0"
 - Microsoft.Extensions.Configuration.Json | Version="7.0.0"
+- Serilog | Version="3.0.1"
+- Serilog.Sinks.Console | Version="4.1.0"
+- Serilog.Sinks.File | Version="5.0.0"
 
 ### HangFireApp
 
@@ -48,32 +60,63 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 - Hangfire.SqlServer | Version="5.1.2"
 - Microsoft.Data.SqlClient Version="5.1.2"
 - Microsoft.Extensions.Configuration | Version="7.0.0"
+- Microsoft.EntityFrameworkCore" Version="7.0.13"
+- Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13"
 - Microsoft SQL Server | Version="15.0.4153"
+- Serilog | Version="3.0.1"
+- Serilog.Sinks.Console | Version="4.1.0"
+- Serilog.Sinks.File | Version="5.0.0"
 
 ### StocksMarketWebAPI
 
-- .NET 7
+- Asp.NET Core 7
 - AutoMapper.Extensions.Microsoft.DependencyInjection | Version="12.0.1"
-- Microsoft.AspNetCore.Authentication.JwtBearer | Version="7.0.12"
-- Microsoft.AspNetCore.OpenApi | Version="7.0.12"
-- Microsoft.EntityFrameworkCore.SqlServer | Version="7.0.12"
-- Microsoft.EntityFrameworkCore.Tools | Version="7.0.12"
+- Microsoft.AspNetCore.Authentication.JwtBearer | Version="7.0.13"
+- Microsoft.AspNetCore.OpenApi | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.SqlServer | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.Tools | Version="7.0.13"
 - Serilog.AspNetCore | Version="7.0.0"
 - Serilog.Sinks.MSSqlServer | Version="6.3.0"
 - Swashbuckle.AspNetCore | Version="6.5.0"
-- Microsoft SQL Server | Version="15.0.4153"
+
+### HangFireDbContextLibrary
+
+- Microsoft.EntityFrameworkCore | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.SqlServer | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.Tools | Version="7.0.13"
+
+### SharedServices
+
+- EPPlus |  Version="7.0.0"
+- Serilog.AspNetCore | Version="7.0.0"
+- Serilog.Sinks.Debug | Version="2.0.0"
+- Serilog.Sinks.File | Version="5.0.0" 
+
+### StocksMarketDbContextLibrary
+
+- Microsoft.EntityFrameworkCore | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.SqlServer | Version="7.0.13"
+- Microsoft.EntityFrameworkCore.Tools | Version="7.0.13"
+
+### StocksMarketEntitiesLibrary
+
+- Microsoft.EntityFrameworkCore | Version="7.0.13"
 
 ## Proje Ayağa Kaldırma Adımları, Projenin Genel Çalışma Mantığı Ve Notlar
 
 ### Projenin Genel Çalışma Mantığı
 
-- Solition içerisinde 3 adet uygulama bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları solition içeriğini oluşturur.
+- Solition içerisinde 3 adet uygulama ve bu uygulamalr tarafından kullanılan kütüphaneler bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları temel solition içeriğini oluşturur.
 - StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
 - HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır.
+- HangFireApp uygulaması kendi metodu üzerinden fiyatı değişen hisse senetlerini bulup, bu hisse senetlerine sahip olan ve bu hisse senetlerini takip eden kullanıcılara email atar.
+- Fiyatı değşen hisse senetlerinin tespiti için ikinci bir veri tabanı ile eşleştirme işlemi yapılır bu sayede sistem yükü dağıtılmış olur.
 - GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir.
-- HangFireApp dakikada 1 kez GetStockService uygulamasını çalıştırır.
+- HangFireApp 3 dakikada 1 kez GetStockService uygulamasını çalıştırır.
+- HangFireApp 3 dakikada 1 kez hisse senedi takip ve email servisini çalıştırır.
 - GetStockService tüm hisseleri çekip, StocksMarketWebAPI uygulamasına istek atıcaktır. (Token ile güvenlik kontrolü)
 - StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
+- StockMarketWeb API üzerinden alım satım geçmişinizi veya ilgili hisse senedine ait fiyat hareketlerini excel çıktısı olarak alabilirsiniz.
 
 ### Proje Ayağa Kaldırma Adımları
 
@@ -111,14 +154,22 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 - Bir çözüm içerisinde üç farklı proje olduğu için `add-migration`, `update-database` vb. komutlarını çalıştırırken hatalar alabilirsiniz. Bu hataları önlemek için komutu çalıştırırken hedef projeyi belirtmelisiniz. Örnek: `Update-Database -Project StocksMarketWebAPI`, `add-migration -Project StocksMarketWebAPI migrationName`
 
+- İki adet context nesnesi olduğuna ilişkin bir hata alırsanız,  `add-migration -Context ContextName` vb.. tarzında bir yazım metodu uygulayın.
+
 - Bazı işlemler için yönetici yetkisi gerekebilir. Yönetici hesabı: { kullanıcı adı: admin, şifre: admin }.
 
 ## Programdan Görseller
 
-
+![Resim 34](/img/34.png)
+![Resim 31](/img/31.png)
+![Resim 33](/img/33.png)
+![Resim 32](/img/32.png)
 ![Resim 30](/img/30.png)
-![Resim 31](/img/cover-image.png)
+![Resim 35](/img/35.png)
+![Resim 35_2](/img/35_2.png)
+![Resim 35_3](/img/35_3.png)
 ![Resim 1](/img/1.png)
+![Resim 1_2](/img/1_2.png)
 ![Resim 2](/img/2.png)
 ![Resim 3](/img/3.png)
 ![Resim 4](/img/4.png)

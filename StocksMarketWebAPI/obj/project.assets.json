@@ -132,7 +132,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.12": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.13": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.15.1"
@@ -151,7 +151,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.OpenApi/7.0.12": {
+      "Microsoft.AspNetCore.OpenApi/7.0.13": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -1894,10 +1894,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.12": {
-      "sha512": "KlSupL6h5oUwjMAoNJO2vp0MrqGYeO6nfdGjAEriK8xUccQndmQW9zQwF7d1R80abrZD/T9b01hmhk3v3LX05g==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.13": {
+      "sha512": "h1B5heq5d7vRC/0CuXlcvNpKzIgZi11b9iURRBDAOSigWXTZlq62Tzix+zyIvOx5xeydE/tniTNSaqeJBQNB3Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.12",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1905,14 +1905,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.7.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.7.0.13.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/7.0.12": {
-      "sha512": "KWfmBcvglieWin4srGSPiREh8/8+qCJpME9MPbsN2OVOwKkMXKta2K82Xk0BcZrZCk9tftMBO6qYfJgz0goQpg==",
+    "Microsoft.AspNetCore.OpenApi/7.0.13": {
+      "sha512": "CHNUWJD3mbfn1Lra1b0EeoyRHDv7udHqVvle/BLZgXSfjRcau8YSWRqmP6W9zLeZ/rxSN64kqrgOOvfkHJzgYg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/7.0.12",
+      "path": "microsoft.aspnetcore.openapi/7.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1920,7 +1920,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -4682,8 +4682,8 @@
     "net7.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "HangFireDbContextLibrary >= 1.0.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.12",
-      "Microsoft.AspNetCore.OpenApi >= 7.0.12",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.13",
+      "Microsoft.AspNetCore.OpenApi >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
       "Serilog.AspNetCore >= 7.0.0",
@@ -4752,11 +4752,11 @@
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[7.0.12, )"
+            "version": "[7.0.13, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[7.0.12, )"
+            "version": "[7.0.13, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
