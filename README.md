@@ -140,14 +140,6 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 5. StocksMarketWebAPI uygulaması, aldığı hisseleri otomatik olarak işler ve veritabanına kaydeder (eğer hisse senedi yoksa, yeni kayıt ekler; varsa, son fiyatını günceller).
 
-6. Postman veya benzeri bir API test aracı kullanarak projeyi test edebilirsiniz. Testlerinize göre Postman çevresel değişkenler (Env.) içindeki Token ve BaseUrl'i güncellemeyi unutmayın.
-
-7. Database konfigürasyonları ile ilgili sorunlar yaşarsanız, projedeki config dosyalarını inceleyin ve gerekirse Connection String'i kendi ortamınıza göre düzenleyin.
-
-8. Projedeki 3 farklı proje olduğu için Migration işlemleri yaparken her proje için belirli bir proje belirtmeyi unutmayın (örneğin: `Update-Database -Project StocksMarketWebAPI`).
-
-9. Bazı metotlar için admin yetkisi gerekebilir. Admin hesabı: { username: admin, password: admin }.
-
 ### Notlar
 
 - Projenin ana parçası çalışsa da, GetStockService uygulamasının PUT yöntemi bir hata verirse, `appconfig` dosyasındaki `BaseUrl` değerini güncelleyin. Örnek: `"BaseUrl":"https://localhost:7261/api/Stock/SetStocks"`
