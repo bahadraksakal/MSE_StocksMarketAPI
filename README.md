@@ -7,6 +7,8 @@
 ## Problem Tanımı
 
 Proje hedefimiz admin rolündeki kullanıcı tarafından hisse senedi portföylerinin yönetildiği kayıtlı kullanıcıların alım, satım işlemleri gerçekleştirebildiği bir platformun Web API servisini oluşturmak. Proje için bir arayüz oluşturulması istenmemektedir. Postman üzerinde bir collection oluşturarak istekleri gerekli klasör yapısında düzenlemeniz yeterlidir. Postman isteklerine “HTTP Status Code” dönüşlerine göre test scriptlerini ekleyiniz. Projedeki hisse senedi bilgileri canlı olarak bir Web API üzerinden düzenli olarak güncellensin. Hisse senedi bilgilerini güncelleyen servis ayrı bir consol uygulaması olarak tasarlansın ve Background Job uygulaması tarafından dakikada 1 kez çalıştırılsın. Background Job'lar ayrı bir consol projesi olarak çalışmalıdır.
+:page_with_curl: **[Proje Detayları İçin Tıkla](https://github.com/bahadraksakal/MSE_StocksMarketAPI/blob/main/Stock_Market_DOTNET_Projesi.pdf)**
+
 
 ## Proje Amacı ve Hedefleri
 
