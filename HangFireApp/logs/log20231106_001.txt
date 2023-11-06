@@ -1,0 +1,18 @@
+2023-11-06 13:39:46.843 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-06 13:39:51.152 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-06 13:39:52.321 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-06 13:42:18.744 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-06 13:42:18.891 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-06 13:42:18.912 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-06 13:42:18.913 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-06 13:42:18.914 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-06 13:42:19.040 +03:00 [INF] Server bahadir-aksakal:10200:3837903b successfully announced in 103,5235 ms
+2023-11-06 13:42:19.046 +03:00 [INF] Server bahadir-aksakal:10200:3837903b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-06 13:42:19.160 +03:00 [INF] Server bahadir-aksakal:10200:3837903b all the dispatchers started
+2023-11-06 13:42:19.293 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-06 13:42:19.383 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-06 13:42:19.863 +03:00 [INF] SendMailWhenPricesChanged tamamlandı

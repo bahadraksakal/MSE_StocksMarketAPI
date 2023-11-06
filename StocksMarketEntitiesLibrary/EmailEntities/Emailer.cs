@@ -10,6 +10,7 @@
         public string subject { get; set; }
         public string body { get; set; }
         public List<string> toUserEmails { get; set; }
+        public string toUserEmail { get; set; }
         public bool enableSsl { get; set; }
     }
 }

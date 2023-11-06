@@ -3,6 +3,8 @@ using System.Net;
 using Serilog;
 using StocksMarketEntitiesLibrary.EmailEntities;
 using Serilog.Core;
+using iTextSharp.text.pdf;
+using System.Net.Mime;
 
 namespace SharedServices.EmailServices
 {
@@ -11,6 +13,53 @@ namespace SharedServices.EmailServices
        
         public EmailService()
         {
+        }
+        public async Task SendEmailWithFilesAsync(Emailer emailer, string[] filePaths)
+        {
+            SmtpClient smtpClient = CreateSmtpClient(emailer.smtpServer, emailer.smtpPort, emailer.username, emailer.password, emailer.enableSsl);
+
+            MailMessage mail = CreateMail(emailer.from, emailer.toUserEmail, emailer.subject, emailer.body);
+
+            foreach(string filePath in filePaths)
+            {
+                mail.Attachments.Add(new Attachment(filePath, MediaTypeNames.Application.Octet));
+            }
+            try
+            {
+                await smtpClient.SendMailAsync(mail);
+                Log.Information($"E-posta {emailer.toUserEmail} adresine başarıyla gönderildi.");
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"E-posta {emailer.toUserEmail} adresine gönderilirken bir hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                mail.Dispose();
+            }
+
+            smtpClient.Dispose();
+        }
+        public async Task SendEmailAsync(Emailer emailer)
+        {
+            SmtpClient smtpClient = CreateSmtpClient(emailer.smtpServer, emailer.smtpPort, emailer.username, emailer.password, emailer.enableSsl);
+
+            MailMessage mail = CreateMail(emailer.from, emailer.toUserEmail, emailer.subject, emailer.body);            
+            try
+            {
+                await smtpClient.SendMailAsync(mail);
+                Log.Information($"E-posta {emailer.toUserEmail} adresine başarıyla gönderildi.");
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"E-posta {emailer.toUserEmail} adresine gönderilirken bir hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                mail.Dispose();
+            }
+
+            smtpClient.Dispose();
         }
         public async Task SendEmailsAsync(Emailer emailer)
         {

@@ -1,0 +1,361 @@
+2023-11-06 14:40:39.266 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-06 14:40:48.847 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-06 14:40:50.072 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-06 16:55:36.220 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-06 16:55:36.457 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-06 16:55:36.479 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-06 16:55:36.481 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-06 16:55:36.482 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-06 16:55:36.823 +03:00 [INF] Server bahadir-aksakal:27356:105b1d0b successfully announced in 293,3274 ms
+2023-11-06 16:55:36.831 +03:00 [INF] Server bahadir-aksakal:27356:105b1d0b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-06 16:55:36.842 +03:00 [INF] 1 servers were removed due to timeout
+2023-11-06 16:55:36.978 +03:00 [INF] Server bahadir-aksakal:27356:105b1d0b all the dispatchers started
+2023-11-06 16:55:37.253 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-06 16:55:37.438 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-06 16:55:38.190 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-06 16:55:38.427 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 16:55:39.006 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDatebdc8df17-f3e3-47dc-88a0-1c582ae193d1.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 16:55:39.279 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:55:39.294 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:55:41.203 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:55:41.220 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 16:55:41.233 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDate56e12d91-5bde-4e3f-a4d6-a1fad63f9f5d.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 16:55:41.240 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:55:41.242 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:55:43.060 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 16:55:43.069 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 16:55:43.085 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDate4df669df-9ee5-4cdf-81b6-c38c646137f3.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 16:55:43.098 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:55:43.099 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:55:44.314 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:55:44.318 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 16:55:44.377 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 16:55:44.379 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 16:55:44.419 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 16:55:44.419 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 16:56:07.344 +03:00 [INF] AKSA Fiyat değişti
+2023-11-06 16:56:07.345 +03:00 [INF] AKSEN Fiyat değişti
+2023-11-06 16:56:07.345 +03:00 [INF] AEFES Fiyat değişti
+2023-11-06 16:56:07.346 +03:00 [INF] ARENA Fiyat değişti
+2023-11-06 16:56:07.346 +03:00 [INF] ASTOR Fiyat değişti
+2023-11-06 16:56:07.347 +03:00 [INF] ASGYO Fiyat değişti
+2023-11-06 16:56:07.347 +03:00 [INF] ATAKP Fiyat değişti
+2023-11-06 16:56:07.348 +03:00 [INF] ATLAS Fiyat değişti
+2023-11-06 16:56:07.348 +03:00 [INF] BERA Fiyat değişti
+2023-11-06 16:56:07.349 +03:00 [INF] BFREN Fiyat değişti
+2023-11-06 16:56:07.349 +03:00 [INF] BJKAS Fiyat değişti
+2023-11-06 16:56:07.350 +03:00 [INF] BOSSA Fiyat değişti
+2023-11-06 16:56:07.350 +03:00 [INF] BORLS Fiyat değişti
+2023-11-06 16:56:07.350 +03:00 [INF] BURVA Fiyat değişti
+2023-11-06 16:56:07.351 +03:00 [INF] BVSAN Fiyat değişti
+2023-11-06 16:56:07.351 +03:00 [INF] BYDNR Fiyat değişti
+2023-11-06 16:56:07.352 +03:00 [INF] CELHA Fiyat değişti
+2023-11-06 16:56:07.352 +03:00 [INF] CCOLA Fiyat değişti
+2023-11-06 16:56:07.353 +03:00 [INF] CEMAS Fiyat değişti
+2023-11-06 16:56:07.353 +03:00 [INF] CEOEM Fiyat değişti
+2023-11-06 16:56:07.354 +03:00 [INF] CRDFA Fiyat değişti
+2023-11-06 16:56:07.354 +03:00 [INF] CRFSA Fiyat değişti
+2023-11-06 16:56:07.355 +03:00 [INF] CVKMD Fiyat değişti
+2023-11-06 16:56:07.355 +03:00 [INF] DAPGM Fiyat değişti
+2023-11-06 16:56:07.356 +03:00 [INF] CMBTN Fiyat değişti
+2023-11-06 16:56:07.356 +03:00 [INF] CLEBI Fiyat değişti
+2023-11-06 16:56:07.357 +03:00 [INF] CONSE Fiyat değişti
+2023-11-06 16:56:07.357 +03:00 [INF] DERHL Fiyat değişti
+2023-11-06 16:56:07.357 +03:00 [INF] DERIM Fiyat değişti
+2023-11-06 16:56:07.358 +03:00 [INF] DESPC Fiyat değişti
+2023-11-06 16:56:07.358 +03:00 [INF] DESA Fiyat değişti
+2023-11-06 16:56:07.359 +03:00 [INF] DGGYO Fiyat değişti
+2023-11-06 16:56:07.359 +03:00 [INF] DGNMO Fiyat değişti
+2023-11-06 16:56:07.360 +03:00 [INF] DJIST Fiyat değişti
+2023-11-06 16:56:07.360 +03:00 [INF] DNISI Fiyat değişti
+2023-11-06 16:56:07.361 +03:00 [INF] DOAS Fiyat değişti
+2023-11-06 16:56:07.361 +03:00 [INF] DOCO Fiyat değişti
+2023-11-06 16:56:07.362 +03:00 [INF] DOGUB Fiyat değişti
+2023-11-06 16:56:07.362 +03:00 [INF] DURDO Fiyat değişti
+2023-11-06 16:56:07.363 +03:00 [INF] DYOBY Fiyat değişti
+2023-11-06 16:56:07.363 +03:00 [INF] DZGYO Fiyat değişti
+2023-11-06 16:56:07.363 +03:00 [INF] EBEBK Fiyat değişti
+2023-11-06 16:56:07.364 +03:00 [INF] EDATA Fiyat değişti
+2023-11-06 16:56:07.364 +03:00 [INF] EDIP Fiyat değişti
+2023-11-06 16:56:07.365 +03:00 [INF] EGEPO Fiyat değişti
+2023-11-06 16:56:07.365 +03:00 [INF] EGSER Fiyat değişti
+2023-11-06 16:56:07.366 +03:00 [INF] EKGYO Fiyat değişti
+2023-11-06 16:56:07.366 +03:00 [INF] ELITE Fiyat değişti
+2023-11-06 16:56:07.367 +03:00 [INF] EKSUN Fiyat değişti
+2023-11-06 16:56:07.367 +03:00 [INF] EMKEL Fiyat değişti
+2023-11-06 16:56:07.367 +03:00 [INF] ENJSA Fiyat değişti
+2023-11-06 16:56:07.368 +03:00 [INF] ENSRI Fiyat değişti
+2023-11-06 16:56:07.368 +03:00 [INF] ERCB Fiyat değişti
+2023-11-06 16:56:07.369 +03:00 [INF] EPLAS Fiyat değişti
+2023-11-06 16:56:07.370 +03:00 [INF] EREGL Fiyat değişti
+2023-11-06 16:56:07.370 +03:00 [INF] ERSU Fiyat değişti
+2023-11-06 16:56:07.372 +03:00 [INF] ESCOM Fiyat değişti
+2023-11-06 16:56:07.372 +03:00 [INF] ESCAR Fiyat değişti
+2023-11-06 16:56:07.373 +03:00 [INF] ESEN Fiyat değişti
+2023-11-06 16:56:07.373 +03:00 [INF] ETYAT Fiyat değişti
+2023-11-06 16:56:07.374 +03:00 [INF] EUPWR Fiyat değişti
+2023-11-06 16:56:07.374 +03:00 [INF] EUYO Fiyat değişti
+2023-11-06 16:56:07.375 +03:00 [INF] EUREN Fiyat değişti
+2023-11-06 16:56:07.375 +03:00 [INF] EYGYO Fiyat değişti
+2023-11-06 16:56:07.376 +03:00 [INF] FENER Fiyat değişti
+2023-11-06 16:56:07.376 +03:00 [INF] FONET Fiyat değişti
+2023-11-06 16:56:07.377 +03:00 [INF] FORMT Fiyat değişti
+2023-11-06 16:56:07.377 +03:00 [INF] FRIGO Fiyat değişti
+2023-11-06 16:56:07.378 +03:00 [INF] ETILR Fiyat değişti
+2023-11-06 16:56:07.378 +03:00 [INF] FMIZP Fiyat değişti
+2023-11-06 16:56:07.379 +03:00 [INF] FZLGY Fiyat değişti
+2023-11-06 16:56:07.379 +03:00 [INF] GARAN Fiyat değişti
+2023-11-06 16:56:07.380 +03:00 [INF] GIPTA Fiyat değişti
+2023-11-06 16:56:07.380 +03:00 [INF] GSRAY Fiyat değişti
+2023-11-06 16:56:07.381 +03:00 [INF] GUBRF Fiyat değişti
+2023-11-06 16:56:07.381 +03:00 [INF] HEKTS Fiyat değişti
+2023-11-06 16:56:07.382 +03:00 [INF] FADE Fiyat değişti
+2023-11-06 16:56:07.382 +03:00 [INF] ISGSY Fiyat değişti
+2023-11-06 16:56:07.383 +03:00 [INF] CUSAN Fiyat değişti
+2023-11-06 16:56:07.383 +03:00 [INF] IZENR Fiyat değişti
+2023-11-06 16:56:07.384 +03:00 [INF] KOZAA Fiyat değişti
+2023-11-06 16:56:07.385 +03:00 [INF] KRONT Fiyat değişti
+2023-11-06 16:56:07.385 +03:00 [INF] KZGYO Fiyat değişti
+2023-11-06 16:56:07.386 +03:00 [INF] LOGO Fiyat değişti
+2023-11-06 16:56:07.386 +03:00 [INF] KAYSE Fiyat değişti
+2023-11-06 16:56:07.387 +03:00 [INF] MEGAP Fiyat değişti
+2023-11-06 16:56:07.387 +03:00 [INF] MHRGY Fiyat değişti
+2023-11-06 16:56:07.388 +03:00 [INF] MAKIM Fiyat değişti
+2023-11-06 16:56:07.388 +03:00 [INF] NETAS Fiyat değişti
+2023-11-06 16:56:07.388 +03:00 [INF] OBASE Fiyat değişti
+2023-11-06 16:56:07.389 +03:00 [INF] OTKAR Fiyat değişti
+2023-11-06 16:56:07.389 +03:00 [INF] OYAYO Fiyat değişti
+2023-11-06 16:56:07.390 +03:00 [INF] PENTA Fiyat değişti
+2023-11-06 16:56:07.390 +03:00 [INF] PGSUS Fiyat değişti
+2023-11-06 16:56:07.391 +03:00 [INF] SASA Fiyat değişti
+2023-11-06 16:56:07.391 +03:00 [INF] SDTTR Fiyat değişti
+2023-11-06 16:56:07.392 +03:00 [INF] SKTAS Fiyat değişti
+2023-11-06 16:56:07.392 +03:00 [INF] SMRTG Fiyat değişti
+2023-11-06 16:56:07.393 +03:00 [INF] SRVGY Fiyat değişti
+2023-11-06 16:56:07.393 +03:00 [INF] TABGD Fiyat değişti
+2023-11-06 16:56:07.394 +03:00 [INF] TARKM Fiyat değişti
+2023-11-06 16:56:07.394 +03:00 [INF] THYAO Fiyat değişti
+2023-11-06 16:56:07.395 +03:00 [INF] TMPOL Fiyat değişti
+2023-11-06 16:56:07.395 +03:00 [INF] TSGYO Fiyat değişti
+2023-11-06 16:56:07.396 +03:00 [INF] TTKOM Fiyat değişti
+2023-11-06 16:56:07.396 +03:00 [INF] ULKER Fiyat değişti
+2023-11-06 16:56:07.396 +03:00 [INF] VESBE Fiyat değişti
+2023-11-06 16:56:07.397 +03:00 [INF] VESTL Fiyat değişti
+2023-11-06 16:56:07.397 +03:00 [INF] UFUK Fiyat değişti
+2023-11-06 16:56:07.398 +03:00 [INF] YATAS Fiyat değişti
+2023-11-06 16:56:07.398 +03:00 [INF] YEOTK Fiyat değişti
+2023-11-06 16:56:07.399 +03:00 [INF] YKSLN Fiyat değişti
+2023-11-06 16:56:07.399 +03:00 [INF] VRGYO Fiyat değişti
+2023-11-06 16:56:07.400 +03:00 [INF] TUKAS Fiyat değişti
+2023-11-06 16:56:07.401 +03:00 [INF] AKBNK Fiyat değişti
+2023-11-06 16:56:07.401 +03:00 [INF] TUPRS Fiyat değişti
+2023-11-06 16:56:07.402 +03:00 [INF] USAK Fiyat değişti
+2023-11-06 16:56:07.402 +03:00 [INF] VAKFN Fiyat değişti
+2023-11-06 16:56:07.403 +03:00 [INF] YUNSA Fiyat değişti
+2023-11-06 16:56:07.403 +03:00 [INF] AHGAZ Fiyat değişti
+2023-11-06 16:56:07.403 +03:00 [INF] ANELE Fiyat değişti
+2023-11-06 16:56:07.404 +03:00 [INF] AYDEM Fiyat değişti
+2023-11-06 16:56:07.405 +03:00 [INF] AYEN Fiyat değişti
+2023-11-06 16:56:07.405 +03:00 [INF] BIMAS Fiyat değişti
+2023-11-06 16:56:07.406 +03:00 [INF] BNTAS Fiyat değişti
+2023-11-06 16:56:07.406 +03:00 [INF] BOBET Fiyat değişti
+2023-11-06 16:56:07.407 +03:00 [INF] CWENE Fiyat değişti
+2023-11-06 16:56:07.407 +03:00 [INF] EGGUB Fiyat değişti
+2023-11-06 16:56:07.408 +03:00 [INF] GEREL Fiyat değişti
+2023-11-06 16:56:07.408 +03:00 [INF] INFO Fiyat değişti
+2023-11-06 16:56:07.409 +03:00 [INF] KATMR Fiyat değişti
+2023-11-06 16:56:07.409 +03:00 [INF] KCHOL Fiyat değişti
+2023-11-06 16:56:07.409 +03:00 [INF] KIMMR Fiyat değişti
+2023-11-06 16:56:07.410 +03:00 [INF] KOZAL Fiyat değişti
+2023-11-06 16:56:07.410 +03:00 [INF] KRGYO Fiyat değişti
+2023-11-06 16:56:07.411 +03:00 [INF] NUHCM Fiyat değişti
+2023-11-06 16:56:07.411 +03:00 [INF] OSTIM Fiyat değişti
+2023-11-06 16:56:07.412 +03:00 [INF] OZKGY Fiyat değişti
+2023-11-06 16:56:07.412 +03:00 [INF] TSKB Fiyat değişti
+2023-11-06 16:56:07.413 +03:00 [INF] TUREX Fiyat değişti
+2023-11-06 16:56:07.413 +03:00 [INF] UZERB Fiyat değişti
+2023-11-06 16:56:07.414 +03:00 [INF] TMSN Fiyat değişti
+2023-11-06 16:56:07.414 +03:00 [INF] YKBNK Fiyat değişti
+2023-11-06 16:56:07.415 +03:00 [INF] ARCLK Fiyat değişti
+2023-11-06 16:56:07.415 +03:00 [INF] GOZDE Fiyat değişti
+2023-11-06 16:56:07.416 +03:00 [INF] GRTRK Fiyat değişti
+2023-11-06 16:56:07.417 +03:00 [INF] IDGYO Fiyat değişti
+2023-11-06 16:56:07.417 +03:00 [INF] IHAAS Fiyat değişti
+2023-11-06 16:56:07.418 +03:00 [INF] INGRM Fiyat değişti
+2023-11-06 16:56:07.418 +03:00 [INF] PRKAB Fiyat değişti
+2023-11-06 16:56:07.419 +03:00 [INF] IZFAS Fiyat değişti
+2023-11-06 16:56:07.419 +03:00 [INF] JANTS Fiyat değişti
+2023-11-06 16:56:07.420 +03:00 [INF] KCAER Fiyat değişti
+2023-11-06 16:56:07.420 +03:00 [INF] KERVT Fiyat değişti
+2023-11-06 16:56:07.420 +03:00 [INF] KGYO Fiyat değişti
+2023-11-06 16:56:07.421 +03:00 [INF] PETKM Fiyat değişti
+2023-11-06 16:56:07.421 +03:00 [INF] ULUSE Fiyat değişti
+2023-11-06 16:56:07.422 +03:00 [INF] AYGAZ Fiyat değişti
+2023-11-06 16:56:07.422 +03:00 [INF] BAGFS Fiyat değişti
+2023-11-06 16:56:07.423 +03:00 [INF] BTCIM Fiyat değişti
+2023-11-06 16:56:07.423 +03:00 [INF] KNFRT Fiyat değişti
+2023-11-06 16:56:07.424 +03:00 [INF] KOPOL Fiyat değişti
+2023-11-06 16:56:07.424 +03:00 [INF] KORDS Fiyat değişti
+2023-11-06 16:56:07.425 +03:00 [INF] KTLEV Fiyat değişti
+2023-11-06 16:56:07.425 +03:00 [INF] KTSKR Fiyat değişti
+2023-11-06 16:56:07.426 +03:00 [INF] KUTPO Fiyat değişti
+2023-11-06 16:56:07.426 +03:00 [INF] LUKSK Fiyat değişti
+2023-11-06 16:56:07.427 +03:00 [INF] MAVI Fiyat değişti
+2023-11-06 16:56:07.427 +03:00 [INF] MAGEN Fiyat değişti
+2023-11-06 16:56:07.428 +03:00 [INF] MERCN Fiyat değişti
+2023-11-06 16:56:07.428 +03:00 [INF] MEPET Fiyat değişti
+2023-11-06 16:56:07.428 +03:00 [INF] MNDRS Fiyat değişti
+2023-11-06 16:56:07.429 +03:00 [INF] MPARK Fiyat değişti
+2023-11-06 16:56:07.429 +03:00 [INF] NATEN Fiyat değişti
+2023-11-06 16:56:07.430 +03:00 [INF] ODAS Fiyat değişti
+2023-11-06 16:56:07.430 +03:00 [INF] PAGYO Fiyat değişti
+2023-11-06 16:56:07.431 +03:00 [INF] ALFAS Fiyat değişti
+2023-11-06 16:56:07.432 +03:00 [INF] RUBNS Fiyat değişti
+2023-11-06 16:56:07.432 +03:00 [INF] TSPOR Fiyat değişti
+2023-11-06 16:56:07.433 +03:00 [INF] AFYON Fiyat değişti
+2023-11-06 16:56:07.433 +03:00 [INF] BEYAZ Fiyat değişti
+2023-11-06 16:56:07.434 +03:00 [INF] PAMEL Fiyat değişti
+2023-11-06 16:56:07.434 +03:00 [INF] PRZMA Fiyat değişti
+2023-11-06 16:56:07.435 +03:00 [INF] QUAGR Fiyat değişti
+2023-11-06 16:56:07.435 +03:00 [INF] ARDYZ Fiyat değişti
+2023-11-06 16:56:07.436 +03:00 [INF] BASGZ Fiyat değişti
+2023-11-06 16:56:07.436 +03:00 [INF] BSOKE Fiyat değişti
+2023-11-06 16:56:07.437 +03:00 [INF] PKART Fiyat değişti
+2023-11-06 16:56:07.437 +03:00 [INF] PRDGS Fiyat değişti
+2023-11-06 16:56:07.438 +03:00 [INF] RAYSG Fiyat değişti
+2023-11-06 16:56:07.438 +03:00 [INF] SELEC Fiyat değişti
+2023-11-06 16:56:07.439 +03:00 [INF] TUCLK Fiyat değişti
+2023-11-06 16:56:07.439 +03:00 [INF] ZPX30 Fiyat değişti
+2023-11-06 16:56:07.441 +03:00 [INF] ATAGY Fiyat değişti
+2023-11-06 16:56:07.441 +03:00 [INF] BARMA Fiyat değişti
+2023-11-06 16:56:07.442 +03:00 [INF] BAYRK Fiyat değişti
+2023-11-06 16:56:07.442 +03:00 [INF] BIZIM Fiyat değişti
+2023-11-06 16:56:07.742 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:56:07.743 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:56:08.912 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:56:08.914 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:56:08.914 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:56:10.117 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:56:10.119 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-06 16:57:07.357 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-11-06 16:57:07.412 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-06 16:58:15.262 +03:00 [INF] AGESA Fiyat değişti
+2023-11-06 16:58:15.264 +03:00 [INF] ACSEL Fiyat değişti
+2023-11-06 16:58:15.264 +03:00 [INF] ADESE Fiyat değişti
+2023-11-06 16:58:15.265 +03:00 [INF] ALARK Fiyat değişti
+2023-11-06 16:58:15.265 +03:00 [INF] ATAKP Fiyat değişti
+2023-11-06 16:58:15.266 +03:00 [INF] ASELS Fiyat değişti
+2023-11-06 16:58:15.266 +03:00 [INF] BIGCH Fiyat değişti
+2023-11-06 16:58:15.267 +03:00 [INF] BFREN Fiyat değişti
+2023-11-06 16:58:15.267 +03:00 [INF] BIENY Fiyat değişti
+2023-11-06 16:58:15.268 +03:00 [INF] BJKAS Fiyat değişti
+2023-11-06 16:58:15.268 +03:00 [INF] BRLSM Fiyat değişti
+2023-11-06 16:58:15.269 +03:00 [INF] CANTE Fiyat değişti
+2023-11-06 16:58:15.269 +03:00 [INF] CEMTS Fiyat değişti
+2023-11-06 16:58:15.270 +03:00 [INF] CCOLA Fiyat değişti
+2023-11-06 16:58:15.271 +03:00 [INF] CEMAS Fiyat değişti
+2023-11-06 16:58:15.272 +03:00 [INF] COSMO Fiyat değişti
+2023-11-06 16:58:15.272 +03:00 [INF] CIMSA Fiyat değişti
+2023-11-06 16:58:15.273 +03:00 [INF] DMSAS Fiyat değişti
+2023-11-06 16:58:15.274 +03:00 [INF] DMRGD Fiyat değişti
+2023-11-06 16:58:15.275 +03:00 [INF] DOFER Fiyat değişti
+2023-11-06 16:58:15.276 +03:00 [INF] DOKTA Fiyat değişti
+2023-11-06 16:58:15.276 +03:00 [INF] DOHOL Fiyat değişti
+2023-11-06 16:58:15.277 +03:00 [INF] ECZYT Fiyat değişti
+2023-11-06 16:58:15.277 +03:00 [INF] EGEEN Fiyat değişti
+2023-11-06 16:58:15.278 +03:00 [INF] ERBOS Fiyat değişti
+2023-11-06 16:58:15.278 +03:00 [INF] ESEN Fiyat değişti
+2023-11-06 16:58:15.279 +03:00 [INF] GARAN Fiyat değişti
+2023-11-06 16:58:15.279 +03:00 [INF] GIPTA Fiyat değişti
+2023-11-06 16:58:15.280 +03:00 [INF] FROTO Fiyat değişti
+2023-11-06 16:58:15.280 +03:00 [INF] GUBRF Fiyat değişti
+2023-11-06 16:58:15.281 +03:00 [INF] ISCTR Fiyat değişti
+2023-11-06 16:58:15.281 +03:00 [INF] DARDL Fiyat değişti
+2023-11-06 16:58:15.282 +03:00 [INF] KARTN Fiyat değişti
+2023-11-06 16:58:15.282 +03:00 [INF] KARSN Fiyat değişti
+2023-11-06 16:58:15.283 +03:00 [INF] KLSER Fiyat değişti
+2023-11-06 16:58:15.283 +03:00 [INF] KONYA Fiyat değişti
+2023-11-06 16:58:15.284 +03:00 [INF] KRDMD Fiyat değişti
+2023-11-06 16:58:15.285 +03:00 [INF] KAYSE Fiyat değişti
+2023-11-06 16:58:15.287 +03:00 [INF] MAALT Fiyat değişti
+2023-11-06 16:58:15.288 +03:00 [INF] MIATK Fiyat değişti
+2023-11-06 16:58:15.288 +03:00 [INF] ONCSM Fiyat değişti
+2023-11-06 16:58:15.289 +03:00 [INF] OYAKC Fiyat değişti
+2023-11-06 16:58:15.289 +03:00 [INF] PGSUS Fiyat değişti
+2023-11-06 16:58:15.290 +03:00 [INF] PNSUT Fiyat değişti
+2023-11-06 16:58:15.291 +03:00 [INF] SAHOL Fiyat değişti
+2023-11-06 16:58:15.291 +03:00 [INF] SASA Fiyat değişti
+2023-11-06 16:58:15.292 +03:00 [INF] SDTTR Fiyat değişti
+2023-11-06 16:58:15.292 +03:00 [INF] TABGD Fiyat değişti
+2023-11-06 16:58:15.293 +03:00 [INF] TARKM Fiyat değişti
+2023-11-06 16:58:15.293 +03:00 [INF] TAVHL Fiyat değişti
+2023-11-06 16:58:15.294 +03:00 [INF] THYAO Fiyat değişti
+2023-11-06 16:58:15.294 +03:00 [INF] TKNSA Fiyat değişti
+2023-11-06 16:58:15.295 +03:00 [INF] SKBNK Fiyat değişti
+2023-11-06 16:58:15.295 +03:00 [INF] TOASO Fiyat değişti
+2023-11-06 16:58:15.296 +03:00 [INF] TMPOL Fiyat değişti
+2023-11-06 16:58:15.296 +03:00 [INF] TSGYO Fiyat değişti
+2023-11-06 16:58:15.297 +03:00 [INF] TTRAK Fiyat değişti
+2023-11-06 16:58:15.297 +03:00 [INF] ULKER Fiyat değişti
+2023-11-06 16:58:15.298 +03:00 [INF] VAKBN Fiyat değişti
+2023-11-06 16:58:15.298 +03:00 [INF] YKSLN Fiyat değişti
+2023-11-06 16:58:15.299 +03:00 [INF] ZOREN Fiyat değişti
+2023-11-06 16:58:15.299 +03:00 [INF] TUKAS Fiyat değişti
+2023-11-06 16:58:15.300 +03:00 [INF] VAKFN Fiyat değişti
+2023-11-06 16:58:15.301 +03:00 [INF] REEDR Fiyat değişti
+2023-11-06 16:58:15.302 +03:00 [INF] A1CAP Fiyat değişti
+2023-11-06 16:58:15.303 +03:00 [INF] AKFYE Fiyat değişti
+2023-11-06 16:58:15.304 +03:00 [INF] ALGYO Fiyat değişti
+2023-11-06 16:58:15.305 +03:00 [INF] AYEN Fiyat değişti
+2023-11-06 16:58:15.305 +03:00 [INF] HALKB Fiyat değişti
+2023-11-06 16:58:15.306 +03:00 [INF] GENTS Fiyat değişti
+2023-11-06 16:58:15.307 +03:00 [INF] KCHOL Fiyat değişti
+2023-11-06 16:58:15.307 +03:00 [INF] KLKIM Fiyat değişti
+2023-11-06 16:58:15.308 +03:00 [INF] KRGYO Fiyat değişti
+2023-11-06 16:58:15.308 +03:00 [INF] GLYHO Fiyat değişti
+2023-11-06 16:58:15.309 +03:00 [INF] PSDTC Fiyat değişti
+2023-11-06 16:58:15.309 +03:00 [INF] TKFEN Fiyat değişti
+2023-11-06 16:58:15.310 +03:00 [INF] TMSN Fiyat değişti
+2023-11-06 16:58:15.310 +03:00 [INF] ADGYO Fiyat değişti
+2023-11-06 16:58:15.311 +03:00 [INF] GARFA Fiyat değişti
+2023-11-06 16:58:15.312 +03:00 [INF] GENIL Fiyat değişti
+2023-11-06 16:58:15.313 +03:00 [INF] GEDZA Fiyat değişti
+2023-11-06 16:58:15.314 +03:00 [INF] GEDIK Fiyat değişti
+2023-11-06 16:58:15.315 +03:00 [INF] GESAN Fiyat değişti
+2023-11-06 16:58:15.316 +03:00 [INF] GLBMD Fiyat değişti
+2023-11-06 16:58:15.319 +03:00 [INF] GLDTR Fiyat değişti
+2023-11-06 16:58:15.321 +03:00 [INF] GOKNR Fiyat değişti
+2023-11-06 16:58:15.324 +03:00 [INF] IDGYO Fiyat değişti
+2023-11-06 16:58:15.324 +03:00 [INF] KLGYO Fiyat değişti
+2023-11-06 16:58:15.325 +03:00 [INF] AZTEK Fiyat değişti
+2023-11-06 16:58:15.325 +03:00 [INF] IZMDC Fiyat değişti
+2023-11-06 16:58:15.326 +03:00 [INF] KAREL Fiyat değişti
+2023-11-06 16:58:15.326 +03:00 [INF] KLMSN Fiyat değişti
+2023-11-06 16:58:15.327 +03:00 [INF] PETKM Fiyat değişti
+2023-11-06 16:58:15.328 +03:00 [INF] MANAS Fiyat değişti
+2023-11-06 16:58:15.328 +03:00 [INF] KZBGY Fiyat değişti
+2023-11-06 16:58:15.329 +03:00 [INF] OZRDN Fiyat değişti
+2023-11-06 16:58:15.331 +03:00 [INF] BUCIM Fiyat değişti
+2023-11-06 16:58:15.334 +03:00 [INF] ARDYZ Fiyat değişti
+2023-11-06 16:58:15.352 +03:00 [INF] PARSN Fiyat değişti
+2023-11-06 16:58:15.354 +03:00 [INF] SEYKM Fiyat değişti
+2023-11-06 16:58:15.354 +03:00 [INF] SMART Fiyat değişti
+2023-11-06 16:58:15.355 +03:00 [INF] SOKM Fiyat değişti
+2023-11-06 16:58:15.355 +03:00 [INF] TLMAN Fiyat değişti
+2023-11-06 16:58:15.356 +03:00 [INF] TUCLK Fiyat değişti
+2023-11-06 16:58:15.357 +03:00 [INF] BRKSN Fiyat değişti
+2023-11-06 16:58:15.492 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:58:15.492 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:58:16.696 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:58:16.697 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:58:16.697 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:58:17.961 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:58:17.962 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 16:58:17.963 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 16:58:19.173 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 16:58:19.174 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-06 16:59:07.455 +03:00 [INF] SendMailWhenPricesChanged tamamlandı

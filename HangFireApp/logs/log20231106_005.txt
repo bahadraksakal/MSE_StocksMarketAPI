@@ -1,0 +1,441 @@
+2023-11-06 13:55:45.039 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-06 13:55:46.508 +03:00 [INF] BIOEN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-06 13:55:50.565 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-06 13:55:51.955 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-06 14:06:37.729 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-06 14:06:37.899 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-06 14:06:37.921 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-06 14:06:37.922 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-06 14:06:37.923 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-06 14:06:38.060 +03:00 [INF] Server bahadir-aksakal:28548:46486edd successfully announced in 113,5831 ms
+2023-11-06 14:06:38.072 +03:00 [INF] Server bahadir-aksakal:28548:46486edd is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-06 14:06:38.082 +03:00 [INF] 1 servers were removed due to timeout
+2023-11-06 14:06:38.246 +03:00 [INF] Server bahadir-aksakal:28548:46486edd all the dispatchers started
+2023-11-06 14:06:38.293 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-06 14:06:38.524 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-06 14:06:38.856 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:06:39.062 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:06:39.393 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate89e4e013-282b-44db-90a8-6bc5cb0c5a1f.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:06:39.420 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:06:39.422 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:06:40.756 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:06:40.779 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:06:40.795 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDated042125d-3229-4b97-aea0-dc8d314cf884.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:06:40.805 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:06:40.806 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:06:42.079 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 14:06:42.108 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:06:42.138 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDate819f730b-eec7-4d6c-aaca-cf168d7c79e1.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:06:42.147 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:06:42.148 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:06:43.334 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:06:43.342 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:06:43.423 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:06:43.426 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:06:43.472 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:06:43.473 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 14:07:08.475 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:07:08.481 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:07:08.488 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDatec858bd1f-a58c-4b64-9e30-99f2428760b2.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:07:08.499 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:07:08.501 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:07:09.727 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:07:09.741 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:07:09.750 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDate2c5b2ec1-4a91-4a47-a537-b8e4bd47db81.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:07:09.760 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:07:09.761 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:07:11.050 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 14:07:11.058 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:07:11.067 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDatefded8144-6876-4e65-bc6f-4238cd8b7d3c.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:07:11.074 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:07:11.075 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:07:12.423 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:07:12.425 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:07:12.465 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:07:12.472 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:07:12.501 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:07:12.501 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 14:08:08.515 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:08:08.529 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:08:08.537 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate53e9f658-0b74-467e-8087-f2eb21f59be9.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:08:08.544 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:08:08.545 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:08:09.946 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:08:09.955 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:08:09.965 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDatee843bc0d-b91d-46df-b49e-c5caffb8a1c7.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:08:09.972 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:08:09.973 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:08:11.311 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 14:08:11.322 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:08:11.332 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDatec986d545-0f94-4d03-a744-91608e69a833.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:08:11.339 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:08:11.340 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:08:12.539 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:08:12.543 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:08:12.586 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:08:12.588 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:08:12.623 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:08:12.623 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 14:09:08.518 +03:00 [INF] GetStocksService 1. kere çalışıyor
+2023-11-06 14:09:08.562 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:09:08.567 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:09:08.578 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate8c35ea35-db99-49a3-993a-c98033aa6265.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:09:08.586 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:09:08.588 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:09:09.837 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:09:09.846 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:09:09.855 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDate22afd767-3ed5-4995-9e82-3762ee00c7e8.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:09:09.865 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:09:09.867 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:09:11.127 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 14:09:11.135 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 14:09:11.144 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDateb921c3ba-6997-496a-8e95-fa337250f5fd.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 14:09:11.151 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:09:11.152 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:09:12.690 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:09:12.693 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:09:12.730 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:09:12.733 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:09:12.772 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:09:12.773 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 14:10:08.588 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:10:08.617 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:10:08.686 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 14:10:08.688 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:10:08.726 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:10:08.728 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:10:08.764 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailMonthlyReport: ForEach içinde hata: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 14:10:08.765 +03:00 [INF] BackGroundJobSendMailMonthlyReport tamamlandı
+2023-11-06 14:10:08.782 +03:00 [INF] AGESA Fiyat değişti
+2023-11-06 14:10:08.784 +03:00 [INF] ACSEL Fiyat değişti
+2023-11-06 14:10:08.784 +03:00 [INF] AKCNS Fiyat değişti
+2023-11-06 14:10:08.784 +03:00 [INF] AKSA Fiyat değişti
+2023-11-06 14:10:08.785 +03:00 [INF] AKSEN Fiyat değişti
+2023-11-06 14:10:08.786 +03:00 [INF] AKYHO Fiyat değişti
+2023-11-06 14:10:08.786 +03:00 [INF] ALARK Fiyat değişti
+2023-11-06 14:10:08.787 +03:00 [INF] ALBRK Fiyat değişti
+2023-11-06 14:10:08.787 +03:00 [INF] AEFES Fiyat değişti
+2023-11-06 14:10:08.788 +03:00 [INF] ANHYT Fiyat değişti
+2023-11-06 14:10:08.788 +03:00 [INF] ANSGR Fiyat değişti
+2023-11-06 14:10:08.789 +03:00 [INF] ARENA Fiyat değişti
+2023-11-06 14:10:08.789 +03:00 [INF] ASTOR Fiyat değişti
+2023-11-06 14:10:08.790 +03:00 [INF] ASGYO Fiyat değişti
+2023-11-06 14:10:08.790 +03:00 [INF] ALCAR Fiyat değişti
+2023-11-06 14:10:08.792 +03:00 [INF] ATAKP Fiyat değişti
+2023-11-06 14:10:08.792 +03:00 [INF] ATATP Fiyat değişti
+2023-11-06 14:10:08.793 +03:00 [INF] ATLAS Fiyat değişti
+2023-11-06 14:10:08.793 +03:00 [INF] AYCES Fiyat değişti
+2023-11-06 14:10:08.794 +03:00 [INF] BERA Fiyat değişti
+2023-11-06 14:10:08.794 +03:00 [INF] BIGCH Fiyat değişti
+2023-11-06 14:10:08.795 +03:00 [INF] BFREN Fiyat değişti
+2023-11-06 14:10:08.795 +03:00 [INF] BIENY Fiyat değişti
+2023-11-06 14:10:08.795 +03:00 [INF] BIOEN Fiyat değişti
+2023-11-06 14:10:08.796 +03:00 [INF] BJKAS Fiyat değişti
+2023-11-06 14:10:08.796 +03:00 [INF] BOSSA Fiyat değişti
+2023-11-06 14:10:08.797 +03:00 [INF] BRISA Fiyat değişti
+2023-11-06 14:10:08.797 +03:00 [INF] BORLS Fiyat değişti
+2023-11-06 14:10:08.798 +03:00 [INF] BRLSM Fiyat değişti
+2023-11-06 14:10:08.798 +03:00 [INF] BRSAN Fiyat değişti
+2023-11-06 14:10:08.799 +03:00 [INF] BURVA Fiyat değişti
+2023-11-06 14:10:08.799 +03:00 [INF] BURCE Fiyat değişti
+2023-11-06 14:10:08.800 +03:00 [INF] BVSAN Fiyat değişti
+2023-11-06 14:10:08.800 +03:00 [INF] BYDNR Fiyat değişti
+2023-11-06 14:10:08.801 +03:00 [INF] CELHA Fiyat değişti
+2023-11-06 14:10:08.801 +03:00 [INF] CEMTS Fiyat değişti
+2023-11-06 14:10:08.802 +03:00 [INF] CRDFA Fiyat değişti
+2023-11-06 14:10:08.802 +03:00 [INF] COSMO Fiyat değişti
+2023-11-06 14:10:08.803 +03:00 [INF] CRFSA Fiyat değişti
+2023-11-06 14:10:08.803 +03:00 [INF] CVKMD Fiyat değişti
+2023-11-06 14:10:08.804 +03:00 [INF] DAGI Fiyat değişti
+2023-11-06 14:10:08.804 +03:00 [INF] DAPGM Fiyat değişti
+2023-11-06 14:10:08.805 +03:00 [INF] CMBTN Fiyat değişti
+2023-11-06 14:10:08.805 +03:00 [INF] CLEBI Fiyat değişti
+2023-11-06 14:10:08.806 +03:00 [INF] CONSE Fiyat değişti
+2023-11-06 14:10:08.806 +03:00 [INF] CIMSA Fiyat değişti
+2023-11-06 14:10:08.807 +03:00 [INF] DERHL Fiyat değişti
+2023-11-06 14:10:08.807 +03:00 [INF] DERIM Fiyat değişti
+2023-11-06 14:10:08.808 +03:00 [INF] DEVA Fiyat değişti
+2023-11-06 14:10:08.808 +03:00 [INF] DESPC Fiyat değişti
+2023-11-06 14:10:08.808 +03:00 [INF] DESA Fiyat değişti
+2023-11-06 14:10:08.809 +03:00 [INF] DGATE Fiyat değişti
+2023-11-06 14:10:08.809 +03:00 [INF] DGGYO Fiyat değişti
+2023-11-06 14:10:08.810 +03:00 [INF] DGNMO Fiyat değişti
+2023-11-06 14:10:08.810 +03:00 [INF] DJIST Fiyat değişti
+2023-11-06 14:10:08.811 +03:00 [INF] DNISI Fiyat değişti
+2023-11-06 14:10:08.811 +03:00 [INF] DMSAS Fiyat değişti
+2023-11-06 14:10:08.812 +03:00 [INF] DMRGD Fiyat değişti
+2023-11-06 14:10:08.812 +03:00 [INF] DOAS Fiyat değişti
+2023-11-06 14:10:08.813 +03:00 [INF] DOBUR Fiyat değişti
+2023-11-06 14:10:08.813 +03:00 [INF] DOCO Fiyat değişti
+2023-11-06 14:10:08.814 +03:00 [INF] DOFER Fiyat değişti
+2023-11-06 14:10:08.814 +03:00 [INF] DOGUB Fiyat değişti
+2023-11-06 14:10:08.814 +03:00 [INF] DOKTA Fiyat değişti
+2023-11-06 14:10:08.815 +03:00 [INF] DURDO Fiyat değişti
+2023-11-06 14:10:08.816 +03:00 [INF] DYOBY Fiyat değişti
+2023-11-06 14:10:08.817 +03:00 [INF] DZGYO Fiyat değişti
+2023-11-06 14:10:08.817 +03:00 [INF] ECILC Fiyat değişti
+2023-11-06 14:10:08.818 +03:00 [INF] ECZYT Fiyat değişti
+2023-11-06 14:10:08.818 +03:00 [INF] EDATA Fiyat değişti
+2023-11-06 14:10:08.819 +03:00 [INF] EDIP Fiyat değişti
+2023-11-06 14:10:08.819 +03:00 [INF] EGEEN Fiyat değişti
+2023-11-06 14:10:08.820 +03:00 [INF] EGEPO Fiyat değişti
+2023-11-06 14:10:08.820 +03:00 [INF] EGPRO Fiyat değişti
+2023-11-06 14:10:08.820 +03:00 [INF] EGSER Fiyat değişti
+2023-11-06 14:10:08.821 +03:00 [INF] DITAS Fiyat değişti
+2023-11-06 14:10:08.821 +03:00 [INF] EKIZ Fiyat değişti
+2023-11-06 14:10:08.822 +03:00 [INF] ELITE Fiyat değişti
+2023-11-06 14:10:08.822 +03:00 [INF] EKSUN Fiyat değişti
+2023-11-06 14:10:08.823 +03:00 [INF] EMKEL Fiyat değişti
+2023-11-06 14:10:08.823 +03:00 [INF] ENERY Fiyat değişti
+2023-11-06 14:10:08.824 +03:00 [INF] ENKAI Fiyat değişti
+2023-11-06 14:10:08.824 +03:00 [INF] ENJSA Fiyat değişti
+2023-11-06 14:10:08.825 +03:00 [INF] ENSRI Fiyat değişti
+2023-11-06 14:10:08.825 +03:00 [INF] ERBOS Fiyat değişti
+2023-11-06 14:10:08.826 +03:00 [INF] ERCB Fiyat değişti
+2023-11-06 14:10:08.826 +03:00 [INF] EPLAS Fiyat değişti
+2023-11-06 14:10:08.827 +03:00 [INF] EREGL Fiyat değişti
+2023-11-06 14:10:08.827 +03:00 [INF] ERSU Fiyat değişti
+2023-11-06 14:10:08.828 +03:00 [INF] ESCOM Fiyat değişti
+2023-11-06 14:10:08.828 +03:00 [INF] ESCAR Fiyat değişti
+2023-11-06 14:10:08.829 +03:00 [INF] ESEN Fiyat değişti
+2023-11-06 14:10:08.829 +03:00 [INF] ETYAT Fiyat değişti
+2023-11-06 14:10:08.829 +03:00 [INF] EUPWR Fiyat değişti
+2023-11-06 14:10:08.830 +03:00 [INF] EUREN Fiyat değişti
+2023-11-06 14:10:08.831 +03:00 [INF] EYGYO Fiyat değişti
+2023-11-06 14:10:08.831 +03:00 [INF] FENER Fiyat değişti
+2023-11-06 14:10:08.832 +03:00 [INF] FLAP Fiyat değişti
+2023-11-06 14:10:08.832 +03:00 [INF] FONET Fiyat değişti
+2023-11-06 14:10:08.833 +03:00 [INF] FORMT Fiyat değişti
+2023-11-06 14:10:08.833 +03:00 [INF] FRIGO Fiyat değişti
+2023-11-06 14:10:08.834 +03:00 [INF] ETILR Fiyat değişti
+2023-11-06 14:10:08.834 +03:00 [INF] FMIZP Fiyat değişti
+2023-11-06 14:10:08.835 +03:00 [INF] FZLGY Fiyat değişti
+2023-11-06 14:10:08.835 +03:00 [INF] GARAN Fiyat değişti
+2023-11-06 14:10:08.836 +03:00 [INF] GIPTA Fiyat değişti
+2023-11-06 14:10:08.836 +03:00 [INF] FROTO Fiyat değişti
+2023-11-06 14:10:08.837 +03:00 [INF] GRNYO Fiyat değişti
+2023-11-06 14:10:08.837 +03:00 [INF] GSRAY Fiyat değişti
+2023-11-06 14:10:08.837 +03:00 [INF] GUBRF Fiyat değişti
+2023-11-06 14:10:08.838 +03:00 [INF] HATSN Fiyat değişti
+2023-11-06 14:10:08.838 +03:00 [INF] HEKTS Fiyat değişti
+2023-11-06 14:10:08.839 +03:00 [INF] ICBCT Fiyat değişti
+2023-11-06 14:10:08.839 +03:00 [INF] FADE Fiyat değişti
+2023-11-06 14:10:08.840 +03:00 [INF] ISCTR Fiyat değişti
+2023-11-06 14:10:08.840 +03:00 [INF] ISGSY Fiyat değişti
+2023-11-06 14:10:08.841 +03:00 [INF] CUSAN Fiyat değişti
+2023-11-06 14:10:08.841 +03:00 [INF] ISMEN Fiyat değişti
+2023-11-06 14:10:08.842 +03:00 [INF] DARDL Fiyat değişti
+2023-11-06 14:10:08.842 +03:00 [INF] IZENR Fiyat değişti
+2023-11-06 14:10:08.843 +03:00 [INF] KARTN Fiyat değişti
+2023-11-06 14:10:08.843 +03:00 [INF] ISYAT Fiyat değişti
+2023-11-06 14:10:08.843 +03:00 [INF] KARSN Fiyat değişti
+2023-11-06 14:10:08.844 +03:00 [INF] KLNMA Fiyat değişti
+2023-11-06 14:10:08.844 +03:00 [INF] KLSER Fiyat değişti
+2023-11-06 14:10:08.845 +03:00 [INF] KLSYN Fiyat değişti
+2023-11-06 14:10:08.845 +03:00 [INF] KMPUR Fiyat değişti
+2023-11-06 14:10:08.846 +03:00 [INF] KONYA Fiyat değişti
+2023-11-06 14:10:08.847 +03:00 [INF] KOZAA Fiyat değişti
+2023-11-06 14:10:08.848 +03:00 [INF] KRONT Fiyat değişti
+2023-11-06 14:10:08.849 +03:00 [INF] KZGYO Fiyat değişti
+2023-11-06 14:10:08.850 +03:00 [INF] LIDER Fiyat değişti
+2023-11-06 14:10:08.850 +03:00 [INF] LOGO Fiyat değişti
+2023-11-06 14:10:08.851 +03:00 [INF] MACKO Fiyat değişti
+2023-11-06 14:10:08.851 +03:00 [INF] MAALT Fiyat değişti
+2023-11-06 14:10:08.852 +03:00 [INF] MHRGY Fiyat değişti
+2023-11-06 14:10:08.852 +03:00 [INF] MAKIM Fiyat değişti
+2023-11-06 14:10:08.853 +03:00 [INF] MIATK Fiyat değişti
+2023-11-06 14:10:08.853 +03:00 [INF] NETAS Fiyat değişti
+2023-11-06 14:10:08.854 +03:00 [INF] OBASE Fiyat değişti
+2023-11-06 14:10:08.855 +03:00 [INF] ONCSM Fiyat değişti
+2023-11-06 14:10:08.855 +03:00 [INF] OTKAR Fiyat değişti
+2023-11-06 14:10:08.856 +03:00 [INF] OYAKC Fiyat değişti
+2023-11-06 14:10:08.856 +03:00 [INF] OYAYO Fiyat değişti
+2023-11-06 14:10:08.857 +03:00 [INF] PASEU Fiyat değişti
+2023-11-06 14:10:08.857 +03:00 [INF] PENTA Fiyat değişti
+2023-11-06 14:10:08.858 +03:00 [INF] PGSUS Fiyat değişti
+2023-11-06 14:10:08.858 +03:00 [INF] SDTTR Fiyat değişti
+2023-11-06 14:10:08.859 +03:00 [INF] SEKUR Fiyat değişti
+2023-11-06 14:10:08.860 +03:00 [INF] SKTAS Fiyat değişti
+2023-11-06 14:10:08.861 +03:00 [INF] SRVGY Fiyat değişti
+2023-11-06 14:10:08.861 +03:00 [INF] TABGD Fiyat değişti
+2023-11-06 14:10:08.862 +03:00 [INF] SUWEN Fiyat değişti
+2023-11-06 14:10:08.863 +03:00 [INF] TATEN Fiyat değişti
+2023-11-06 14:10:08.864 +03:00 [INF] TARKM Fiyat değişti
+2023-11-06 14:10:08.864 +03:00 [INF] TAVHL Fiyat değişti
+2023-11-06 14:10:08.866 +03:00 [INF] THYAO Fiyat değişti
+2023-11-06 14:10:08.866 +03:00 [INF] TKNSA Fiyat değişti
+2023-11-06 14:10:08.867 +03:00 [INF] SKBNK Fiyat değişti
+2023-11-06 14:10:08.868 +03:00 [INF] TTKOM Fiyat değişti
+2023-11-06 14:10:08.869 +03:00 [INF] ULKER Fiyat değişti
+2023-11-06 14:10:08.870 +03:00 [INF] VAKBN Fiyat değişti
+2023-11-06 14:10:08.870 +03:00 [INF] TRILC Fiyat değişti
+2023-11-06 14:10:08.871 +03:00 [INF] VESBE Fiyat değişti
+2023-11-06 14:10:08.871 +03:00 [INF] VESTL Fiyat değişti
+2023-11-06 14:10:08.872 +03:00 [INF] YATAS Fiyat değişti
+2023-11-06 14:10:08.872 +03:00 [INF] YGYO Fiyat değişti
+2023-11-06 14:10:08.873 +03:00 [INF] YEOTK Fiyat değişti
+2023-11-06 14:10:08.873 +03:00 [INF] YKSLN Fiyat değişti
+2023-11-06 14:10:08.874 +03:00 [INF] VRGYO Fiyat değişti
+2023-11-06 14:10:08.874 +03:00 [INF] YYAPI Fiyat değişti
+2023-11-06 14:10:08.875 +03:00 [INF] ZOREN Fiyat değişti
+2023-11-06 14:10:08.875 +03:00 [INF] TUKAS Fiyat değişti
+2023-11-06 14:10:08.876 +03:00 [INF] AKBNK Fiyat değişti
+2023-11-06 14:10:08.877 +03:00 [INF] AKSUE Fiyat değişti
+2023-11-06 14:10:08.877 +03:00 [INF] ARSAN Fiyat değişti
+2023-11-06 14:10:08.878 +03:00 [INF] AVHOL Fiyat değişti
+2023-11-06 14:10:08.878 +03:00 [INF] SOKE Fiyat değişti
+2023-11-06 14:10:08.879 +03:00 [INF] TUPRS Fiyat değişti
+2023-11-06 14:10:08.880 +03:00 [INF] YESIL Fiyat değişti
+2023-11-06 14:10:08.880 +03:00 [INF] REEDR Fiyat değişti
+2023-11-06 14:10:08.881 +03:00 [INF] YUNSA Fiyat değişti
+2023-11-06 14:10:08.881 +03:00 [INF] AHGAZ Fiyat değişti
+2023-11-06 14:10:08.882 +03:00 [INF] A1CAP Fiyat değişti
+2023-11-06 14:10:08.882 +03:00 [INF] AKFYE Fiyat değişti
+2023-11-06 14:10:08.883 +03:00 [INF] ALGYO Fiyat değişti
+2023-11-06 14:10:08.884 +03:00 [INF] ANELE Fiyat değişti
+2023-11-06 14:10:08.884 +03:00 [INF] ARZUM Fiyat değişti
+2023-11-06 14:10:08.885 +03:00 [INF] ATEKS Fiyat değişti
+2023-11-06 14:10:08.885 +03:00 [INF] AYDEM Fiyat değişti
+2023-11-06 14:10:08.886 +03:00 [INF] AYEN Fiyat değişti
+2023-11-06 14:10:08.886 +03:00 [INF] BNTAS Fiyat değişti
+2023-11-06 14:10:08.886 +03:00 [INF] CWENE Fiyat değişti
+2023-11-06 14:10:08.887 +03:00 [INF] EGGUB Fiyat değişti
+2023-11-06 14:10:08.891 +03:00 [INF] EUHOL Fiyat değişti
+2023-11-06 14:10:08.891 +03:00 [INF] GEREL Fiyat değişti
+2023-11-06 14:10:08.892 +03:00 [INF] GOLTS Fiyat değişti
+2023-11-06 14:10:08.892 +03:00 [INF] GENTS Fiyat değişti
+2023-11-06 14:10:08.893 +03:00 [INF] HUBVC Fiyat değişti
+2023-11-06 14:10:08.893 +03:00 [INF] IHLAS Fiyat değişti
+2023-11-06 14:10:08.894 +03:00 [INF] IHLGM Fiyat değişti
+2023-11-06 14:10:08.894 +03:00 [INF] INFO Fiyat değişti
+2023-11-06 14:10:08.895 +03:00 [INF] KATMR Fiyat değişti
+2023-11-06 14:10:08.895 +03:00 [INF] KCHOL Fiyat değişti
+2023-11-06 14:10:08.896 +03:00 [INF] KLKIM Fiyat değişti
+2023-11-06 14:10:08.896 +03:00 [INF] KIMMR Fiyat değişti
+2023-11-06 14:10:08.897 +03:00 [INF] KOZAL Fiyat değişti
+2023-11-06 14:10:08.897 +03:00 [INF] KRGYO Fiyat değişti
+2023-11-06 14:10:08.898 +03:00 [INF] GLYHO Fiyat değişti
+2023-11-06 14:10:08.898 +03:00 [INF] MGROS Fiyat değişti
+2023-11-06 14:10:08.899 +03:00 [INF] OSTIM Fiyat değişti
+2023-11-06 14:10:08.899 +03:00 [INF] OZKGY Fiyat değişti
+2023-11-06 14:10:08.900 +03:00 [INF] POLTK Fiyat değişti
+2023-11-06 14:10:08.900 +03:00 [INF] SANKO Fiyat değişti
+2023-11-06 14:10:08.901 +03:00 [INF] SISE Fiyat değişti
+2023-11-06 14:10:08.901 +03:00 [INF] TSKB Fiyat değişti
+2023-11-06 14:10:08.902 +03:00 [INF] TMSN Fiyat değişti
+2023-11-06 14:10:08.902 +03:00 [INF] ADGYO Fiyat değişti
+2023-11-06 14:10:08.903 +03:00 [INF] ARCLK Fiyat değişti
+2023-11-06 14:10:08.903 +03:00 [INF] BRYAT Fiyat değişti
+2023-11-06 14:10:08.904 +03:00 [INF] DAGHL Fiyat değişti
+2023-11-06 14:10:08.904 +03:00 [INF] GESAN Fiyat değişti
+2023-11-06 14:10:08.905 +03:00 [INF] GMSTR Fiyat değişti
+2023-11-06 14:10:08.905 +03:00 [INF] GOODY Fiyat değişti
+2023-11-06 14:10:08.906 +03:00 [INF] GWIND Fiyat değişti
+2023-11-06 14:10:08.906 +03:00 [INF] IDGYO Fiyat değişti
+2023-11-06 14:10:08.907 +03:00 [INF] IHAAS Fiyat değişti
+2023-11-06 14:10:08.907 +03:00 [INF] INGRM Fiyat değişti
+2023-11-06 14:10:08.908 +03:00 [INF] IPEKE Fiyat değişti
+2023-11-06 14:10:08.910 +03:00 [INF] ZTM15 Fiyat değişti
+2023-11-06 14:10:08.911 +03:00 [INF] AZTEK Fiyat değişti
+2023-11-06 14:10:08.911 +03:00 [INF] ISFIN Fiyat değişti
+2023-11-06 14:10:08.912 +03:00 [INF] ISGYO Fiyat değişti
+2023-11-06 14:10:08.912 +03:00 [INF] ISDMR Fiyat değişti
+2023-11-06 14:10:08.913 +03:00 [INF] IZFAS Fiyat değişti
+2023-11-06 14:10:08.913 +03:00 [INF] IZMDC Fiyat değişti
+2023-11-06 14:10:08.914 +03:00 [INF] JANTS Fiyat değişti
+2023-11-06 14:10:08.914 +03:00 [INF] KCAER Fiyat değişti
+2023-11-06 14:10:08.915 +03:00 [INF] KLMSN Fiyat değişti
+2023-11-06 14:10:08.915 +03:00 [INF] PETKM Fiyat değişti
+2023-11-06 14:10:08.916 +03:00 [INF] TATGD Fiyat değişti
+2023-11-06 14:10:08.916 +03:00 [INF] ULUSE Fiyat değişti
+2023-11-06 14:10:08.917 +03:00 [INF] AKMGY Fiyat değişti
+2023-11-06 14:10:08.918 +03:00 [INF] AYES Fiyat değişti
+2023-11-06 14:10:08.918 +03:00 [INF] TURGG Fiyat değişti
+2023-11-06 14:10:08.919 +03:00 [INF] AYGAZ Fiyat değişti
+2023-11-06 14:10:08.919 +03:00 [INF] ARASE Fiyat değişti
+2023-11-06 14:10:08.920 +03:00 [INF] BAGFS Fiyat değişti
+2023-11-06 14:10:08.921 +03:00 [INF] BTCIM Fiyat değişti
+2023-11-06 14:10:08.921 +03:00 [INF] KNFRT Fiyat değişti
+2023-11-06 14:10:08.922 +03:00 [INF] KORDS Fiyat değişti
+2023-11-06 14:10:08.924 +03:00 [INF] KRDMA Fiyat değişti
+2023-11-06 14:10:08.924 +03:00 [INF] KTLEV Fiyat değişti
+2023-11-06 14:10:08.925 +03:00 [INF] KTSKR Fiyat değişti
+2023-11-06 14:10:08.925 +03:00 [INF] MAKTK Fiyat değişti
+2023-11-06 14:10:08.927 +03:00 [INF] LUKSK Fiyat değişti
+2023-11-06 14:10:08.928 +03:00 [INF] MAVI Fiyat değişti
+2023-11-06 14:10:08.928 +03:00 [INF] MAGEN Fiyat değişti
+2023-11-06 14:10:08.929 +03:00 [INF] MEPET Fiyat değişti
+2023-11-06 14:10:08.929 +03:00 [INF] MIPAZ Fiyat değişti
+2023-11-06 14:10:08.930 +03:00 [INF] MTRYO Fiyat değişti
+2023-11-06 14:10:08.930 +03:00 [INF] NATEN Fiyat değişti
+2023-11-06 14:10:08.931 +03:00 [INF] NUGYO Fiyat değişti
+2023-11-06 14:10:08.931 +03:00 [INF] ORCAY Fiyat değişti
+2023-11-06 14:10:08.932 +03:00 [INF] ORGE Fiyat değişti
+2023-11-06 14:10:08.932 +03:00 [INF] PAGYO Fiyat değişti
+2023-11-06 14:10:08.933 +03:00 [INF] ALFAS Fiyat değişti
+2023-11-06 14:10:08.934 +03:00 [INF] AVTUR Fiyat değişti
+2023-11-06 14:10:08.935 +03:00 [INF] RUBNS Fiyat değişti
+2023-11-06 14:10:08.935 +03:00 [INF] AKGRT Fiyat değişti
+2023-11-06 14:10:08.936 +03:00 [INF] ANGEN Fiyat değişti
+2023-11-06 14:10:08.937 +03:00 [INF] BASCM Fiyat değişti
+2023-11-06 14:10:08.937 +03:00 [INF] ZGOLD Fiyat değişti
+2023-11-06 14:10:08.938 +03:00 [INF] AFYON Fiyat değişti
+2023-11-06 14:10:08.938 +03:00 [INF] AKSGY Fiyat değişti
+2023-11-06 14:10:08.939 +03:00 [INF] AKENR Fiyat değişti
+2023-11-06 14:10:08.940 +03:00 [INF] BEYAZ Fiyat değişti
+2023-11-06 14:10:08.941 +03:00 [INF] BRKO Fiyat değişti
+2023-11-06 14:10:08.941 +03:00 [INF] QUAGR Fiyat değişti
+2023-11-06 14:10:08.943 +03:00 [INF] ALMAD Fiyat değişti
+2023-11-06 14:10:08.944 +03:00 [INF] ARDYZ Fiyat değişti
+2023-11-06 14:10:08.945 +03:00 [INF] AVOD Fiyat değişti
+2023-11-06 14:10:08.945 +03:00 [INF] BASGZ Fiyat değişti
+2023-11-06 14:10:08.946 +03:00 [INF] BMSTL Fiyat değişti
+2023-11-06 14:10:08.947 +03:00 [INF] BMSCH Fiyat değişti
+2023-11-06 14:10:08.947 +03:00 [INF] BRKVY Fiyat değişti
+2023-11-06 14:10:08.948 +03:00 [INF] BSOKE Fiyat değişti
+2023-11-06 14:10:08.950 +03:00 [INF] PARSN Fiyat değişti
+2023-11-06 14:10:08.951 +03:00 [INF] PETUN Fiyat değişti
+2023-11-06 14:10:08.952 +03:00 [INF] PSGYO Fiyat değişti
+2023-11-06 14:10:08.952 +03:00 [INF] RAYSG Fiyat değişti
+2023-11-06 14:10:08.953 +03:00 [INF] RTALB Fiyat değişti
+2023-11-06 14:10:08.954 +03:00 [INF] RYSAS Fiyat değişti
+2023-11-06 14:10:08.954 +03:00 [INF] SMART Fiyat değişti
+2023-11-06 14:10:08.955 +03:00 [INF] SOKM Fiyat değişti
+2023-11-06 14:10:08.956 +03:00 [INF] TUCLK Fiyat değişti
+2023-11-06 14:10:08.957 +03:00 [INF] TURSG Fiyat değişti
+2023-11-06 14:10:08.957 +03:00 [INF] YBTAS Fiyat değişti
+2023-11-06 14:10:08.958 +03:00 [INF] AGHOL Fiyat değişti
+2023-11-06 14:10:08.958 +03:00 [INF] ALCTL Fiyat değişti
+2023-11-06 14:10:08.959 +03:00 [INF] ALKA Fiyat değişti
+2023-11-06 14:10:08.960 +03:00 [INF] ALKIM Fiyat değişti
+2023-11-06 14:10:08.960 +03:00 [INF] ASUZU Fiyat değişti
+2023-11-06 14:10:08.961 +03:00 [INF] ATSYH Fiyat değişti
+2023-11-06 14:10:08.962 +03:00 [INF] AVGYO Fiyat değişti
+2023-11-06 14:10:08.962 +03:00 [INF] BAKAB Fiyat değişti
+2023-11-06 14:10:08.963 +03:00 [INF] BARMA Fiyat değişti
+2023-11-06 14:10:08.963 +03:00 [INF] BANVT Fiyat değişti
+2023-11-06 14:10:08.964 +03:00 [INF] BAYRK Fiyat değişti
+2023-11-06 14:10:08.964 +03:00 [INF] BIZIM Fiyat değişti
+2023-11-06 14:10:08.965 +03:00 [INF] BLCYT Fiyat değişti
+2023-11-06 14:10:08.965 +03:00 [INF] TEZOL Fiyat değişti
+2023-11-06 14:10:08.966 +03:00 [INF] BRMEN Fiyat değişti
+2023-11-06 14:10:08.966 +03:00 [INF] ZRE20 Fiyat değişti
+2023-11-06 14:10:08.967 +03:00 [INF] SANFM Fiyat değişti
+2023-11-06 14:10:09.367 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:10:09.368 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:10:10.644 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:10:10.645 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:10:10.646 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:10:11.872 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:10:11.874 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 14:10:11.874 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 14:10:13.096 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 14:10:13.097 +03:00 [INF] SendMailWhenPricesChanged tamamlandı
+2023-11-06 14:10:52.282 +03:00 [INF] Server bahadir-aksakal:28548:46486edd caught stopping signal...
+2023-11-06 14:10:52.336 +03:00 [INF] Server bahadir-aksakal:28548:46486edd All dispatchers stopped
+2023-11-06 14:10:52.342 +03:00 [INF] Server bahadir-aksakal:28548:46486edd successfully reported itself as stopped in 1,7202 ms
+2023-11-06 14:10:52.343 +03:00 [INF] Server bahadir-aksakal:28548:46486edd has been stopped in total 20,4113 ms

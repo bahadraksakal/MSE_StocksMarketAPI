@@ -18,3 +18,18 @@
 2023-11-06 11:13:39.078 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
 2023-11-06 11:15:47.878 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
 2023-11-06 11:20:59.476 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:39:52.292 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 13:42:23.849 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 13:48:10.349 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 13:55:51.924 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 13:55:51.924 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:06:44.528 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:09:12.460 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:13:47.646 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:15:15.275 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:32:10.959 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:33:28.646 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:36:08.214 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 14:40:50.046 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 16:55:56.610 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-06 16:57:10.669 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.

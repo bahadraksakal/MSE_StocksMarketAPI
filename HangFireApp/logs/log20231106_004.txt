@@ -1,0 +1,3 @@
+2023-11-06 13:55:45.028 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-06 13:55:50.590 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-06 13:55:51.954 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

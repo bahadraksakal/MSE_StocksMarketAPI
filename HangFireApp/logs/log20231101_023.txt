@@ -1,3 +1,0 @@
-2023-11-01 17:31:52.332 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
-2023-11-01 17:31:55.204 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
-2023-11-01 17:31:59.314 +03:00 [WRN] HTTP isteği sırasında hata oluştu: Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı. (localhost:7261)

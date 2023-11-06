@@ -13,5 +13,6 @@ namespace SharedServices.EmailServices
     public interface IEmailService
     {
         Task SendEmailsAsync(Emailer emailer);
+        Task SendEmailWithFilesAsync(Emailer emailer, string[] filePaths);
     }
 }

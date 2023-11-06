@@ -1,17 +1,9 @@
-﻿using HangFireDbContextLibrary.Context;
-using Microsoft.Extensions.Configuration;
-using Serilog;
+﻿using Serilog;
 using SharedServices.EmailServices;
 using SharedServices.StockTrackingServices;
-using StockMarketDbContextLibrary.Context;
 using StockMarketEntitiesLibrary.Entities;
 using StocksMarketEntitiesLibrary.EmailEntities;
 using StocksMarketEntitiesLibrary.HangFireEntities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HangFireApp.BackGroundJobs
 {
@@ -19,14 +11,10 @@ namespace HangFireApp.BackGroundJobs
     {
         private IEmailService _emailService;
         private StockTrackingService _stockTrackingService;
-        private readonly HangFireDbContext _hangFireDbContext;
-        private readonly StockMarketDbContext _stockMarketDbContext;
-        public BackGroundJobSendMailWhenPricesChanged(HangFireDbContext hangFireDbContext,StockMarketDbContext stockMarketDbContext)
+        public BackGroundJobSendMailWhenPricesChanged(IEmailService emailService, StockTrackingService stockTrackingService)
         {
-            _hangFireDbContext = hangFireDbContext;
-            _stockMarketDbContext = stockMarketDbContext;
-            _emailService = new EmailService();
-            _stockTrackingService = new StockTrackingService(_hangFireDbContext,_stockMarketDbContext);
+            _emailService = emailService;
+            _stockTrackingService = stockTrackingService;
         }
         public async Task SendMailWhenPricesChanged(Emailer emailer)
         {
@@ -38,7 +26,14 @@ namespace HangFireApp.BackGroundJobs
                     emailer.toUserEmails = keyValuePair.Value.Select(user => user.Email).ToList();
                     emailer.subject = "Hisse Senedi Fiyat Değişikliği";
                     emailer.body = $"Değerli kullanıcımız: {keyValuePair.Key.Name} hisse senedinin fiyatı {keyValuePair.Key.Price} TL oldu";
-                    await _emailService.SendEmailsAsync(emailer);
+                    try
+                    {
+                        await _emailService.SendEmailsAsync(emailer);
+                    }
+                    catch(Exception ex)
+                    {
+                        Log.Error($"HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: Mesaj yollamaa işleminde hata: {ex.Message}");
+                    }
                 }
                 Log.Information("SendMailWhenPricesChanged tamamlandı");
             }

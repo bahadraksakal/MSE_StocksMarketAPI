@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using SharedServices.EmailServices;
+using SharedServices.ExcelServices;
+using SharedServices.PdfServices;
 using SharedServices.StockTrackingServices;
 using StockMarketDbContextLibrary.Context;
 using StocksMarketEntitiesLibrary.EmailEntities;
@@ -24,12 +26,15 @@ namespace HangFireApp
             .Build();
 
             var serviceProvider = new ServiceCollection()
+            .AddDbContext<HangFireDbContext>(options => options.UseSqlServer(configuration["ConnectionString:ConStr"]), ServiceLifetime.Transient)
+            .AddDbContext<StockMarketDbContext>(options => options.UseSqlServer(configuration["ConnectionString:ConStrStockMarket"]), ServiceLifetime.Transient)
             .AddScoped<IEmailService, EmailService>()
-            .AddScoped<StockTrackingService>()
+            .AddTransient<StockTrackingService>()
+            .AddTransient<ExportPdfService>()
+            .AddTransient<ExportExcelService>()
             .AddSingleton<BackGroundJobSendMailWhenPricesChanged>()
             .AddSingleton<BackGroundJobRunGetStocksService>()
-            .AddDbContext<HangFireDbContext>(options => options.UseSqlServer(configuration["ConnectionString:ConStr"]))
-            .AddDbContext<StockMarketDbContext>(options => options.UseSqlServer(configuration["ConnectionString:ConStrStockMarket"]))
+            .AddSingleton<BackGroundJobSendMailMonthlyReport>()
             .BuildServiceProvider();
 
             var hangFireDbContext = serviceProvider.GetService<HangFireDbContext>();
@@ -81,6 +86,12 @@ namespace HangFireApp
                     "job-send-mail-prices-changed",
                     job => job.SendMailWhenPricesChanged(emailer),
                     "*/1 * * * *");
+
+                RecurringJob.AddOrUpdate<BackGroundJobSendMailMonthlyReport>(
+                    "job-send-mail-monthly-report",
+                    job => job.SendMailMonthlyReport(emailer),
+                    "*/10 * * * *"); // 0 0 */30 * *
+
 
                 Log.Information("Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.");
                 Console.ReadLine();

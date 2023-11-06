@@ -1,0 +1,59 @@
+2023-11-06 13:48:04.234 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-06 13:48:05.244 +03:00 [INF] ANELE Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-06 13:48:05.924 +03:00 [INF] BORLS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-06 13:48:08.633 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-06 13:48:10.378 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-06 13:55:44.038 +03:00 [INF] Start installing Hangfire SQL objects...
+2023-11-06 13:55:44.185 +03:00 [INF] Hangfire SQL objects installed.
+2023-11-06 13:55:44.212 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@StockMarketDbHangFire'
+2023-11-06 13:55:44.213 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2023-11-06 13:55:44.214 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2023-11-06 13:55:44.352 +03:00 [INF] Server bahadir-aksakal:21068:90d2e902 successfully announced in 111,5767 ms
+2023-11-06 13:55:44.361 +03:00 [INF] Server bahadir-aksakal:21068:90d2e902 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2023-11-06 13:55:44.375 +03:00 [INF] 2 servers were removed due to timeout
+2023-11-06 13:55:44.475 +03:00 [INF] Server bahadir-aksakal:21068:90d2e902 all the dispatchers started
+2023-11-06 13:55:44.528 +03:00 [INF] Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.
+2023-11-06 13:55:44.653 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-06 13:55:44.657 +03:00 [INF] GetStocksService 0. kere çalışıyor
+2023-11-06 13:55:44.977 +03:00 [ERR] HangFireApp.BackGroundJobs:BackGroundJobSendMailMonthlyReport: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 13:55:45.055 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 13:55:45.069 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 13:55:45.338 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:55:45.747 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate92e0ca33-ad35-4893-81e3-e531b9a52b3f.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:55:45.782 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:55:45.784 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:55:47.294 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 13:55:47.319 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:55:47.339 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDateb8f43cdf-bc8c-491a-972a-67023b0b8a50.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:55:47.347 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:55:47.348 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:55:48.636 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 13:55:48.649 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:55:48.663 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDate406b0758-9556-4b91-b1c6-ea935e0deef1.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:55:48.671 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:55:48.672 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:55:50.005 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 13:55:50.009 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 13:55:50.066 +03:00 [ERR] HangFireApp.BackGroundJobs:BackGroundJobSendMailMonthlyReport: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 13:56:14.727 +03:00 [ERR] HangFireApp.BackGroundJobs:SendMailWhenPricesChanged: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+2023-11-06 13:56:14.733 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 1-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:56:14.740 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate5d3ef5bb-77d4-4933-8212-de2c15652946.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:56:14.751 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:56:14.752 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:56:16.255 +03:00 [INF] E-posta admin@gmail.com adresine başarıyla gönderildi.
+2023-11-06 13:56:16.264 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 2-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:56:16.273 +03:00 [INF] ExportExcelService-ExportToExcel: 2-BuyAndSaleDetailInfoByDatee2125179-a7e2-4f88-abb6-23ce6129ba89.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:56:16.279 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:56:16.280 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:56:17.569 +03:00 [INF] E-posta deneme2stockmarketappmse@nqmo.com adresine başarıyla gönderildi.
+2023-11-06 13:56:17.577 +03:00 [INF] ExportPdfService-StockBuyAndSaleActivityToPdf: 3-BuyAndSaleDetailInfoByDate.pdf saved to BuyAndSaleDetailDateExportedPdf directory.
+2023-11-06 13:56:17.587 +03:00 [INF] ExportExcelService-ExportToExcel: 3-BuyAndSaleDetailInfoByDatef0e27ba6-e32a-4941-8f2b-2d18cac30cad.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\HangFireApp\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-06 13:56:17.594 +03:00 [INF] SmtpClient oluşturuldu
+2023-11-06 13:56:17.595 +03:00 [INF] MailMessage oluşturuldu
+2023-11-06 13:56:18.771 +03:00 [INF] E-posta deneme3@gmail.com adresine başarıyla gönderildi.
+2023-11-06 13:56:18.775 +03:00 [WRN] ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
+2023-11-06 13:56:18.815 +03:00 [ERR] HangFireApp.BackGroundJobs:BackGroundJobSendMailMonthlyReport: ExportPdfService-StockBuyAndSaleActivityReportExportToPdf: alınıp satılan hiç hisse yok.
