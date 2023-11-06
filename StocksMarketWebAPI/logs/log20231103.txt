@@ -7,3 +7,35 @@
 2023-11-03 10:59:53.198 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-11-03 11:00:06.267 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
 2023-11-03 11:03:07.243 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:29:16.707 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:30:13.018 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:33:14.289 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:33:48.104 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-11-03 15:33:48.122 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk5MDE0ODI4LCJleHAiOjE2OTkwMTg0MjgsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.chGq685ihwJ-38Pn-6wkLmRh7w7uORcQm5sGQ9hjoYo
+2023-11-03 15:34:06.264 +03:00 [INF] ExportExcelService-ExportToExcel: A1CAPStockPrices.xlsxd2a93d30-5b36-4ead-be42-a6c3232934ba.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\StocksPricesExportedExcel klasörüne kayıt edildi.
+2023-11-03 15:35:04.399 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2023-11-03 15:35:04.424 +03:00 [WRN] StockService-BuyStockAsync Hata: Bu hisseden elinizde hiç bulunmuyor veya hisse işleme kapalı.
+2023-11-03 15:35:11.632 +03:00 [WRN] SEKUR kodlu hisse senedinden, 27,56 TL fiyatından, 46 adet satın adlınız. İşlem 1267,76 TL, komisyon 63,388 TL tuttu. Eski bakiyeniz 38920,67 TL.
+Yeni bakiyeniz 37589,523 TL. Sistemde kalan hisse senedi 9954 adettir.
+2023-11-03 15:35:14.203 +03:00 [WRN] SEKUR kodlu hisse senedinden, 27,56 TL fiyatından, 15 adet sattınız. İşlem 413,4 TL, komisyon 20,67 TL tuttu. Eski bakiyeniz 37589,523 TL.
+Yeni bakiyeniz 37982,25 TL. Sistemde kalan hisse senedi 9969 adettir.
+2023-11-03 15:35:18.829 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsx6f368971-334a-43a7-a5fd-f9ea32ab5814.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-03 15:36:12.990 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:39:12.963 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:42:13.706 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:45:12.839 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:48:12.752 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:51:13.418 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:54:13.390 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 15:57:12.799 +03:00 [WRN] StockService-SetStocks işlemi çalıştı.
+2023-11-03 16:48:27.344 +03:00 [WRN] AuthService-CheckCredentialsAsync: admin giriş yaptı.
+2023-11-03 16:48:27.395 +03:00 [WRN] AuthService-CreateToken: Token oluşturuldu: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwidXNlcklkIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjk5MDE5MzA3LCJleHAiOjE2OTkwMjI5MDcsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6IkJ1QmVuaW1BdWRpZW5jZURlxJ9lcmltIn0.51fgSO8MQlQhmWawrKW7WbW4FoVKWE59wOu-W-e3PFE
+2023-11-03 16:48:30.398 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsx2b181152-5f7d-4d84-8458-d6b665fd4029.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-03 16:48:32.188 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo.xlsxfaee9d05-9cc9-45bf-b6f2-4462710314ed.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:06:31.991 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo77c2f83b-c4e4-4f7c-87c7-5b52ef63e663.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:06:37.862 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo18875aad-0421-4745-9cf0-53bf6266a9e8.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:07:26.672 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo8015d0c6-884e-48ea-a192-1495f5406481.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:07:29.456 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoa9b09bbb-a865-4e81-b1ef-b542238e2216.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:07:58.779 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfo906b1e04-b4d9-48e5-9cd6-a145b6023c4c.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.
+2023-11-03 17:12:15.659 +03:00 [WRN] ExcelService-StockBuyAndSaleActivityReportExportToExcel: alınıp satılan hiç hisse yok.
+2023-11-03 17:12:28.411 +03:00 [INF] ExportExcelService-ExportToExcel: 1-BuyAndSaleDetailInfoByDate05811da1-aae9-4729-848f-72ee3f954842.xlsx dosyası D:\Masaüstü\Bahadır Aksakal\Dersler 4.sınıf -1- Güz - İmep\.NET Projelerim\StocksMarket\StocksMarketWebAPI\bin\Debug\net7.0\BuyAndSaleDetailDateExportedExcel klasörüne kayıt edildi.

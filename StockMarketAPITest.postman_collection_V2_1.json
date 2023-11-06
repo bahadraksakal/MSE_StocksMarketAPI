@@ -410,7 +410,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/Stock/BuyStock/10/A1CAP",
+							"raw": "{{BaseUrl}}/api/Stock/BuyStock/46/EREGL",
 							"host": [
 								"{{BaseUrl}}"
 							],
@@ -418,8 +418,8 @@
 								"api",
 								"Stock",
 								"BuyStock",
-								"10",
-								"A1CAP"
+								"46",
+								"EREGL"
 							]
 						},
 						"description": "Hisse senedi al - auth olanlar"
@@ -503,7 +503,7 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}/api/Stock/SetStockIsTracked/BIMAS/true",
+							"raw": "{{BaseUrl}}/api/Stock/SetStockIsTracked/MIATK/true",
 							"host": [
 								"{{BaseUrl}}"
 							],
@@ -511,7 +511,7 @@
 								"api",
 								"Stock",
 								"SetStockIsTracked",
-								"BIMAS",
+								"MIATK",
 								"true"
 							]
 						},
@@ -745,9 +745,91 @@
 						"description": "Kullanıcıya ait tüm hisse alım satım işlemlerini excel tablosu olarak verir.\r\nAuth gerekli"
 					},
 					"response": []
+				},
+				{
+					"name": "/api/Excel/ExportExcelUserStockBuyAndSaleByDate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"StartDate\": \"2023-10-03T08:00:00\",\r\n    \"EndDate\": \"2023-11-03T12:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/Excel/ExportExcelUserStockBuyAndSaleByDate",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Excel",
+								"ExportExcelUserStockBuyAndSaleByDate"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"description": "Bilgilerinizi excel çıktısı olarak almak için olan controller - auth gerekli"
+		},
+		{
+			"name": "Pdf",
+			"item": [
+				{
+					"name": "/api/Pdf/ExportPdfUserStockBuyAndSaleByDate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startDate\": \"2023-10-06T07:22:05.936Z\",\r\n  \"endDate\": \"2023-11-06T07:22:05.936Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/Pdf/ExportPdfUserStockBuyAndSaleByDate",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"Pdf",
+								"ExportPdfUserStockBuyAndSaleByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Bilgilerinizi pdf çıktısı olarak almak için olan controller - auth gerekli"
 		}
 	],
 	"auth": {

@@ -79,6 +79,61 @@
         }
       }
     },
+    "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\ModalsLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\ModalsLibrary.csproj",
+        "projectName": "ModalsLibrary",
+        "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\ModalsLibrary.csproj",
+        "packagesPath": "C:\\Users\\Bahadr\\.nuget\\packages\\",
+        "outputPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Bahadr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -140,6 +195,10 @@
             "Serilog.Sinks.File": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "iTextSharp.LGPLv2.Core": {
+              "target": "Package",
+              "version": "[3.4.12, )"
             }
           },
           "imports": [
@@ -324,6 +383,9 @@
             "projectReferences": {
               "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj": {
                 "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\HangFireDbContextLibrary\\HangFireDbContextLibrary.csproj"
+              },
+              "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\ModalsLibrary.csproj": {
+                "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\ModalsLibrary\\ModalsLibrary.csproj"
               },
               "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj": {
                 "projectPath": "D:\\Masaüstü\\Bahadır Aksakal\\Dersler 4.sınıf -1- Güz - İmep\\.NET Projelerim\\StocksMarket\\SharedServices\\SharedServices.csproj"

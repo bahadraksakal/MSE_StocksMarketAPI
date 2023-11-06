@@ -1,0 +1,55 @@
+2023-11-03 15:33:10.336 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:33:11.748 +03:00 [INF] EREGL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:33:12.755 +03:00 [INF] TNZTP Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:33:13.057 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:33:14.319 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:36:10.031 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:36:10.953 +03:00 [INF] BORLS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:36:12.791 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:36:12.992 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:39:10.061 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:39:10.859 +03:00 [INF] AVHOL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:39:11.984 +03:00 [INF] PARSN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:39:12.801 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:39:12.967 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:42:10.131 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:42:10.984 +03:00 [INF] BANVT Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:11.290 +03:00 [INF] EGSER Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:11.803 +03:00 [INF] KOZAA Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:11.945 +03:00 [INF] MEKAG Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.006 +03:00 [INF] KZGYO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.006 +03:00 [INF] METRO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.006 +03:00 [INF] MOBTL Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.108 +03:00 [INF] NATEN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.108 +03:00 [INF] OSTIM Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.439 +03:00 [INF] PASEU Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:12.450 +03:00 [INF] TOASO Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:42:13.541 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:42:13.708 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:45:10.206 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:45:10.906 +03:00 [INF] BARMA Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:45:12.335 +03:00 [INF] TSKB Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:45:12.640 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:45:12.841 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:48:10.257 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:48:11.338 +03:00 [INF] EDATA Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:48:11.747 +03:00 [INF] KLSER Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:48:12.589 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:48:12.755 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:51:10.328 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:51:11.669 +03:00 [INF] EUPWR Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:51:12.179 +03:00 [INF] LUKSK Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:51:12.793 +03:00 [INF] YEOTK Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:51:13.218 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:51:13.420 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:54:10.404 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:54:11.432 +03:00 [INF] AKSEN Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:54:11.513 +03:00 [INF] BOBET Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:54:11.590 +03:00 [INF] CLEBI Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:54:12.720 +03:00 [INF] SNPAM Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:54:13.222 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:54:13.392 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.
+2023-11-03 15:57:10.472 +03:00 [INF] Hisse senetleri alınıyor bu işlem 1dk-3dk arası sürebilmektedir...
+2023-11-03 15:57:11.541 +03:00 [INF] GOLTS Kodlu Hissenin Detayını Çekerken Hata: 'Y' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+2023-11-03 15:57:12.564 +03:00 [INF] Tüm veriler çekildi. İşlem Başarılı.
+2023-11-03 15:57:12.800 +03:00 [INF] PUT isteği başarılı. İşlem başarıyla tamamlandı.

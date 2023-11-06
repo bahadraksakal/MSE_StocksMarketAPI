@@ -40,7 +40,9 @@ namespace SharedServices.EmailServices
         private SmtpClient CreateSmtpClient(string smtpServer, int smtpPort, string username, string password, bool enableSsl)
         {
             SmtpClient smtpClient = new SmtpClient(smtpServer, smtpPort);
+
             smtpClient.Credentials = new NetworkCredential(username, password);
+
             smtpClient.EnableSsl = enableSsl; // E-postayı SSL ile güvenli bir şekilde göndermek için.
             Log.Information("SmtpClient oluşturuldu");
             return smtpClient;

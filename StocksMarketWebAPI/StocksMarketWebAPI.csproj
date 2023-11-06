@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HangFireDbContextLibrary\HangFireDbContextLibrary.csproj" />
+    <ProjectReference Include="..\ModalsLibrary\ModalsLibrary.csproj" />
     <ProjectReference Include="..\SharedServices\SharedServices.csproj" />
     <ProjectReference Include="..\StocksMarketDbContextLibrary\StocksMarketDbContextLibrary.csproj" />
     <ProjectReference Include="..\StocksMarketEntitiesLibrary\StocksMarketEntitiesLibrary.csproj" />

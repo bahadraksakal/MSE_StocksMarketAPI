@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketDbContextLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketEntitiesLibrary", "StocksMarketEntitiesLibrary\StocksMarketEntitiesLibrary.csproj", "{3EBF62DA-8664-4084-BA85-944F04FCF292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices", "SharedServices\SharedServices.csproj", "{4F3DAC47-6CDD-4046-8F92-55AFCC151805}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedServices", "SharedServices\SharedServices.csproj", "{4F3DAC47-6CDD-4046-8F92-55AFCC151805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModalsLibrary", "ModalsLibrary\ModalsLibrary.csproj", "{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F3DAC47-6CDD-4046-8F92-55AFCC151805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
