@@ -70,20 +70,29 @@ namespace SharedServices.StockTrackingServices
             Dictionary<StockHangFire, List<User>> userChangedStockMap = new Dictionary<StockHangFire, List<User>>();
             foreach(StockHangFire stockHangFire in stocksHangFireChanged)
             {
-                List<int> portfolioStocks = await _stockMarketDbContext.PortfolioStock
+                List<User> users = await _stockMarketDbContext.PortfolioStock
                                                 .AsNoTracking()
                                                 .Include(portfolioStocks => portfolioStocks.Stock)
+                                                .Include(portfolioStocks => portfolioStocks.Portfolio)
+                                                .ThenInclude(portfolio => portfolio.PortfolioUsers)
+                                                .ThenInclude(portfolioUser => portfolioUser.User)
                                                 .Where(portfolioStocks => portfolioStocks.Stock.Name == stockHangFire.Name
-                                                && portfolioStocks.Stock.Status == false && portfolioStocks.Unit>0
+                                                && portfolioStocks.Stock.Status == false 
+                                                && portfolioStocks.Unit>0
                                                 && portfolioStocks.IsTracked == true)
-                                                .Select(portfolioStocks => portfolioStocks.PortfolioId)
+                                                .Select(portfolioStocks => new User
+                                                {
+                                                    Id = portfolioStocks.Portfolio.PortfolioUsers.User.Id,
+                                                    Name = portfolioStocks.Portfolio.PortfolioUsers.User.Name,
+                                                    Email = portfolioStocks.Portfolio.PortfolioUsers.User.Email
+                                                })
                                                 .ToListAsync();
-                List<User> users = _stockMarketDbContext.PortfolioUser
-                                .AsNoTracking()
-                                .Include(portfolioUser => portfolioUser.User)
-                                .Where(portfolioUser => portfolioStocks.Contains(portfolioUser.PortfolioId))
-                                .Select(portfolio => portfolio.User)
-                                .ToList();
+                //List<User> users = _stockMarketDbContext.PortfolioUser
+                //                .AsNoTracking()
+                //                .Include(portfolioUser => portfolioUser.User)
+                //                .Where(portfolioUser => portfolioStocks.Contains(portfolioUser.PortfolioId))
+                //                .Select(portfolio => portfolio.User)
+                //                .ToList();
                 if(users.IsNullOrEmpty())
                 {
                     //Log.Warning("users null or empty");

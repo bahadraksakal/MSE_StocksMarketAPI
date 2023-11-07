@@ -334,10 +334,11 @@ namespace StocksMarketWebAPI.Services
             PortfolioStock portfolioStock = await _stockMarketDbContext.PortfolioStock
                                                     .Include(portfolioStock => portfolioStock.Stock)
                                                     .FirstOrDefaultAsync(portfolioStock => portfolioStock.PortfolioId == portfolioUser.PortfolioId
-                                                     && portfolioStock.Stock.Name == stockName);
+                                                     && portfolioStock.Stock.Name == stockName
+                                                     && portfolioStock.Unit>0);
             if (portfolioStock == null)
             {
-                Log.Error($"StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.");
+                Log.Warning($"StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.");
                 throw new Exception("StockService SetStockIsTrackedAsync: Bu hisse senedine sahip değilsiniz.");
             }
             portfolioStock.IsTracked = isTracked;
