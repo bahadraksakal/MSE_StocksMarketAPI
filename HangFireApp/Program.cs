@@ -90,7 +90,7 @@ namespace HangFireApp
                 RecurringJob.AddOrUpdate<BackGroundJobSendMailMonthlyReport>(
                     "job-send-mail-monthly-report",
                     job => job.SendMailMonthlyReport(emailer),
-                    "*/10 * * * *"); // Cron.Monthly(31, 23, 40)  her ayın son günü 23:40'da çalıştırır. test bitince bunu kullan.
+                    "*/10 * * * *"); // Cron.Monthly(31, 23, 40)  her ayın son günü 23:40'da çalıştırır. // 0 0 1 * * her ayın ilk günü çalıştırır. artık yıl sorununu çözer test bitince bunu kullan.
 
 
                 Log.Information("Hangfire arka plan işlemleri başlatıldı. Çıkmak için ENTER'a basın.");
