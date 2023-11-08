@@ -228,7 +228,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"deneme4\",\r\n  \"password\": \"deneme4\",\r\n  \"email\": \"deneme4@gmail.com\",\r\n  \"tel\": \"05554443322\"\r\n}",
+							"raw": "{\r\n  \"name\": \"deneme8\",\r\n  \"password\": \"deneme8\",\r\n  \"email\": \"denemes8tockmarketappmse@nqmo.com\",\r\n  \"tel\": \"05554443322\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

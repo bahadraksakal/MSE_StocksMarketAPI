@@ -35,6 +35,8 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 - Alım, satım hareketleri bir tabloda tutularak kullanıcıya ait hareketler tarih aralığında incelenebilir.
 - Kullanıcılar hisse senetlerinde alt veya üst miktar limiti belirleyerek kural setleri oluşturabilir. Hisse senedi fiyatı güncellendiğinde e-posta ile bilgilendirme alabilirler.
 - Kullanıcılar tarafından hisse senedi fiyat ve alım satım hareketleri Excel dosyası olarak çıktı alınabilir.
+- Kullanıcılar tarafından hisse senedi fiyat ve alım satım hareketleri Pdf dosyası olarak çıktı alınabilir.
+- Kullancılara her ay sonunda, o aya ait işlem özetleri pdf ve excel formatında gönderilebilir.
 
 ## Projelerde Kullanılan Teknoloji Ve Diller
 
@@ -92,6 +94,7 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 ### SharedServices
 
 - EPPlus |  Version="7.0.0"
+- iTextSharp.LGPLv2.Core | Version="3.4.12"
 - Serilog.AspNetCore | Version="7.0.0"
 - Serilog.Sinks.Debug | Version="2.0.0"
 - Serilog.Sinks.File | Version="5.0.0" 
@@ -106,18 +109,24 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 - Microsoft.EntityFrameworkCore | Version="7.0.13"
 
+### ModalsLibrary
+
+- None
+
 ## Proje Ayağa Kaldırma Adımları, Projenin Genel Çalışma Mantığı Ve Notlar
 
 ### Projenin Genel Çalışma Mantığı
 
 - Solition içerisinde 3 adet uygulama ve bu uygulamalr tarafından kullanılan kütüphaneler bulunur. GetStockService ,HangFireApp ve StocksMarketWebAPI uygulamaları temel solition içeriğini oluşturur.
-- StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfügre edilmiştir.
+- StocksMarketWebAPI ve HangFireApp uygulaması birlikte ayağa kalkıp, çalışacak şekilde konfigüre edilmiştir.
 - HangFireApp uygulaması kendi metodu üzerinden GetStockService uygulamasını çalıştırır.
 - HangFireApp uygulaması kendi metodu üzerinden fiyatı değişen hisse senetlerini bulup, bu hisse senetlerine sahip olan ve bu hisse senetlerini takip eden kullanıcılara email atar.
+- HangFireApp uygulaması her ay sonu kullanıcılara işlem özet rapolarını excel ve pdf formatında email olarak gönderir.
 - Fiyatı değşen hisse senetlerinin tespiti için ikinci bir veri tabanı ile eşleştirme işlemi yapılır bu sayede sistem yükü dağıtılmış olur.
 - GetStockService, HangFireApp'in bağımlılığı olarak tanımlanmıştır, bu sayede Web API ve HangFireApp ayağa kalkarken GetStockService uygulamasıda otomatik olarak derlenir.
 - HangFireApp 3 dakikada 1 kez GetStockService uygulamasını çalıştırır.
 - HangFireApp 3 dakikada 1 kez hisse senedi takip ve email servisini çalıştırır.
+- HangFireApp ayda 1 kez SendMailMonthlyReport işini çalıştırır.
 - GetStockService tüm hisseleri çekip, StocksMarketWebAPI uygulamasına istek atıcaktır. (Token ile güvenlik kontrolü)
 - StocksMarketWebAPI uygulaması controller üzerinden aldığı hisseleri otomatik olarak işleyip, veritabanına kayıt edicektir. (Hisse senedi yoksa yeni kayıt ekler, var ise son fiyatını sisteme ekler.)
 - StockMarketWeb API üzerinden alım satım geçmişinizi veya ilgili hisse senedine ait fiyat hareketlerini excel çıktısı olarak alabilirsiniz.
@@ -160,6 +169,10 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 
 ## Programdan Görseller
 
+![Resim 34](/img/37.png)
+![Resim 34](/img/36.png)
+![Resim 34](/img/38.png)
+![Resim 34](/img/35.png)
 ![Resim 34](/img/34.png)
 ![Resim 31](/img/31.png)
 ![Resim 33](/img/33.png)
