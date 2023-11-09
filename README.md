@@ -13,7 +13,7 @@
 
 #### [EN]
 
-`- **Ahmet Bahadır Aksakal** [@bahadraksakal](https://github.com/bahadraksakal) tarafından oluşturuldu.`
+- Created by **Ahmet Bahadır Aksakal** [@bahadraksakal](https://github.com/bahadraksakal).
 
 ## Problem Definition
 
@@ -174,21 +174,19 @@ The aim of this project is to develop a StockMarket Web API application in accor
 - Some operations may require administrator authorization. Administrator account: { username: admin, password: admin }.
 
 
-## [Click for Database Design :boom:](#Veritabanı Tasarımı)
-
-## [Click for Images from the Program :boom:](##Programdan Görseller)  
-
-
+<h2 align="left"><b>[Click for Database Design :boom:](#Veritabanı Tasarımı)</b></h2>
+##
+<h2 align="left"><b>[Click for Images from the Program :boom:](#Programdan Görseller)</b></h2>
+##
 
 ****
-
 
 
 <h1 align="center"> Mert Yazlım - Uzun Dönem Imep Staj - StockMarket Web API Uygulaması </h1>
 
 #### [TR]
 
-`- **Ahmet Bahadır Aksakal** [@bahadraksakal](https://github.com/bahadraksakal) tarafından oluşturuldu.`
+- **Ahmet Bahadır Aksakal** [@bahadraksakal](https://github.com/bahadraksakal) tarafından oluşturuldu.
 
 ## Problem Tanımı
 
