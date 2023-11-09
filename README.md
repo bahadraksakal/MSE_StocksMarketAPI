@@ -6,8 +6,8 @@
 
 ****
 
-- [EN : Description :boom:](#en)  
-- [TR : Açıklama :tr:](#tr)
+- [EN : Description :book: :leftwards_arrow_with_hook:](#en)  
+- [TR : Açıklama :book: :leftwards_arrow_with_hook:](#tr)
 
 ****
 
