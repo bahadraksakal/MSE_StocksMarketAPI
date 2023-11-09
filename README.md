@@ -17,8 +17,8 @@
 
 ## Problem Definition
 
-Our project goal is to create a Web API service of a platform where stock portfolios are managed by the user in the admin role and registered users can perform purchase and sale transactions. It is not required to create an interface for the project. It is enough to create a collection on Postman and organize the requests in the required folder structure. Add test scripts to Postman requests according to "HTTP Status Code" returns. The stock information in the project should be updated regularly via a live Web API. The service that updates the stock information should be designed as a separate consol application and run once a minute by the Background Job application. Background Job should run as a separate consol project.
-\n :page_with_curl: **[Click for Project Details](https://github.com/bahadraksakal/MSE_StocksMarketAPI/blob/main/Stock_Market_DOTNET_Projesi.pdf)**
+Our project goal is to create a Web API service of a platform where stock portfolios are managed by the user in the admin role and registered users can perform purchase and sale transactions. It is not required to create an interface for the project. It is enough to create a collection on Postman and organize the requests in the required folder structure. Add test scripts to Postman requests according to "HTTP Status Code" returns. The stock information in the project should be updated regularly via a live Web API. The service that updates the stock information should be designed as a separate consol application and run once a minute by the Background Job application. Background Job should run as a separate consol project.__
+:page_with_curl: **[Click for Project Details](https://github.com/bahadraksakal/MSE_StocksMarketAPI/blob/main/Stock_Market_DOTNET_Projesi.pdf)**
 
 ## Project Aims and Objectives
 
