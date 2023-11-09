@@ -179,10 +179,14 @@ The aim of this project is to develop a StockMarket Web API application in accor
 ## [Click for Images from the Program :boom:](#Programdan-Görseller)
 
 
+
+****
 ****
 
 
+
 <h1 align="center"> Mert Yazlım - Uzun Dönem Imep Staj - StockMarket Web API Uygulaması </h1>
+
 
 #### [TR]
 
