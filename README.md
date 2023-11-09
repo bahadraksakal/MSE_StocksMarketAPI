@@ -159,7 +159,7 @@ The aim of this project is to develop a StockMarket Web API application in accor
 
 6. The StocksMarketWebAPI application automatically processes the stocks it receives and saves them in the database (if the stock does not exist, it adds a new record; if it exists, it updates its last price).
 
-#### Notes
+### Notes
 
 - If the PUT method of GetStockService throws an error even though the main part of the project works, update the `BaseUrl` value in the `appconfig` file. Example: `"BaseUrl": "https://localhost:7261/api/Stock/SetStocks"`
 
@@ -174,9 +174,9 @@ The aim of this project is to develop a StockMarket Web API application in accor
 - Some operations may require administrator authorization. Administrator account: { username: admin, password: admin }.
 
 
-##[Click for Database Design :boom:](#Veritabanı Tasarımı)
+## [Click for Database Design :boom:](#Veritabanı Tasarımı)
 
-##[Click for Images from the Program :boom:](##Programdan Görseller)  
+## [Click for Images from the Program :boom:](##Programdan Görseller)  
 
 
 
