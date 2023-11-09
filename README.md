@@ -148,12 +148,12 @@ The aim of this project is to develop a StockMarket Web API application in accor
 2. Install the project's dependencies using NuGet Package Manager to install the required packages before running the project.
 
 3. To run the project as Default:\
- &emsp a) Run the project.
+ &emsp; a) Run the project.
    
 4. To run the project Manually:\
- &emsp a) Run the StocksMarketWebAPI application.\
- &emsp b) Then compile the GetStockService application.\
- &emsp c) Run the HangFireApp application.
+ &emsp; a) Run the StocksMarketWebAPI application.\
+ &emsp; b) Then compile the GetStockService application.\
+ &emsp; c) Run the HangFireApp application.
 
 5. HangFireApp runs GetStockService once per minute. GetStockService pulls all the stocks and sends this data to the Web API.
 
@@ -326,12 +326,12 @@ Bu projenin amacı, kurumsal yazılım geliştirme süreçleri, temiz kod yazma 
 2. Projeyi çalıştırmadan önce gerekli paketleri yüklemek için NuGet Paket Yöneticisi'ni kullanarak projenin bağımlılıklarını yükleyin.
 
 3. Projeyi Default olarak çalıştırmak için:\
- &emsp a) Projeyi çalıştırın.
+ &emsp; a) Projeyi çalıştırın.
 
 4. Projeyi Manuel olarak çalıştırmak için:\
- &emsp a) StocksMarketWebAPI uygulamasını çalıştırın.\
- &emsp b) Ardından GetStockService uygulamasını derleyin.\
- &emsp c) HangFireApp uygulamasını çalıştırın.
+ &emsp; a) StocksMarketWebAPI uygulamasını çalıştırın.\
+ &emsp; b) Ardından GetStockService uygulamasını derleyin.\
+ &emsp; c) HangFireApp uygulamasını çalıştırın.
 
 4. HangFireApp, dakikada bir kez GetStockService uygulamasını çalıştırır. GetStockService, tüm hisseleri çeker ve bu verileri Web API'ye gönderir.
 
