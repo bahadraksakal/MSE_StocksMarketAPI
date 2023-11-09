@@ -174,9 +174,9 @@ The aim of this project is to develop a StockMarket Web API application in accor
 - Some operations may require administrator authorization. Administrator account: { username: admin, password: admin }.
 
 
-### [Click for Database Design :boom:](#Veritabanı-Tasarımı)
+## [Click for Database Design :boom:](#Veritabanı-Tasarımı)
 
-### [Click for Images from the Program :boom:](#Programdan Görseller)
+## [Click for Images from the Program :boom:](#Programdan-Görseller)
 
 
 ****
