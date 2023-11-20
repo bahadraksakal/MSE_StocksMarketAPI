@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StocksMarketEntitiesLibrary
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedServices", "SharedServices\SharedServices.csproj", "{4F3DAC47-6CDD-4046-8F92-55AFCC151805}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModalsLibrary", "ModalsLibrary\ModalsLibrary.csproj", "{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModalsLibrary", "ModalsLibrary\ModalsLibrary.csproj", "{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0FF1C4AC-088F-4C2F-84DC-4D3152BF8089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServicesTestXUnit", "SharedServicesTestXUnit\SharedServicesTestXUnit.csproj", "{E3F1BF09-5341-4227-80E3-1D2FB9183743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,9 +67,16 @@ Global
 		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84392E4-03DE-42C4-B0A8-4AB2C41433E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F1BF09-5341-4227-80E3-1D2FB9183743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F1BF09-5341-4227-80E3-1D2FB9183743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F1BF09-5341-4227-80E3-1D2FB9183743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F1BF09-5341-4227-80E3-1D2FB9183743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3F1BF09-5341-4227-80E3-1D2FB9183743} = {0FF1C4AC-088F-4C2F-84DC-4D3152BF8089}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA349CB2-5491-4959-B0B7-077CD521F099}
