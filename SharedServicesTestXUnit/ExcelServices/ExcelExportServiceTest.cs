@@ -8,8 +8,13 @@ using StockMarketDbContextLibrary.Context;
 using StockMarketEntitiesLibrary.Entities;
 using Xunit;
 
+//default olarak paralel çalışır. true yaparsak parallelik kapanır.
+
+
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
 namespace Tests
 {
+    
     public class ExportExcelServiceTests : IDisposable
     {
         private readonly StockMarketDbContext _dbContext;
